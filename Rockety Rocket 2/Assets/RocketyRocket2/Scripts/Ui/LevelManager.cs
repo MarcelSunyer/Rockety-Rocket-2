@@ -37,7 +37,7 @@ namespace RocketyRocket2
         {
             fade.gameObject.SetActive(true);
 
-            Tween tween = fade.DOFade(1,1);
+            Tween tween = fade.DOFade(1,0.5f);
             tween.Play();
 
             yield return tween.WaitForCompletion();
