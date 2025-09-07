@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -37,6 +38,8 @@ namespace RocketyRocket2
 
         public Button Messier32;
         public Button Messier32Back;
+
+        [SerializeField] private Image fade;
         private void Start()
         {
             if (canvasFather != null)
@@ -92,6 +95,17 @@ namespace RocketyRocket2
             if (Messier32Back != null)
                 Messier32Back.onClick.AddListener(Messier32ToGalaxy);
 
+            if(fade != null)
+                StartCoroutine(FadeIn());
+        }
+
+        private IEnumerator FadeIn()
+        {
+            Tween tween = fade.DOFade(0, 1f);
+            tween.Play();
+            yield return tween.WaitForCompletion();
+
+            fade.gameObject.SetActive(false);
         }
         public void StartButton()
         {
@@ -222,5 +236,6 @@ namespace RocketyRocket2
             tween.Play();
             Messier32.Select();
         }
+
     }
 }

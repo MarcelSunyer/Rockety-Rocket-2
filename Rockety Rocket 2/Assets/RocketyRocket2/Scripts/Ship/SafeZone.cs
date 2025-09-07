@@ -50,9 +50,11 @@ namespace RocketyRocket2
                 shipController.rigidbody2D.drag = 5f;
                 shipController.boostInput = 0;
 
-                shipController.boost_particle_1.gameObject.SetActive(false);
-                shipController.boost_particle_2.gameObject.SetActive(false);
-                shipController.boost_particle_3.gameObject.SetActive(false);
+                shipController.boost_particle_1.Stop();
+                shipController.boost_particle_2.Stop();
+                shipController.boost_particle_3.Stop();
+
+               
 
                 Destroy(shipController);
 
@@ -84,6 +86,9 @@ namespace RocketyRocket2
         {
             yield return new WaitForSeconds(1);
             endLevelUI.gameObject.SetActive(true);
+            shipController.boost_particle_1.gameObject.SetActive(false);
+            shipController.boost_particle_2.gameObject.SetActive(false);
+            shipController.boost_particle_3.gameObject.SetActive(false);
         }
         private IEnumerator UpdateColor()
         {

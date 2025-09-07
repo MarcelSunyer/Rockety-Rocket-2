@@ -219,8 +219,8 @@ RectTransform:
   - {fileID: 1757990584}
   - {fileID: 885646272}
   - {fileID: 23660990}
-  - {fileID: 193019143}
   - {fileID: 180860182}
+  - {fileID: 193019143}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -11637,26 +11637,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
-    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
-      propertyPath: IsTutorial
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7325495018755074532, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.884516
-      objectReference: {fileID: 0}
-    - target: {fileID: 7325495018755074532, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3.884516
-      objectReference: {fileID: 0}
-    - target: {fileID: 7325495018755074532, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3.884516
-      objectReference: {fileID: 0}
     - target: {fileID: 7325495018755074532, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.2623
@@ -11696,10 +11676,6 @@ PrefabInstance:
     - target: {fileID: 7325495018755074532, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.037
-      objectReference: {fileID: 0}
-    - target: {fileID: 8980951526198230892, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
-      propertyPath: m_SortingOrder
-      value: 176
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -138,6 +138,10 @@ namespace RocketyRocket2
                 destroy_particle_2.Play();
                 destroy_particle_3.Play();
 
+                boost_particle_1.Stop();
+                boost_particle_2.Stop();
+                boost_particle_3.Stop();
+
                 boost_particle_1.gameObject.SetActive(false);
                 boost_particle_2.gameObject.SetActive(false);
                 boost_particle_3.gameObject.SetActive(false);

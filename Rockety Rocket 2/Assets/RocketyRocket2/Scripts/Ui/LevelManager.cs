@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,8 @@ namespace RocketyRocket2
     {
         [SerializeField] private Button[] Levels;
         [SerializeField] private int galaxy = 1;
+
+        [SerializeField] private Image fade;
 
         private void Start()
         {
@@ -27,6 +30,18 @@ namespace RocketyRocket2
 
         private void LoadLevel(string levelName)
         {
+            StartCoroutine(FadeOut(levelName));
+        }
+
+        private IEnumerator FadeOut(string levelName)
+        {
+            fade.gameObject.SetActive(true);
+
+            Tween tween = fade.DOFade(1,1);
+            tween.Play();
+
+            yield return tween.WaitForCompletion();
+
             SceneManager.LoadScene(levelName);
         }
     }
