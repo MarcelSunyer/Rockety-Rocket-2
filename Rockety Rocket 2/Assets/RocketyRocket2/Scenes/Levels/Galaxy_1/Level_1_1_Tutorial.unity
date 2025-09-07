@@ -581,6 +581,7 @@ MonoBehaviour:
   buttonContinue: {fileID: 2126972074}
   buttonTryAgain: {fileID: 481427909}
   buttonMainMenu: {fileID: 2000036002}
+  startEndLevel: {fileID: 193019144}
 --- !u!1 &193019142
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,8 @@ namespace RocketyRocket2
         [SerializeField] private Button buttonTryAgain;
         [SerializeField] private Button buttonMainMenu;
 
+        [SerializeField] private StartEndLevel startEndLevel;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -24,9 +26,30 @@ namespace RocketyRocket2
 
         private void LoadNextLevel()
         {
-            if (Galaxy == 1) {
+            StartCoroutine(LoadNextLevelAnimationClose());
+        }
 
-                SceneManager.LoadScene("Level_1_1" );
+        private void LoadLevelWithoutTutorial()
+        {
+            StartCoroutine(LoadLevelWithoutTutorialAnimationClose());
+        }
+
+        private void GoMainMenu()
+        {
+            StartCoroutine(GoMainMenuAnimationClose());
+        }
+
+        private IEnumerator LoadNextLevelAnimationClose()
+        {
+            buttonContinue.enabled = false;
+            buttonTryAgain.enabled = false;
+            buttonMainMenu.enabled = false;
+            startEndLevel.CloseAnim();
+            yield return new WaitForSeconds(2);
+
+            if (Galaxy == 1)
+            {
+                SceneManager.LoadScene("Level_1_1");
             }
 
             if (Galaxy == 2)
@@ -46,41 +69,53 @@ namespace RocketyRocket2
                 SceneManager.LoadScene("Level_5_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Red.ToString() + 1);
             }
         }
-        private void LoadLevelWithoutTutorial()
+
+        private IEnumerator LoadLevelWithoutTutorialAnimationClose()
         {
+            buttonContinue.enabled = false;
+            buttonTryAgain.enabled = false;
+            buttonMainMenu.enabled = false;
+            startEndLevel.CloseAnim();
+            yield return new WaitForSeconds(2);
+
             Scene currentScene = SceneManager.GetActiveScene();
 
             if (currentScene.name == "Level_1_1_Tutorial")
             {
                 SceneManager.LoadScene("Level_1_1");
-                return;
+                yield return null;
             }
             if (currentScene.name == "Level_2_1_Tutorial")
             {
                 SceneManager.LoadScene("Level_2_1");
-                return;
+                yield return null;
             }
             if (currentScene.name == "Level_3_1_Tutorial")
             {
                 SceneManager.LoadScene("Level_3_1");
-                return;
+                yield return null;
             }
             if (currentScene.name == "Level_4_1_Tutorial")
             {
                 SceneManager.LoadScene("Level_4_1");
-                return;
+                yield return null;
             }
             if (currentScene.name == "Level_5_1_Tutorial")
             {
                 SceneManager.LoadScene("Level_5_1");
-                return;
+                yield return null;
             }
 
             SceneManager.LoadScene(currentScene.name);
         }
 
-        private void GoMainMenu()
+        private IEnumerator GoMainMenuAnimationClose()
         {
+            buttonContinue.enabled = false;
+            buttonTryAgain.enabled = false;
+            buttonMainMenu.enabled = false;
+            startEndLevel.CloseAnim();
+            yield return new WaitForSeconds(2);
             SceneManager.LoadScene("MainMenuBootstrap");
         }
     }

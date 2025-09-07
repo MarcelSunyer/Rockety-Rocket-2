@@ -20,7 +20,6 @@ namespace RocketyRocket2
         [SerializeField] private float second;
         private void Start()
         {
-
             if(arrow != null)
                 arrow.enabled = false;
 
@@ -28,9 +27,6 @@ namespace RocketyRocket2
                 goal.enabled = false;
 
             StartCoroutine(OpenAnim());
-            
-
-
         }
 
         private IEnumerator Test()
@@ -52,16 +48,20 @@ namespace RocketyRocket2
                 yield return new WaitForSeconds(2);
                 if (cameraFollow != null)
                     cameraFollow.enabled = true;
-
             }
+            yield return new WaitForSeconds(5);
+
+
 
         }
         public void CloseAnim()
         {
+
             Tween upTween = upImage.transform.DOMoveY(400, second);
             Tween downTween = downImage.transform.DOMoveY(200, second);
             upTween.Play();
             downTween.Play();
+
         }
     }
 }

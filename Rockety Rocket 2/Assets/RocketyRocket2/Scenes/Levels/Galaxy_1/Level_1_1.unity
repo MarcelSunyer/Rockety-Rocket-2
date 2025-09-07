@@ -520,6 +520,7 @@ MonoBehaviour:
   buttonContinue: {fileID: 2126972074}
   buttonTryAgain: {fileID: 481427909}
   buttonMainMenu: {fileID: 2000036002}
+  startEndLevel: {fileID: 5256622344116083105}
 --- !u!224 &193019143 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2192171346338059469, guid: 4df25563b52f858419157b72c440ef18, type: 3}
@@ -10059,6 +10060,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df25563b52f858419157b72c440ef18, type: 3}
+--- !u!114 &5256622344116083105 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3574329789850444228, guid: 4df25563b52f858419157b72c440ef18, type: 3}
+  m_PrefabInstance: {fileID: 5256622344116083104}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4866864051882e8489665cad1946dbe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
