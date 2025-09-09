@@ -59,7 +59,7 @@ namespace RocketyRocket2
                 Destroy(shipController);
 
                 if (GalaxyNum == 1)
-                    RocketyRocket2Game.Instance.SaveGameManager.Level_Green += 1;
+                    RocketyRocket2Game.Instance.SaveGameManager.Level_Green = PlanetNum + 1;
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
 
                 if (GalaxyNum == 2)
