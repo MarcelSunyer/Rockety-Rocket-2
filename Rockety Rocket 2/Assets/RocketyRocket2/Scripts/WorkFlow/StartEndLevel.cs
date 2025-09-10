@@ -17,7 +17,7 @@ namespace RocketyRocket2
         [SerializeField] private SpriteRenderer arrow;
         [SerializeField] private SpriteRenderer goal;
 
-        [SerializeField] private float second;
+        [SerializeField] private float fadeTimeInOut;
         private void Start()
         {
             if(arrow != null)
@@ -36,10 +36,10 @@ namespace RocketyRocket2
             CloseAnim();
         }
 
-        private IEnumerator OpenAnim()
+        public IEnumerator OpenAnim()
         {
-            Tween upTween = upImage.transform.DOMoveY(2000, second);
-            Tween downTween = downImage.transform.DOMoveY(-900, second);
+            Tween upTween = upImage.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0,2000), fadeTimeInOut);
+            Tween downTween = downImage.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, -2000), fadeTimeInOut);
             upTween.Play();
             downTween.Play();
 
@@ -56,12 +56,10 @@ namespace RocketyRocket2
         }
         public void CloseAnim()
         {
-
-            Tween upTween = upImage.transform.DOMoveY(400, second);
-            Tween downTween = downImage.transform.DOMoveY(200, second);
+            Tween upTween =   upImage.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, -500), fadeTimeInOut / 1.5f);
+            Tween downTween = downImage.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 500), fadeTimeInOut / 1.5f);
             upTween.Play();
             downTween.Play();
-
         }
     }
 }

@@ -96,7 +96,7 @@ namespace RocketyRocket2
                 Messier32Back.onClick.AddListener(Messier32ToGalaxy);
 
             if(fade != null)
-                StartCoroutine(FadeIn());
+                StartCoroutine(FadeIn());           
         }
 
         private IEnumerator FadeIn()

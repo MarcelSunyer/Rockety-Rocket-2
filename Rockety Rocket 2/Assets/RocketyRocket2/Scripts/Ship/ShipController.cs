@@ -1,7 +1,10 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 namespace RocketyRocket2
 {
     public class ShipController : MonoBehaviour
@@ -37,6 +40,11 @@ namespace RocketyRocket2
 
         [Header("TimeToStart")]
         public float TimeToStart;
+
+        [Header("DeathStuff")]
+        public Image FadeDeath;
+        public Button[] DeathButtons;
+        public GameObject textDestroyed;
 
         void Start()
         {
@@ -128,6 +136,7 @@ namespace RocketyRocket2
         {
             if (collision.gameObject.CompareTag("Asteroid"))
             {
+
                 for (int i = 0; i < skins.Length; i++)
                 {
 
@@ -149,14 +158,29 @@ namespace RocketyRocket2
                 collision.gameObject.GetComponent<Collider2D>().enabled = false;
 
                 StartCoroutine(DestroyShip());
-
-               
-
             }
         }
         private IEnumerator DestroyShip()
         {
-            yield return new WaitForSeconds(2);
+            currentState = StateShip.Stop;
+            yield return new WaitForSeconds(1);
+
+            FadeDeath.gameObject.SetActive(true);
+            Tween tween = FadeDeath.DOFade(0.8f, 1);
+            tween.Play();
+            yield return tween.WaitForCompletion();
+
+            textDestroyed.SetActive(true);
+
+            yield return new WaitForSeconds(1f);
+
+
+            for (int i = 0; i < DeathButtons.Length; ++i)
+            {
+                DeathButtons[i].gameObject.SetActive(true);
+                yield return new WaitForSeconds(1.5f);
+            }
+
             Destroy(this.gameObject);
         }
 

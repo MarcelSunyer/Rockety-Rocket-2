@@ -9,19 +9,29 @@ namespace RocketyRocket2
     public class EndLevel : MonoBehaviour
     {
         public int Galaxy;
+        public StartEndLevel startEndLevel;
 
         [SerializeField] private Button buttonContinue;
         [SerializeField] private Button buttonTryAgain;
         [SerializeField] private Button buttonMainMenu;
+        [SerializeField] private Button quitButton;
 
-        [SerializeField] private StartEndLevel startEndLevel;
+
 
         // Start is called before the first frame update
         void Start()
         {
-            buttonContinue.onClick.AddListener(LoadNextLevel);
-            buttonTryAgain.onClick.AddListener(LoadLevelWithoutTutorial);
-            buttonMainMenu.onClick.AddListener(GoMainMenu);
+            if (buttonContinue != null)
+                buttonContinue.onClick.AddListener(LoadNextLevel);
+
+            if (buttonTryAgain != null)
+                buttonTryAgain.onClick.AddListener(LoadLevelWithoutTutorial);
+
+            if (buttonMainMenu != null)
+                buttonMainMenu.onClick.AddListener(GoMainMenu);
+
+            if (quitButton != null)
+                quitButton.onClick.AddListener(QuitGame);
         }
 
         private void LoadNextLevel()
@@ -39,11 +49,25 @@ namespace RocketyRocket2
             StartCoroutine(GoMainMenuAnimationClose());
         }
 
+        private void QuitGame()
+        {
+            StartCoroutine(CloseGame());
+        }
+
         private IEnumerator LoadNextLevelAnimationClose()
         {
-            buttonContinue.enabled = false;
-            buttonTryAgain.enabled = false;
-            buttonMainMenu.enabled = false;
+            if (buttonContinue != null)
+                buttonContinue.enabled = false;
+
+            if (buttonTryAgain != null)
+                buttonTryAgain.enabled = false;
+
+            if (buttonMainMenu != null)
+                buttonMainMenu.enabled = false;
+
+            if (quitButton != null)
+                quitButton.enabled = false;
+
             startEndLevel.CloseAnim();
             yield return new WaitForSeconds(2);
 
@@ -72,9 +96,18 @@ namespace RocketyRocket2
 
         private IEnumerator LoadLevelWithoutTutorialAnimationClose()
         {
-            buttonContinue.enabled = false;
-            buttonTryAgain.enabled = false;
-            buttonMainMenu.enabled = false;
+            if(buttonContinue != null)
+                buttonContinue.enabled = false;
+            
+            if(buttonTryAgain != null)
+                buttonTryAgain.enabled = false;
+
+            if (buttonMainMenu != null)
+                buttonMainMenu.enabled = false;
+
+            if(quitButton != null)
+                quitButton.enabled = false;
+
             startEndLevel.CloseAnim();
             yield return new WaitForSeconds(2);
 
@@ -111,12 +144,27 @@ namespace RocketyRocket2
 
         private IEnumerator GoMainMenuAnimationClose()
         {
-            buttonContinue.enabled = false;
-            buttonTryAgain.enabled = false;
-            buttonMainMenu.enabled = false;
+            if (buttonContinue != null)
+                buttonContinue.enabled = false;
+
+            if (buttonTryAgain != null)
+                buttonTryAgain.enabled = false;
+
+            if (buttonMainMenu != null)
+                buttonMainMenu.enabled = false;
+
+            if (quitButton != null)
+                quitButton.enabled = false;
+
             startEndLevel.CloseAnim();
             yield return new WaitForSeconds(2);
             SceneManager.LoadScene("MainMenuBootstrap");
+        }
+
+        private IEnumerator CloseGame()
+        {
+            yield return new WaitForSeconds(2);
+            Application.Quit();
         }
     }
 }
