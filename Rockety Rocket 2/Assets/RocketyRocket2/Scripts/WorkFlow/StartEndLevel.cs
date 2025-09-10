@@ -38,8 +38,8 @@ namespace RocketyRocket2
 
         public IEnumerator OpenAnim()
         {
-            Tween upTween = upImage.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0,2000), fadeTimeInOut);
-            Tween downTween = downImage.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, -2000), fadeTimeInOut);
+            Tween upTween = upImage.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0,2500), fadeTimeInOut);
+            Tween downTween = downImage.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, -2500), fadeTimeInOut);
             upTween.Play();
             downTween.Play();
 
