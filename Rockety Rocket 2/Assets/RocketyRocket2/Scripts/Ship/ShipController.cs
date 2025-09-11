@@ -94,7 +94,7 @@ namespace RocketyRocket2
             {
                 boost_particle_1.gameObject.SetActive(true);
                 boost_particle_2.gameObject.SetActive(true);
-                boost_particle_3.gameObject.SetActive(false);
+                boost_particle_3.gameObject.SetActive(true);
                 rigidbody2D.velocity = saveVelocity;
                 stopToPlay = false;
             }
@@ -164,10 +164,11 @@ namespace RocketyRocket2
         {
             currentState = StateShip.Stop;
             yield return new WaitForSeconds(1);
+            if(FadeDeath)
+                FadeDeath.gameObject.SetActive(true);
+                Tween tween = FadeDeath.DOFade(0.8f, 1);
+                tween.Play();
 
-            FadeDeath.gameObject.SetActive(true);
-            Tween tween = FadeDeath.DOFade(0.8f, 1);
-            tween.Play();
             yield return tween.WaitForCompletion();
 
             textDestroyed.SetActive(true);
