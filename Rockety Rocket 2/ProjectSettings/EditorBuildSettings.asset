@@ -18,7 +18,10 @@ EditorBuildSettings:
     path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_1/Level_1_1_Tutorial.unity
     guid: 06de3422ea69964418747510538a9785
   - enabled: 1
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_1/Level_1_3.unity
+    guid: aa85e8c61d85a23428a12a53463405ff
+  - enabled: 1
     path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_1/Level_1_2.unity
-    guid: 6a6fd24991a0f2a4ebc0a67d5dd8afca
+    guid: e5f486d89ac80c9498b2401c77db1710
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 5cae969e405f9d9448804d113d248d09, type: 3}
