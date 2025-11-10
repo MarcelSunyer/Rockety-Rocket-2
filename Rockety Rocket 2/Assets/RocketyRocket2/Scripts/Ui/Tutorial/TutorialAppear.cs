@@ -36,8 +36,8 @@ namespace RocketyRocket2
            cam.GetComponent<CameraFollow>().enabled = false;
 
            startGameplay.onClick.AddListener(StartGamePlay);
-            startGameplay.Select();
-            shipState.enabled = false;
+           startGameplay.Select();
+           shipState.enabled = false;
         }
 
         private void StartGamePlay()
