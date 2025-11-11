@@ -11,12 +11,13 @@ namespace RocketyRocket2
         [SerializeField] private Image tankGas;
 
         [SerializeField] private Slider slider;
-        [SerializeField] private float LowingValue;
+        [SerializeField] private float lowingValue;
+        [SerializeField] private ParticleSystem boost;
 
         // Start is called before the first frame update
         void Start()
         {
-            LowingValue = LowingValue / 1000;
+            lowingValue = lowingValue / 5000;
 
             StartCoroutine(UpdateTankBar());
         }
@@ -25,13 +26,15 @@ namespace RocketyRocket2
         {
             while (true)
             {
-                slider.value += LowingValue;
+                slider.value += lowingValue;
                 yield return new WaitForEndOfFrame();
 
-                if(slider.value <= 1)
+                if(slider.value >= 1)
                 {
-                    yield return new WaitForSeconds(1);
+                    boost.Stop();
+                    yield return new WaitForSeconds(3);
                     slider.value = 0;
+                    boost.Play();
                 }
 
             }

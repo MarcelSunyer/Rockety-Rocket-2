@@ -3,18 +3,19 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.ParticleSystem;
 
 namespace RocketyRocket2
 {
     public class TutorialAppear : MonoBehaviour
     {
+
+
         [SerializeField] private ShipController shipState;
 
         [SerializeField] private GameObject cam;
 
         [SerializeField] private Button startGameplay;
-
-        [SerializeField] private Image fade;
 
         [SerializeField] private GameObject particleTutorial;
 
@@ -30,14 +31,23 @@ namespace RocketyRocket2
 
         [SerializeField] private SpriteRenderer arrow; 
 
+        [SerializeField] private GameObject particles;
+
+        
+
         void Start()
         {
+
+            particles.SetActive(false);
            shipState.currentState = ShipController.StateShip.Stop;
            cam.GetComponent<CameraFollow>().enabled = false;
+
 
            startGameplay.onClick.AddListener(StartGamePlay);
            startGameplay.Select();
            shipState.enabled = false;
+
+           
         }
 
         private void StartGamePlay()
@@ -47,29 +57,51 @@ namespace RocketyRocket2
 
         private IEnumerator HideTutorialAndMove()
         {
-            particleTutorial.gameObject.SetActive(false);
+            if (particleTutorial != null)
+            {
+                particleTutorial.gameObject.SetActive(false);
 
+            }
             Tween tween = gameObject.transform.DOMoveY(-200, 2);
             tween.Play();
             yield return tween.WaitForCompletion();
 
-            tween = fade.DOFade(0f,1f);
-            tween.Play();
+            if (shipTutorial != null)
+            {
+                tween = shipTutorial.DOFade(0f, 1f);
+                tween.Play();
+            }
 
-            tween = shipTutorial.DOFade(0f, 1f);
-            tween.Play();
+            if (endTutorial != null)
+            {
+                tween = endTutorial.DOFade(0f, 1f);
+                tween.Play();
+            }
+            if (notendGameplay != null)
+            {
+                tween = notendGameplay.DOFade(0f, 1f);
+                tween.Play();
+            }
+
            
-            tween = endTutorial.DOFade(0f, 1f);
-            tween.Play();
-            
-            tween = notendGameplay.DOFade(0f, 1f);
-            tween.Play();
-            tutorialScript.enabled = false;
             cam.GetComponent<CameraFollow>().enabled = true;
             yield return new WaitForSeconds(2);
-            goal.enabled = false;
 
-            arrow.enabled = false;
+            if (goal != null)
+            {
+                goal.enabled = false;
+            }
+            if (arrow != null)
+            {
+                arrow.enabled = false;
+            }
+            //Activar particulas de boost al terminar el tutorial
+            particles.SetActive(true);
+            if(tutorialScript != null)
+            { 
+                tutorialScript.enabled = false;
+            }
+           
             shipState.enabled = true;
             shipState.currentState = ShipController.StateShip.Playing;
 

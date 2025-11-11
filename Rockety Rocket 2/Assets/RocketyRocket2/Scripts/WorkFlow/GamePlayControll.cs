@@ -14,7 +14,6 @@ namespace RocketyRocket2
         public bool clicked = false;
         void Update()
         {
-
             RestartLevel();
         }
 
