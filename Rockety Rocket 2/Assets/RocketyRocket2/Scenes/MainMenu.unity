@@ -2899,10 +2899,6 @@ MonoBehaviour:
   - {fileID: 59354830}
   - {fileID: 1044319608}
   - {fileID: 1446824268}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   updateLevels: {fileID: 1794614542}
 --- !u!114 &319440927
 MonoBehaviour:
@@ -2974,7 +2970,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 7e0ea2f0ee5788c4483ad76fdcdfc1b2, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: c72a5e225d716674b8cf16fd408c60a9, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: cf7420ac58e936e4f833275f0e9a3c00, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -9753,7 +9749,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: af5f6fcd963b6174d87176a905bac8f7, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 5df5058184b99444d97bb73743e2d96a, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: 920abf401cecbc54692490dcb2d4bad9, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -13722,7 +13718,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: af5f6fcd963b6174d87176a905bac8f7, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 5df5058184b99444d97bb73743e2d96a, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: 920abf401cecbc54692490dcb2d4bad9, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -15380,7 +15376,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 7e0ea2f0ee5788c4483ad76fdcdfc1b2, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: c72a5e225d716674b8cf16fd408c60a9, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: cf7420ac58e936e4f833275f0e9a3c00, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
