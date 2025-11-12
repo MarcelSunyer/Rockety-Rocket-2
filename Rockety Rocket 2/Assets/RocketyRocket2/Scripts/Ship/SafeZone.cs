@@ -8,6 +8,7 @@ namespace RocketyRocket2
 {
     public class SafeZone : MonoBehaviour
     {
+        //Keep Updateing Levels
         public int GalaxyNum = 1;
         public int PlanetNum = 1;
 
