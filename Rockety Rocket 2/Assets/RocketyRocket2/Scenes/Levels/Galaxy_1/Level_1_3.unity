@@ -464,6 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36646fbde3e0364ab9872e3ac9ca224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NextLevelIsTutorial: 1
   Galaxy: 1
   startEndLevel: {fileID: 5256622344116083105}
   buttonContinue: {fileID: 2126972074}
@@ -844,7 +845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &347650867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8791,7 +8792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GalaxyNum: 1
-  PlanetNum: 2
+  PlanetNum: 3
   idle: {r: 1, g: 1, b: 1, a: 1}
   idleColor: {r: 0.27822578, g: 1, b: 0.38709667, a: 1}
   lerpSpeed: 1

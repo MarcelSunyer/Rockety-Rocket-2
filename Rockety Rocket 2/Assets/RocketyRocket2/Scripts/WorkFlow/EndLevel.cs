@@ -8,6 +8,7 @@ namespace RocketyRocket2
 {
     public class EndLevel : MonoBehaviour
     {
+        public bool NextLevelIsTutorial;
         public int Galaxy;
         public StartEndLevel startEndLevel;
 
@@ -73,12 +74,26 @@ namespace RocketyRocket2
 
             if (Galaxy == 1)
             {
-                SceneManager.LoadScene("Level_1_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Green.ToString());
+                if (NextLevelIsTutorial)
+                {
+                    SceneManager.LoadScene("Level_1_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Green.ToString() + "_Tutorial");
+                }
+                else
+                {
+                    SceneManager.LoadScene("Level_1_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Green.ToString());
+                }
             }
 
             if (Galaxy == 2)
             {
-                SceneManager.LoadScene("Level_2_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Blue.ToString());
+                if (NextLevelIsTutorial)
+                {
+                    SceneManager.LoadScene("Level_2_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Blue.ToString() + "_Tutorial");
+                }
+                else
+                {
+                    SceneManager.LoadScene("Level_2_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Blue.ToString());
+                }
             }
             if (Galaxy == 3)
             {
