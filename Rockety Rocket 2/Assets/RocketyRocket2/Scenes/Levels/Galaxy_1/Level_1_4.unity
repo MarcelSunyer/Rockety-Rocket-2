@@ -356,7 +356,7 @@ Transform:
   m_GameObject: {fileID: 140255950}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.76, y: -6.15, z: 0.043967873}
+  m_LocalPosition: {x: 15.8, y: -12.28, z: 0.043967873}
   m_LocalScale: {x: 0.5669, y: 0.5669, z: 0.5669}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1244,8 +1244,8 @@ Transform:
   m_GameObject: {fileID: 443307891}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.85, y: -9.35, z: 0.043967873}
-  m_LocalScale: {x: 0.5669, y: 0.5669, z: 0.5669}
+  m_LocalPosition: {x: -10.17, y: -14.33, z: 0.043967873}
+  m_LocalScale: {x: 1.3786441, y: 1.3786441, z: 1.3786441}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 470931041}
@@ -1292,7 +1292,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -30
   m_Sprite: {fileID: 21300000, guid: 74bfb7585a7ec754c84c8ac658aa6839, type: 3}
-  m_Color: {r: 0, g: 0.5676286, b: 1, a: 0.07058824}
+  m_Color: {r: 0, g: 0.5676286, b: 1, a: 0.16862746}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6611,7 +6611,7 @@ Transform:
   m_GameObject: {fileID: 828211815}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.86, y: -12.26, z: 0.043967873}
+  m_LocalPosition: {x: 15.48, y: -3.15, z: 0.043967873}
   m_LocalScale: {x: 0.5669, y: 0.5669, z: 0.5669}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7576,8 +7576,8 @@ Transform:
   m_GameObject: {fileID: 1440425955}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.42, y: -1.09, z: 0.043967873}
-  m_LocalScale: {x: 0.5669, y: 0.5669, z: 0.5669}
+  m_LocalPosition: {x: 9.01, y: -9.14, z: 0.043967873}
+  m_LocalScale: {x: 0.79740155, y: 0.79740155, z: 0.79740155}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 470931041}
@@ -7624,7 +7624,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -30
   m_Sprite: {fileID: 21300000, guid: 74bfb7585a7ec754c84c8ac658aa6839, type: 3}
-  m_Color: {r: 1, g: 0.60249305, b: 0, a: 0.019607844}
+  m_Color: {r: 1, g: 0.60249305, b: 0, a: 0.05490196}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
