@@ -32,8 +32,10 @@ namespace RocketyRocket2
         [SerializeField] private SpriteRenderer arrow; 
 
         [SerializeField] private GameObject particles;
-
         
+        //Fade background fadetoblack
+        [SerializeField] private Image fade;
+
 
         void Start()
         {
@@ -65,6 +67,12 @@ namespace RocketyRocket2
             Tween tween = gameObject.transform.DOMoveY(-200, 2);
             tween.Play();
             yield return tween.WaitForCompletion();
+
+            if (tween != null)
+            {
+                tween = fade.DOFade(0f, 1f);
+                tween.Play();
+            }
 
             if (shipTutorial != null)
             {

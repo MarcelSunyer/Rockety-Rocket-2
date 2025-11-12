@@ -90,7 +90,7 @@ namespace RocketyRocket2
             }
             if (Galaxy == 5)
             {
-                SceneManager.LoadScene("Level_5_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Red.ToString() + 1);
+                SceneManager.LoadScene("Level_5_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Red.ToString());
             }
         }
 
@@ -113,9 +113,16 @@ namespace RocketyRocket2
 
             Scene currentScene = SceneManager.GetActiveScene();
 
+
+            //Add scenes with tutorial
             if (currentScene.name == "Level_1_1_Tutorial")
             {
                 SceneManager.LoadScene("Level_1_1");
+                yield return null;
+            }
+            if (currentScene.name == "Level_1_4_Tutorial")
+            {
+                SceneManager.LoadScene("Level_1_4");
                 yield return null;
             }
             if (currentScene.name == "Level_2_1_Tutorial")
