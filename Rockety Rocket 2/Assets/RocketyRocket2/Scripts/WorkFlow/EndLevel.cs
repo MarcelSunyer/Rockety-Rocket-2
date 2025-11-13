@@ -9,7 +9,11 @@ namespace RocketyRocket2
     public class EndLevel : MonoBehaviour
     {
         public bool NextLevelIsTutorial;
+        
         public int Galaxy;
+
+        public bool IsNextLevelAnotherGalxy;
+
         public StartEndLevel startEndLevel;
 
         [SerializeField] private Button buttonContinue;
@@ -72,40 +76,113 @@ namespace RocketyRocket2
             startEndLevel.CloseAnim();
             yield return new WaitForSeconds(2);
 
-            if (Galaxy == 1)
+            if (IsNextLevelAnotherGalxy)
             {
-                if (NextLevelIsTutorial)
+                switch (Galaxy)
                 {
-                    SceneManager.LoadScene("Level_1_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Green.ToString() + "_Tutorial");
+                    case 1:
+                        if (NextLevelIsTutorial)
+                        {
+                            SceneManager.LoadScene("Level_2_1_Tutorial");
+                        }
+                        else
+                        {
+                            SceneManager.LoadScene("Level_2_1");
+                        }
+                        break;
+                    case 2:
+                        if (NextLevelIsTutorial)
+                        {
+                            SceneManager.LoadScene("Level_3_1_Tutorial");
+                        }
+                        else
+                        {
+                            SceneManager.LoadScene("Level_3_1");
+                        }
+                        break;
+                    case 3:
+                        if (NextLevelIsTutorial)
+                        {
+                            SceneManager.LoadScene("Level_4_1_Tutorial");
+                        }
+                        else
+                        {
+                            SceneManager.LoadScene("Level_4_1");
+                        }
+                        break;
+                    case 4:
+                        if (NextLevelIsTutorial)
+                        {
+                            SceneManager.LoadScene("Level_5_1_Tutorial");
+                        }
+                        else
+                        {
+                            SceneManager.LoadScene("Level_5_1" );
+                        }
+                        break;
                 }
-                else
-                {
-                    SceneManager.LoadScene("Level_1_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Green.ToString());
-                }
-            }
 
-            if (Galaxy == 2)
+
+            }
+            else
             {
-                if (NextLevelIsTutorial)
+
+                if (Galaxy == 1)
                 {
-                    SceneManager.LoadScene("Level_2_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Blue.ToString() + "_Tutorial");
+                    if (NextLevelIsTutorial)
+                    {
+                        SceneManager.LoadScene("Level_1_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Green.ToString() + "_Tutorial");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("Level_1_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Green.ToString());
+                    }
                 }
-                else
+
+                if (Galaxy == 2)
                 {
-                    SceneManager.LoadScene("Level_2_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Blue.ToString());
+                    if (NextLevelIsTutorial)
+                    {
+                        SceneManager.LoadScene("Level_2_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Blue.ToString() + "_Tutorial");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("Level_2_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Blue.ToString());
+                    }
                 }
-            }
-            if (Galaxy == 3)
-            {
-                SceneManager.LoadScene("Level_3_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Purple.ToString());
-            }
-            if (Galaxy == 4)
-            {
-                SceneManager.LoadScene("Level_4_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Orange.ToString());
-            }
-            if (Galaxy == 5)
-            {
-                SceneManager.LoadScene("Level_5_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Red.ToString());
+                if (Galaxy == 3)
+                {
+                    if (NextLevelIsTutorial)
+                    {
+                        SceneManager.LoadScene("Level_3_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Purple.ToString() + "_Tutorial");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("Level_3_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Purple.ToString());
+                    }
+                }
+                if (Galaxy == 4)
+                {
+                    if (NextLevelIsTutorial)
+                    {
+                        SceneManager.LoadScene("Level_4_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Orange.ToString() + "_Tutorial");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("Level_4_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Orange.ToString());
+                    }
+                }
+                if (Galaxy == 5)
+                {
+                    if (NextLevelIsTutorial)
+                    {
+                        SceneManager.LoadScene("Level_5_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Red.ToString() + "_Tutorial");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("Level_5_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Red.ToString());
+                    }
+                }
             }
         }
 

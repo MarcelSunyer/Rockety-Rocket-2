@@ -554,8 +554,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36646fbde3e0364ab9872e3ac9ca224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevelIsTutorial: 0
+  NextLevelIsTutorial: 1
   Galaxy: 1
+  IsNextLevelAnotherGalxy: 1
   startEndLevel: {fileID: 5256622344116083105}
   buttonContinue: {fileID: 2126972074}
   buttonTryAgain: {fileID: 481427909}
@@ -10375,7 +10376,7 @@ Transform:
   m_GameObject: {fileID: 2137142210}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.81, y: -0.74, z: 24.9}
+  m_LocalPosition: {x: -2.36, y: -0.74, z: 24.9}
   m_LocalScale: {x: 4.43087, y: 4.43087, z: 4.43087}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10395,7 +10396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GalaxyNum: 1
-  PlanetNum: 5
+  PlanetNum: 6
   idle: {r: 1, g: 1, b: 1, a: 1}
   idleColor: {r: 0.27822578, g: 1, b: 0.38709667, a: 1}
   lerpSpeed: 1
@@ -10627,7 +10628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2082795046607584659, guid: 4df25563b52f858419157b72c440ef18, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2192171346338059469, guid: 4df25563b52f858419157b72c440ef18, type: 3}
       propertyPath: m_Pivot.x
