@@ -547,6 +547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextLevelIsTutorial: 0
   Galaxy: 1
+  IsNextLevelAnotherGalxy: 0
   startEndLevel: {fileID: 5256622344116083105}
   buttonContinue: {fileID: 2126972074}
   buttonTryAgain: {fileID: 481427909}
@@ -6767,7 +6768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8724450969297842984, guid: d16395826747f7f4cac904e791cf6830, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

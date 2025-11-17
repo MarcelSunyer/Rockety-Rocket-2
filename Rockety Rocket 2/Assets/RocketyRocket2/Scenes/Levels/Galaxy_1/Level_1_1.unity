@@ -711,7 +711,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36646fbde3e0364ab9872e3ac9ca224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NextLevelIsTutorial: 0
   Galaxy: 1
+  IsNextLevelAnotherGalxy: 0
   startEndLevel: {fileID: 5256622344116083105}
   buttonContinue: {fileID: 2126972074}
   buttonTryAgain: {fileID: 481427909}
@@ -7302,7 +7304,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.013714, y: 1.0065808, z: 0.043967873}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 470931041}

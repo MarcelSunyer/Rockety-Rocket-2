@@ -46,20 +46,27 @@ namespace RocketyRocket2
         public Button[] DeathButtons;
         public GameObject textDestroyed;
 
+        [Header("Boost")]
+        public float valueBoost;
+        [SerializeField] private Slider sliderBoost;
+
         void Start()
         {
-            currentState = StateShip.Stop;
-            StartCoroutine(WaitToStart());
-
-            for (int i = 0; i < skins.Length; i++)
+            if (skins != null)
             {
-                if (skins[i].name == "Skin_" + RocketyRocket2Game.Instance.SaveGameManager.Skin)
+                currentState = StateShip.Stop;
+                StartCoroutine(WaitToStart());
+
+                for (int i = 0; i < skins.Length; i++)
                 {
-                    skins[i].SetActive(true);
-                }
-                else
-                {
-                    skins[i].SetActive(false);
+                    if (skins[i].name == "Skin_" + RocketyRocket2Game.Instance.SaveGameManager.Skin)
+                    {
+                        skins[i].SetActive(true);
+                    }
+                    else
+                    {
+                        skins[i].SetActive(false);
+                    }
                 }
             }
 
@@ -79,6 +86,14 @@ namespace RocketyRocket2
                     break;
             }
 
+            if (sliderBoost != null)
+            {
+                if (sliderBoost.value >= 1000)
+                {
+                    currentState = StateShip.Stop;
+                }
+            }
+            //Slider value reversed
 
             if (boostInput == 0)
             {
@@ -86,10 +101,18 @@ namespace RocketyRocket2
                 boost_particle_2.Stop();
                 boost_particle_3.Stop();
             }
+            else
+            {
+                if (sliderBoost != null)
+                {
+                    sliderBoost.value += valueBoost;
+                }
+            }
         }
 
         private void MoveShip()
         {
+
             if(stopToPlay)
             {
                 boost_particle_1.gameObject.SetActive(true);
@@ -109,15 +132,41 @@ namespace RocketyRocket2
 
         private void StopShip()
         {
-            boost_particle_1.gameObject.SetActive(false);
-            boost_particle_2.gameObject.SetActive(false);
-            boost_particle_3.gameObject.SetActive(false);
+           
             rotationInput = 0;
 
             stopToPlay = true;
             boostInput = 0;
+            if (sliderBoost != null)
+            {
+                if (sliderBoost.value >= 1000)
+                {
+                    StartCoroutine(StopParticles());
+                    if (rigidbody2D.rotation < 0)
+                    {
+                        rigidbody2D.rotation -= rotationSpeed * Time.fixedDeltaTime;
+                        return;
+                    }
+
+                    if (rigidbody2D.rotation > 0)
+                    {
+                        rigidbody2D.rotation -= -rotationSpeed * Time.fixedDeltaTime;
+                        return;
+                    }
+
+                }
+            }
             rigidbody2D.AddForce(Vector2.zero);
             rigidbody2D.velocity = Vector2.zero;
+        }
+
+        public IEnumerator StopParticles()
+        {
+            yield return new WaitForSeconds(2);
+
+            boost_particle_1.gameObject.SetActive(false);
+            boost_particle_2.gameObject.SetActive(false);
+            boost_particle_3.gameObject.SetActive(false);
         }
         public void Rotation(InputAction.CallbackContext context)
         {
@@ -130,6 +179,8 @@ namespace RocketyRocket2
             boost_particle_1.Play();
             boost_particle_2.Play();
             boost_particle_3.Play();
+
+            
         }
 
         private void OnCollisionEnter2D(Collision2D collision)

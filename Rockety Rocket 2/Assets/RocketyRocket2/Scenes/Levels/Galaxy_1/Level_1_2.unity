@@ -466,6 +466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextLevelIsTutorial: 0
   Galaxy: 1
+  IsNextLevelAnotherGalxy: 0
   startEndLevel: {fileID: 5256622344116083105}
   buttonContinue: {fileID: 2126972074}
   buttonTryAgain: {fileID: 481427909}
@@ -8755,7 +8756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2082795046607584659, guid: 4df25563b52f858419157b72c440ef18, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2192171346338059469, guid: 4df25563b52f858419157b72c440ef18, type: 3}
       propertyPath: m_Pivot.x
