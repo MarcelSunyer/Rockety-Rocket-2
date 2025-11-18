@@ -14655,7 +14655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1589306178596232472
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15093,12 +15093,13 @@ MonoBehaviour:
   - {fileID: 1148455791346119224}
   - {fileID: 8574251344904661531}
   - {fileID: 3678315551788339174}
-  TimeToStart: 0
+  TimeToStart: 3
   FadeDeath: {fileID: 0}
   DeathButtons: []
   textDestroyed: {fileID: 0}
-  valueBoost: 0
-  sliderBoost: {fileID: 0}
+  valueBoost: 1
+  sliderBoost: {fileID: 5302014562166046088}
+  activeBoost: 1
 --- !u!1 &2968015558697662207
 GameObject:
   m_ObjectHideFlags: 0
@@ -25279,7 +25280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7650952532886183455
 RectTransform:
   m_ObjectHideFlags: 0

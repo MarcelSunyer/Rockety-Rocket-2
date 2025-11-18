@@ -49,6 +49,7 @@ namespace RocketyRocket2
         [Header("Boost")]
         public float valueBoost;
         [SerializeField] private Slider sliderBoost;
+        [SerializeField] private bool activeBoost = true;
 
         void Start()
         {
@@ -69,7 +70,10 @@ namespace RocketyRocket2
                     }
                 }
             }
-
+            if (activeBoost)
+            {
+                sliderBoost.gameObject.SetActive(true);
+            }
 
         }
         void FixedUpdate()
@@ -86,7 +90,7 @@ namespace RocketyRocket2
                     break;
             }
 
-            if (sliderBoost != null)
+            if (sliderBoost != null && activeBoost)
             {
                 if (sliderBoost.value >= 1000)
                 {
@@ -103,7 +107,7 @@ namespace RocketyRocket2
             }
             else
             {
-                if (sliderBoost != null)
+                if (sliderBoost != null && activeBoost)
                 {
                     sliderBoost.value += valueBoost;
                 }
@@ -137,7 +141,7 @@ namespace RocketyRocket2
 
             stopToPlay = true;
             boostInput = 0;
-            if (sliderBoost != null)
+            if (sliderBoost != null && activeBoost)
             {
                 if (sliderBoost.value >= 1000)
                 {
@@ -179,8 +183,6 @@ namespace RocketyRocket2
             boost_particle_1.Play();
             boost_particle_2.Play();
             boost_particle_3.Play();
-
-            
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
