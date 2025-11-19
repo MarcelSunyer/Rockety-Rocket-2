@@ -8,10 +8,11 @@ namespace RocketyRocket2
 {
     public class StartEndLevel : MonoBehaviour
     {
+        public bool isTutorial;
+
         [SerializeField] private GameObject upImage;
         [SerializeField] private GameObject downImage;
 
-        [SerializeField] private bool isTutorial;
         [SerializeField] private CameraFollow cameraFollow;
 
         [SerializeField] private SpriteRenderer arrow;
