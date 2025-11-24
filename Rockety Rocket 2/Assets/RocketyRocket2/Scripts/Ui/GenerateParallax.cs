@@ -11,6 +11,7 @@ namespace RocketyRocket2
         public GameObject[] stars = new GameObject[150];
         [Range(0f, 1f)]
         public float alpha = 0.5f;
+        public GameObject parent;
 
         void Start()
         {
@@ -24,6 +25,7 @@ namespace RocketyRocket2
 
                     var newStar = Instantiate(star, randomPos, Quaternion.identity);
                     stars[count] = newStar;
+                    stars[count].gameObject.transform.parent = parent.transform;
                     count++;
                 }
             }
