@@ -1,4 +1,4 @@
-﻿Shader "Custom/MainMenuShader"
+﻿Shader "Custom/Shader Galaxy"
 {
     Properties
     {
