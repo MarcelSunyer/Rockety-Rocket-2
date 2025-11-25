@@ -68,11 +68,11 @@ Material:
     - _Metallic: 0.43
     - _Randomness: 2
     - _Rotation: 0
-    - _Speed: 0.1
+    - _Speed: 0.26
     - _StarAmount: 0.22
     - _StarBrightness: 1.5
-    - _StarDensity: 1
-    - _StarSize: 0.017
+    - _StarDensity: 0.3
+    - _StarSize: 0.025
     - _StarTwinkleSpeed: 2
     - _StarsIntensity: 0.35
     - _TrailLength: 3
@@ -86,6 +86,6 @@ Material:
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _SecondaryColor: {r: 0.15231623, g: 0.1792453, b: 0.13781595, a: 1}
-    - _TertiaryColor: {r: 0.4241963, g: 0.9339623, b: 0.4008989, a: 0.65882355}
+    - _TertiaryColor: {r: 0.042452812, g: 1, b: 0.47277105, a: 0.65882355}
     - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_BuildTextureStacks: []

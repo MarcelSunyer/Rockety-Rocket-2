@@ -9949,6 +9949,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 358192429}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: TimeToStart
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: activeBoost
       value: 0
       objectReference: {fileID: 0}

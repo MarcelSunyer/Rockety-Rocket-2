@@ -68,11 +68,11 @@ Material:
     - _Metallic: 0.43
     - _Randomness: 2
     - _Rotation: 0
-    - _Speed: 0.1
+    - _Speed: 0.26
     - _StarAmount: 0.22
     - _StarBrightness: 1.5
-    - _StarDensity: 1
-    - _StarSize: 0.017
+    - _StarDensity: 0.3
+    - _StarSize: 0.025
     - _StarTwinkleSpeed: 2
     - _StarsIntensity: 0.35
     - _TrailLength: 3
