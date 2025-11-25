@@ -35,7 +35,7 @@ namespace RocketyRocket2
             }
             updateLevels.onClick.AddListener(UpdateLevels);
         }
-        private void UpdateLevels()
+        public void UpdateLevels()
         {
             for (int i = levels.Length - 1; i >= LevelsOperative; --i)
             {

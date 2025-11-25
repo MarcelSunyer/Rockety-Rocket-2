@@ -11,31 +11,35 @@ namespace RocketyRocket2
         public Button[] Galaxies;
         public Button UpdateStateGalaxies;
 
-        public int galaxiesLocked = 1;
+        public Color color;
+
+        public int galaxiesLocked = 0;
 
         private void Start()
         {
             UpdateStateGalaxies.onClick.AddListener(UnlockGalxies);
         }
 
-        private void UnlockGalxies()
+        public void UnlockGalxies()
         {
-            if(RocketyRocket2Game.Instance.SaveGameManager.Level_Green ==11)
+            if(RocketyRocket2Game.Instance.SaveGameManager.Level_Green ==7)
+            {
+                galaxiesLocked = 1;
+            }
+            if (RocketyRocket2Game.Instance.SaveGameManager.Level_Blue == 7)
             {
                 galaxiesLocked = 2;
             }
-            if (RocketyRocket2Game.Instance.SaveGameManager.Level_Blue == 11)
+            if (RocketyRocket2Game.Instance.SaveGameManager.Level_Purple == 7)
             {
                 galaxiesLocked = 3;
             }
-            if (RocketyRocket2Game.Instance.SaveGameManager.Level_Purple == 11)
+            if (RocketyRocket2Game.Instance.SaveGameManager.Level_Orange == 7)
             {
                 galaxiesLocked = 4;
             }
-            if (RocketyRocket2Game.Instance.SaveGameManager.Level_Orange == 11)
-            {
-                galaxiesLocked = 5;
-            }
+
+
 
             for (int i = Galaxies.Length - 1; i >= galaxiesLocked; --i)
             {
@@ -43,6 +47,15 @@ namespace RocketyRocket2
                 Galaxies[i].GetComponentInChildren<SpriteRenderer>().color = Color.black;
 
                 Galaxies[i].interactable = false;
+
+            }
+
+            for (int i = 0; i <= galaxiesLocked; ++i)
+            {
+                Galaxies[i].image.color = color;
+                Galaxies[i].GetComponentInChildren<SpriteRenderer>().color = Color.white;
+
+                Galaxies[i].interactable = true;
 
             }
         }
