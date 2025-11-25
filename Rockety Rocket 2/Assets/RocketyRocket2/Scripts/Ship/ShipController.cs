@@ -232,7 +232,7 @@ namespace RocketyRocket2
             for (int i = 0; i < DeathButtons.Length; ++i)
             {
                 DeathButtons[i].gameObject.SetActive(true);
-                yield return new WaitForSeconds(1.5f);
+                yield return new WaitForSeconds(0.75f);
             }
 
             Destroy(this.gameObject);
