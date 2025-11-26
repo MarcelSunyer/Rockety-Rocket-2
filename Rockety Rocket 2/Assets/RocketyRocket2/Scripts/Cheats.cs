@@ -30,7 +30,7 @@ public class Cheats : MonoBehaviour
 
     private void OpenCheats()
     {
-
+        levels[0].LevelsOperative = 6;
         RocketyRocket2Game.Instance.SaveGameManager.Level_Green = 7;
 
         RocketyRocket2Game.Instance.SaveGameManager.Level_Blue = 7;
@@ -42,7 +42,7 @@ public class Cheats : MonoBehaviour
         RocketyRocket2Game.Instance.SaveGameManager.Level_Red = 7;
 
         unlockedGalaxies.UnlockGalxies();
-        levels[0].LevelsOperative = 6;
+
         for (int i = 0; i < levels.Length; ++i)
         {
             levels[i].LevelsOperative = 6;
