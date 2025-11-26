@@ -1228,7 +1228,7 @@ GameObject:
   - component: {fileID: 128529068}
   - component: {fileID: 128529067}
   m_Layer: 5
-  m_Name: Level_5
+  m_Name: Level_2_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13192,7 +13192,7 @@ GameObject:
   - component: {fileID: 1505369315}
   - component: {fileID: 1505369314}
   m_Layer: 5
-  m_Name: Level_4
+  m_Name: Level_2_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14271,7 +14271,7 @@ GameObject:
   - component: {fileID: 1662699789}
   - component: {fileID: 1662699788}
   m_Layer: 5
-  m_Name: Level_6
+  m_Name: Level_2_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14401,6 +14401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1680051599}
   - component: {fileID: 1680051600}
+  - component: {fileID: 1680051601}
   m_Layer: 0
   m_Name: SagDEG
   m_TagString: Untagged
@@ -14454,6 +14455,27 @@ MonoBehaviour:
   - {fileID: 128529067}
   - {fileID: 1662699788}
   updateLevels: {fileID: 2093869186}
+--- !u!114 &1680051601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680051598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ff266235884fc4687ee3d4aa99bdd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Levels:
+  - {fileID: 1809898830}
+  - {fileID: 2009726498}
+  - {fileID: 1791925672}
+  - {fileID: 1505369314}
+  - {fileID: 128529067}
+  - {fileID: 1662699788}
+  galaxy: 2
+  fade: {fileID: 274621051}
 --- !u!1 &1712428105
 GameObject:
   m_ObjectHideFlags: 0
@@ -15319,7 +15341,7 @@ GameObject:
   - component: {fileID: 1791925673}
   - component: {fileID: 1791925672}
   m_Layer: 5
-  m_Name: Level_3
+  m_Name: Level_2_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16118,7 +16140,7 @@ GameObject:
   - component: {fileID: 1809898831}
   - component: {fileID: 1809898830}
   m_Layer: 5
-  m_Name: Level_1
+  m_Name: Level_2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17937,7 +17959,7 @@ GameObject:
   - component: {fileID: 2009726499}
   - component: {fileID: 2009726498}
   m_Layer: 5
-  m_Name: Level_2
+  m_Name: Level_2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
