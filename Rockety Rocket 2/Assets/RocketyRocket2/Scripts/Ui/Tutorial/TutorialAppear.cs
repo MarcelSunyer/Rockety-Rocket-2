@@ -113,7 +113,9 @@ namespace RocketyRocket2
             shipState.enabled = true;
             shipState.currentState = ShipController.StateShip.Playing;
 
+            yield return new WaitForSeconds(1);
 
+            gameObject.SetActive(false);
         }
 
     }

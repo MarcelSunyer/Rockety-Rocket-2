@@ -9,6 +9,8 @@ namespace RocketyRocket2
 {
     public class PauseMenu : MonoBehaviour
     {
+        public GameObject TutorialIsActive;
+
         [SerializeField] private StartEndLevel SEL_isTutorial;
 
         [SerializeField] private GameObject pauseMenu;
@@ -39,13 +41,22 @@ namespace RocketyRocket2
 
         // Update is called once per frame
         void Update()
-
         {
-            if (!pauseActive && Input.GetKeyDown(KeyCode.Escape))
+
+            if(TutorialIsActive == null)
+            {
+                if (!pauseActive && Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseActive();
+                    return;
+                }
+
+            } else if(!pauseActive && Input.GetKeyDown(KeyCode.Escape) && !TutorialIsActive.active)
             {
                 PauseActive();
                 return;
             }
+
         }
 
         private void PauseActive()

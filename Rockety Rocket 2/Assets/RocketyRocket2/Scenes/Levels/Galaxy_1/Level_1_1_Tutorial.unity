@@ -9054,6 +9054,10 @@ PrefabInstance:
       propertyPath: shipController
       value: 
       objectReference: {fileID: 1448262378}
+    - target: {fileID: 4427022524175426421, guid: 07156247122480e4dacca4158551259b, type: 3}
+      propertyPath: TutorialIsActive
+      value: 
+      objectReference: {fileID: 1968289505}
     - target: {fileID: 8202211516721520224, guid: 07156247122480e4dacca4158551259b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -9339,6 +9343,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1968289505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3797320339823524701, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+  m_PrefabInstance: {fileID: 4735758217398302213}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1974989049
 GameObject:
   m_ObjectHideFlags: 0
