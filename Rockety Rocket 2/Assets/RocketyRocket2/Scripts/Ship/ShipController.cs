@@ -74,7 +74,7 @@ namespace RocketyRocket2
             {
                 sliderBoost.gameObject.SetActive(true);
             }
-
+            boostForce = boostForce / 30000;
         }
         void FixedUpdate()
         {
@@ -92,7 +92,7 @@ namespace RocketyRocket2
 
             if (sliderBoost != null && activeBoost)
             {
-                if (sliderBoost.value >= 1000)
+                if (sliderBoost.value >= sliderBoost.maxValue)
                 {
                     currentState = StateShip.Stop;
                 }
@@ -128,7 +128,7 @@ namespace RocketyRocket2
             rigidbody2D.rotation -= rotationInput * rotationSpeed * Time.fixedDeltaTime;
 
             Vector2 direction = transform.up;
-            saveForce = direction * boostInput * (boostForce / 1000);
+            saveForce = direction * boostInput * boostForce;
             rigidbody2D.AddForce(saveForce);
             saveVelocity = rigidbody2D.velocity;
             
@@ -143,7 +143,7 @@ namespace RocketyRocket2
             boostInput = 0;
             if (sliderBoost != null && activeBoost)
             {
-                if (sliderBoost.value >= 1000)
+                if (sliderBoost.value >= sliderBoost.maxValue)
                 {
                     StartCoroutine(StopParticles());
                     if (rigidbody2D.rotation < 0)
