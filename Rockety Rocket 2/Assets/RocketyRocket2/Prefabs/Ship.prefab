@@ -19937,7 +19937,7 @@ MonoBehaviour:
   FadeDeath: {fileID: 0}
   DeathButtons: []
   textDestroyed: {fileID: 0}
-  valueBoost: 1
+  valueBoost: 2
   sliderBoost: {fileID: 5302014562166046088}
   activeBoost: 1
 --- !u!1 &2968015558697662207

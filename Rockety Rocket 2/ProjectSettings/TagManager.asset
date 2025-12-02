@@ -10,6 +10,7 @@ TagManager:
   - MoveCamLeft
   - MoveCamUp
   - MoveCamDown
+  - Blade
   layers:
   - Default
   - TransparentFX

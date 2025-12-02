@@ -185,32 +185,35 @@ namespace RocketyRocket2
             boost_particle_3.Play();
         }
 
+        public void ShipDestroyed()
+        {
+            for (int i = 0; i < skins.Length; i++)
+            {
+
+                skins[i].SetActive(false);
+
+            }
+            destroy_particle_1.Play();
+            destroy_particle_2.Play();
+            destroy_particle_3.Play();
+
+            boost_particle_1.Stop();
+            boost_particle_2.Stop();
+            boost_particle_3.Stop();
+
+            boost_particle_1.gameObject.SetActive(false);
+            boost_particle_2.gameObject.SetActive(false);
+            boost_particle_3.gameObject.SetActive(false);
+
+            gameObject.GetComponent<Collider2D>().enabled = false;
+
+            StartCoroutine(DestroyShip());
+        }
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.CompareTag("Asteroid"))
             {
-
-                for (int i = 0; i < skins.Length; i++)
-                {
-
-                    skins[i].SetActive(false);
-
-                }
-                destroy_particle_1.Play();
-                destroy_particle_2.Play();
-                destroy_particle_3.Play();
-
-                boost_particle_1.Stop();
-                boost_particle_2.Stop();
-                boost_particle_3.Stop();
-
-                boost_particle_1.gameObject.SetActive(false);
-                boost_particle_2.gameObject.SetActive(false);
-                boost_particle_3.gameObject.SetActive(false);
-
-                collision.gameObject.GetComponent<Collider2D>().enabled = false;
-
-                StartCoroutine(DestroyShip());
+                ShipDestroyed();
             }
         }
         private IEnumerator DestroyShip()
@@ -243,6 +246,7 @@ namespace RocketyRocket2
             yield return new WaitForSeconds(TimeToStart);
             currentState = StateShip.Playing;
         }
+
     }
 }
 

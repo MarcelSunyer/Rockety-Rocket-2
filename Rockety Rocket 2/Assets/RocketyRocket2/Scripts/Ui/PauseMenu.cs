@@ -25,7 +25,10 @@ namespace RocketyRocket2
 
         [SerializeField] private Button returnToMainMenu;
 
-        
+
+        [SerializeField] private BladeFunction[] bladeStop;
+
+
 
         // Start is called before the first frame update
         void Start()
@@ -61,6 +64,12 @@ namespace RocketyRocket2
 
         private void PauseActive()
         {
+            for (int i = 0; i < bladeStop.Length; i++)
+            {
+                if (bladeStop[i] != null)
+                    bladeStop[i].BladeCanMove = false;
+            }
+
             shipController.currentState = StateShip.Stop;
             pauseMenu.SetActive(true);
             pauseActive = true;
@@ -78,6 +87,12 @@ namespace RocketyRocket2
 
         private void PauseDisable()
         {
+            for (int i = 0; i < bladeStop.Length; i++)
+            {
+                if (bladeStop[i] != null)
+                    bladeStop[i].BladeCanMove = true;
+            }
+
             shipController.currentState = StateShip.Playing;
             pauseMenu.SetActive(false);
 
