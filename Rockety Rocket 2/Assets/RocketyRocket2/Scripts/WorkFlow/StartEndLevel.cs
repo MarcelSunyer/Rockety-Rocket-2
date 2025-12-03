@@ -51,9 +51,6 @@ namespace RocketyRocket2
                     cameraFollow.enabled = true;
             }
             yield return new WaitForSeconds(5);
-
-
-
         }
         public void CloseAnim()
         {
