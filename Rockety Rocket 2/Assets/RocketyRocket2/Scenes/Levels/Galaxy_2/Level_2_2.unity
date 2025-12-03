@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextLevelIsTutorial: 0
-  Galaxy: 1
+  Galaxy: 2
   IsNextLevelAnotherGalxy: 0
   startEndLevel: {fileID: 5256622344116083105}
   buttonContinue: {fileID: 2126972074}
@@ -9501,7 +9501,7 @@ MonoBehaviour:
   GalaxyNum: 1
   PlanetNum: 2
   idle: {r: 1, g: 1, b: 1, a: 1}
-  idleColor: {r: 0.27822578, g: 1, b: 0.38709667, a: 1}
+  idleColor: {r: 0.28235295, g: 0.5921569, b: 1, a: 1}
   lerpSpeed: 1
   startUpdateColor: 0
   shipController: {fileID: 1448262378}

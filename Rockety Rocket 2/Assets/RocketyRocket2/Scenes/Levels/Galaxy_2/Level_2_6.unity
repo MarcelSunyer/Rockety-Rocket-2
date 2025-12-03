@@ -642,7 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextLevelIsTutorial: 1
-  Galaxy: 1
+  Galaxy: 2
   IsNextLevelAnotherGalxy: 1
   startEndLevel: {fileID: 5256622344116083105}
   buttonContinue: {fileID: 2126972074}
@@ -10612,6 +10612,18 @@ PrefabInstance:
     - target: {fileID: 2632728655352967896, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_Name
       value: Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416393691484280215, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416393691484280215, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416393691484280215, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4876315936959099005, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_AnchorMax.x
