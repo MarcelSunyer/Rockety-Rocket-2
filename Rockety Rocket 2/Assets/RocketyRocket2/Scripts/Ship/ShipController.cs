@@ -146,6 +146,12 @@ namespace RocketyRocket2
                 if (sliderBoost.value >= sliderBoost.maxValue)
                 {
                     StartCoroutine(StopParticles());
+                    if (rigidbody2D.rotation == 0)
+                    {
+                        rigidbody2D.rotation = 0 * Time.fixedDeltaTime;
+                        return;
+                    }
+
                     if (rigidbody2D.rotation < 0)
                     {
                         rigidbody2D.rotation -= rotationSpeed * Time.fixedDeltaTime;
@@ -158,6 +164,7 @@ namespace RocketyRocket2
                         return;
                     }
 
+                   
                 }
             }
             rigidbody2D.AddForce(Vector2.zero);
