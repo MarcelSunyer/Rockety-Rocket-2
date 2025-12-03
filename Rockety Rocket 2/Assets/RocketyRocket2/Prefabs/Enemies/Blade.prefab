@@ -47,13 +47,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 5
-  MovementSpeed: 0
+  MovementSpeed: 2
   BladeCanMove: 1
   positionsToMove:
-  - {x: -2.3, y: 2.1}
-  - {x: -1.24, y: 3.52}
-  - {x: -0.46, y: 2.41}
-  - {x: 3.87, y: 0.97}
+  - {x: 0, y: 0}
   shipController: {fileID: 0}
 --- !u!212 &4481107267523913396
 SpriteRenderer:

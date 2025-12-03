@@ -7129,11 +7129,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2085235170846214319, guid: 07156247122480e4dacca4158551259b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -62.825256
+      value: -62.825012
       objectReference: {fileID: 0}
     - target: {fileID: 2085235170846214319, guid: 07156247122480e4dacca4158551259b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000061035156
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2085235170846214319, guid: 07156247122480e4dacca4158551259b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10529,7 +10529,7 @@ Transform:
   m_GameObject: {fileID: 2137142210}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.75, y: -0.5, z: 24.9}
+  m_LocalPosition: {x: -2.31, y: -1.74, z: 24.9}
   m_LocalScale: {x: 4.43087, y: 4.43087, z: 4.43087}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10612,6 +10612,18 @@ PrefabInstance:
     - target: {fileID: 2632728655352967896, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_Name
       value: Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416393691484280215, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416393691484280215, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416393691484280215, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4876315936959099005, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_AnchorMax.x
