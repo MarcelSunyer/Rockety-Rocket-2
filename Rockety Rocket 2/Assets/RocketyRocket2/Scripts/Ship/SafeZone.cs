@@ -62,7 +62,7 @@ namespace RocketyRocket2
                         RocketyRocket2Game.Instance.SaveGameManager.Level_Green = PlanetNum + 1;
                         RocketyRocket2Game.Instance.SaveGameManager.Save();
                 }
-                if (GalaxyNum == 2 && PlanetNum != 6)
+                if (GalaxyNum == 2)
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Blue = PlanetNum + 1;
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
 

@@ -9548,6 +9548,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 4416393691484280215, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416393691484280215, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416393691484280215, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: FadeDeath
       value: 
@@ -9841,7 +9853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2082795046607584659, guid: 4df25563b52f858419157b72c440ef18, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2192171346338059469, guid: 4df25563b52f858419157b72c440ef18, type: 3}
       propertyPath: m_Pivot.x
