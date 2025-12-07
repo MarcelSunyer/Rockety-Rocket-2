@@ -50,7 +50,7 @@ Material:
     m_Ints: []
     m_Floats:
     - PixelSnap: 0
-    - _Alpha: 0.22
+    - _Alpha: 0.19
     - _BackgroundIntensity: 0.45
     - _CautionThreshold: 0.25
     - _ColorVariation: 2
@@ -67,11 +67,11 @@ Material:
     - _GalaxyRadius: 2
     - _Glossiness: 0.5
     - _GoodThreshold: 0.5
-    - _Intensity: 1.1
+    - _Intensity: 1.75
     - _Metallic: 0.43
     - _Randomness: 2
     - _Rotation: 0
-    - _Speed: 0.21
+    - _Speed: 0.09
     - _StarAmount: 0.22
     - _StarBrightness: 1.5
     - _StarDensity: 1
