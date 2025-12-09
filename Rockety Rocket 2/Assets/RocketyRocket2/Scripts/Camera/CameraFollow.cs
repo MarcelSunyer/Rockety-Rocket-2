@@ -40,12 +40,13 @@ namespace RocketyRocket2
 
             if (shipPos.y < bottom) 
             { 
-                targetPos.y = shipPos.y + deadZoneSize.y * 0.5f; 
+                targetPos.y = (shipPos.y) + (deadZoneSize.y * 0.5f); 
             }
 
-            if (shipPos.y > top) 
-            { 
-                targetPos.y = shipPos.y - deadZoneSize.y * 0.5f; 
+            if (shipPos.y > top)
+            {
+                targetPos.y = (shipPos.y) - (deadZoneSize.y * 0.5f);
+                
             }
 
             targetPos.z = camPos.z;  
