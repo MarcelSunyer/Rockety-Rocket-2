@@ -21,10 +21,10 @@ namespace RocketyRocket2
             Vector3 shipPos = ship.position;
 
             // define dead zone around camera center
-            float left = camPos.x - deadZoneSize.x * 0.5f;
-            float right = camPos.x + deadZoneSize.x * 0.5f;
-            float bottom = camPos.y - deadZoneSize.y * 0.5f;
-            float top = camPos.y + deadZoneSize.y * 0.5f;
+            float left = camPos.x - deadZoneSize.x * 2;
+            float right = camPos.x + deadZoneSize.x * 2;
+            float bottom = camPos.y + deadZoneSize.y * 2;
+            float top = camPos.y - deadZoneSize.y * 2;
 
             Vector3 targetPos = camPos;
             //Debug.Log(camPos.x);
@@ -32,22 +32,22 @@ namespace RocketyRocket2
 
             if (shipPos.x < left)
             {
-                targetPos.x = shipPos.x + deadZoneSize.x * 0.5f;
-            }
-
-            if (shipPos.x > right)
-            {
-                targetPos.x = shipPos.x - deadZoneSize.x * 0.5f;
-            }
-
-            if (shipPos.y < bottom) 
-            { 
-                targetPos.y = shipPos.y + deadZoneSize.y * 0.5f; 
-            }
-
-            if (shipPos.y > top) 
-            { 
-                targetPos.y = shipPos.y - deadZoneSize.y * 0.5f; 
+                targetPos.x = shipPos.x + deadZoneSize.x * 2;
+            }                                              
+                                                           
+            if (shipPos.x > right)                         
+            {                                              
+                targetPos.x = shipPos.x - deadZoneSize.x * 2;
+            }                                              
+                                                           
+            if (shipPos.y < bottom)                        
+            {                                              
+                targetPos.y = shipPos.y + deadZoneSize.y * 2; 
+            }                                              
+                                                           
+            if (shipPos.y > top)                           
+            {                                              
+                targetPos.y = shipPos.y - deadZoneSize.y * 2; 
             }
 
             targetPos.z = camPos.z; 

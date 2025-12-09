@@ -24932,6 +24932,10 @@ PrefabInstance:
       propertyPath: particle
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2183584428938603034, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3797320339823524701, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: m_Name
       value: Tutorial
@@ -25164,7 +25168,8 @@ PrefabInstance:
       propertyPath: particleTutorial
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2183584428938603034, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8453454545307033390, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
     - {fileID: 5385207867726104325, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}

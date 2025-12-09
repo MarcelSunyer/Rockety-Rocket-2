@@ -50,7 +50,8 @@ Material:
     m_Ints: []
     m_Floats:
     - PixelSnap: 0
-    - _Alpha: 0.88
+    - _Alpha: 0
+    - _BackgroundIntensity: 0.3
     - _CautionThreshold: 0.25
     - _ColorVariation: 2
     - _CometBrightness: 3.13
@@ -59,12 +60,14 @@ Material:
     - _CometFrequency: 0.54
     - _CometSpeed: 10
     - _Cutoff: 0
+    - _EdgeBlurDistance: 0.2
+    - _EdgeBlurStrength: 2
     - _EnableExternalAlpha: 0
     - _Exposure: 1
     - _GalaxyRadius: 2
     - _Glossiness: 0.5
     - _GoodThreshold: 0.5
-    - _Intensity: 0.55
+    - _Intensity: 1.4
     - _Metallic: 0.43
     - _Randomness: 2
     - _Rotation: 0
@@ -78,6 +81,7 @@ Material:
     - _TrailLength: 3
     - _TrailSmoothness: 0.67
     m_Colors:
+    - _BackgroundColor: {r: 0.049999982, g: 0.049999982, b: 0.09999997, a: 1}
     - _CautionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 0, b: 0, a: 1}
     - _CriticalColor: {r: 1, g: 1, b: 1, a: 1}

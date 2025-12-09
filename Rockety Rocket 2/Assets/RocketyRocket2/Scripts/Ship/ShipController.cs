@@ -51,8 +51,12 @@ namespace RocketyRocket2
         [SerializeField] private Slider sliderBoost;
         [SerializeField] private bool activeBoost = true;
 
+        private GameObject safeZone;
+
         void Start()
         {
+            safeZone = GameObject.Find("End");
+
             if (skins != null)
             {
                 currentState = StateShip.Stop;
@@ -111,6 +115,11 @@ namespace RocketyRocket2
                 {
                     sliderBoost.value += valueBoost;
                 }
+            }
+
+            if(Input.GetKeyDown(KeyCode.H))
+            {
+                gameObject.transform.position = safeZone.transform.position;
             }
         }
 
