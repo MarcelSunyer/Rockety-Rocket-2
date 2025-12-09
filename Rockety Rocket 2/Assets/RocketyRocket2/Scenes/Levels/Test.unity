@@ -5455,8 +5455,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ship: {fileID: 1448262379}
-  deadZoneSize: {x: 0, y: 0}
+  deadZoneX: 3
+  deadZoneY: 1
   smoothSpeed: 1
+  upwardOffset: 1
+  downwardOffset: 1
+  verticalBias: 3
 --- !u!114 &1251456068
 MonoBehaviour:
   m_ObjectHideFlags: 0
