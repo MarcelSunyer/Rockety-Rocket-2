@@ -48,7 +48,7 @@ namespace RocketyRocket2
                 targetPos.y = shipPos.y - deadZoneSize.y * 0.5f; 
             }
 
-            targetPos.z = camPos.z; 
+            targetPos.z = camPos.z;  
             transform.position = Vector3.SmoothDamp(camPos, targetPos, ref velocity, smoothSpeed) ;
 
 
