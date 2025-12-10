@@ -119,7 +119,7 @@ namespace RocketyRocket2
 
             if(Input.GetKeyDown(KeyCode.H))
             {
-                gameObject.transform.position = safeZone.transform.position;
+                safeZone.transform.position = gameObject.transform.position ;
             }
         }
 
