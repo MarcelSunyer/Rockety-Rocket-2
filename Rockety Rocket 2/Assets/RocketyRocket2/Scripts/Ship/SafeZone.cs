@@ -62,6 +62,7 @@ namespace RocketyRocket2
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Green = PlanetNum + 1;
                     if (RocketyRocket2Game.Instance.SaveGameManager.Level_Green == 7 && RocketyRocket2Game.Instance.SaveGameManager.Level_Blue ==0)
                     {
+                        RocketyRocket2Game.Instance.SaveGameManager.Galaxy = 2;
                         RocketyRocket2Game.Instance.SaveGameManager.Level_Blue = 1;
                     }
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
@@ -71,6 +72,7 @@ namespace RocketyRocket2
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Blue = PlanetNum + 1;
                     if (RocketyRocket2Game.Instance.SaveGameManager.Level_Blue == 7 && RocketyRocket2Game.Instance.SaveGameManager.Level_Purple == 0)
                     {
+                        RocketyRocket2Game.Instance.SaveGameManager.Galaxy = 3;
                         RocketyRocket2Game.Instance.SaveGameManager.Level_Purple = 1;
                     }
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
@@ -80,6 +82,7 @@ namespace RocketyRocket2
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Purple = PlanetNum + 1;
                     if (RocketyRocket2Game.Instance.SaveGameManager.Level_Purple == 7 && RocketyRocket2Game.Instance.SaveGameManager.Level_Orange == 0)
                     {
+                        RocketyRocket2Game.Instance.SaveGameManager.Galaxy = 4;
                         RocketyRocket2Game.Instance.SaveGameManager.Level_Orange = 1;
                     }
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
@@ -89,6 +92,7 @@ namespace RocketyRocket2
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Orange = PlanetNum + 1;
                     if (RocketyRocket2Game.Instance.SaveGameManager.Level_Orange == 7 && RocketyRocket2Game.Instance.SaveGameManager.Level_Red == 0)
                     {
+                        RocketyRocket2Game.Instance.SaveGameManager.Galaxy = 5;
                         RocketyRocket2Game.Instance.SaveGameManager.Level_Red = 1;
 
                     }
