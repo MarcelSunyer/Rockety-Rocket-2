@@ -59,26 +59,47 @@ namespace RocketyRocket2
 
                 if (GalaxyNum == 1)
                 {
-                        RocketyRocket2Game.Instance.SaveGameManager.Level_Green = PlanetNum + 1;
-                        RocketyRocket2Game.Instance.SaveGameManager.Save();
+                    RocketyRocket2Game.Instance.SaveGameManager.Level_Green = PlanetNum + 1;
+                    if (RocketyRocket2Game.Instance.SaveGameManager.Level_Green == 7 && RocketyRocket2Game.Instance.SaveGameManager.Level_Blue ==0)
+                    {
+                        RocketyRocket2Game.Instance.SaveGameManager.Level_Blue = 1;
+                    }
+                    RocketyRocket2Game.Instance.SaveGameManager.Save();
                 }
                 if (GalaxyNum == 2)
+                {
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Blue = PlanetNum + 1;
+                    if (RocketyRocket2Game.Instance.SaveGameManager.Level_Blue == 7 && RocketyRocket2Game.Instance.SaveGameManager.Level_Purple == 0)
+                    {
+                        RocketyRocket2Game.Instance.SaveGameManager.Level_Purple = 1;
+                    }
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
-
+                }
                 if (GalaxyNum == 3 && PlanetNum != 6)
+                {
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Purple = PlanetNum + 1;
+                    if (RocketyRocket2Game.Instance.SaveGameManager.Level_Purple == 7 && RocketyRocket2Game.Instance.SaveGameManager.Level_Orange == 0)
+                    {
+                        RocketyRocket2Game.Instance.SaveGameManager.Level_Orange = 1;
+                    }
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
-
+                }
                 if (GalaxyNum == 4 && PlanetNum != 6)
+                {
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Orange = PlanetNum + 1;
-                    RocketyRocket2Game.Instance.SaveGameManager.Save();
+                    if (RocketyRocket2Game.Instance.SaveGameManager.Level_Orange == 7 && RocketyRocket2Game.Instance.SaveGameManager.Level_Red == 0)
+                    {
+                        RocketyRocket2Game.Instance.SaveGameManager.Level_Red = 1;
 
+                    }
+                    RocketyRocket2Game.Instance.SaveGameManager.Save();
+                }
                 if (GalaxyNum == 5 && PlanetNum != 6)
+                {
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Red = PlanetNum + 1;
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
-               
 
+                }
                 StartCoroutine(NextLevelAppear());
 
             }
