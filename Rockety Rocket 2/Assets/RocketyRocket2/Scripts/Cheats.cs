@@ -16,7 +16,6 @@ public class Cheats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             RocketyRocket2Game.Instance.SaveGameManager.Level_Green = 6;
@@ -25,9 +24,13 @@ public class Cheats : MonoBehaviour
             RocketyRocket2Game.Instance.SaveGameManager.Level_Orange = 0;
             RocketyRocket2Game.Instance.SaveGameManager.Level_Purple = 0;
             RocketyRocket2Game.Instance.SaveGameManager.Level_Red = 0;
+
+            UpdateLevelsHack(0);
+
             unlockedGalaxies.UnlockGalxies();
             hackActive = !hackActive;
             unlockedGalaxies.BlockGalaxies(4);
+            UpdateLevelsHack(0);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -38,6 +41,9 @@ public class Cheats : MonoBehaviour
             RocketyRocket2Game.Instance.SaveGameManager.Level_Orange = 0;
             RocketyRocket2Game.Instance.SaveGameManager.Level_Purple = 0;
             RocketyRocket2Game.Instance.SaveGameManager.Level_Red = 0;
+
+            UpdateLevelsHack(1);
+
             unlockedGalaxies.UnlockGalxies();       
             hackActive = !hackActive;
             unlockedGalaxies.BlockGalaxies(3);
@@ -49,6 +55,9 @@ public class Cheats : MonoBehaviour
 
             RocketyRocket2Game.Instance.SaveGameManager.Level_Purple = 0;
             RocketyRocket2Game.Instance.SaveGameManager.Level_Red = 0;
+
+            UpdateLevelsHack(2);
+
             unlockedGalaxies.UnlockGalxies();
             hackActive = !hackActive;
             unlockedGalaxies.BlockGalaxies(2);
@@ -60,6 +69,8 @@ public class Cheats : MonoBehaviour
 
             RocketyRocket2Game.Instance.SaveGameManager.Level_Red = 0;
 
+            UpdateLevelsHack(3);
+            
             unlockedGalaxies.UnlockGalxies();
             hackActive = !hackActive;
             unlockedGalaxies.BlockGalaxies(1);
@@ -71,27 +82,18 @@ public class Cheats : MonoBehaviour
 
             unlockedGalaxies.UnlockGalxies();
 
+            levels[4].LevelsOperative = 6;
+            UpdateLevelsHack(4);
+
             hackActive = !hackActive;
         }
-        if(hackActive)
-        {
-            for (int i = 0; i < levels.Length; ++i)
-            {
-                levels[i].LevelsOperative = 6;
-
-                levels[i].UpdateLevels();
-            }
-        }
-    }
-
-    private void OpenCheats()
-    {
-        for (int i = 0; i < levels.Length; ++i)
-        {
-            levels[i].LevelsOperative = 6;
-
-            levels[i].UpdateLevels();
-        }
 
     }
+
+    private void UpdateLevelsHack(int i)
+    { 
+        levels[i].LevelsOperative = 6;
+        levels[i].UnblockLevels();
+    }
+
 }

@@ -10,6 +10,9 @@ namespace RocketyRocket2
     {
         public int LevelsOperative = 1;
         public Color BlockedLevel;
+        public Color UnblockedLevel;
+        public Color UnblockedText;
+
         public int GalaxyNum;
 
         [SerializeField] private Button[] levels;
@@ -33,9 +36,9 @@ namespace RocketyRocket2
                 if (GalaxyNum == 5)
                     LevelsOperative = RocketyRocket2Game.Instance.SaveGameManager.Level_Red;
             }
-            updateLevels.onClick.AddListener(UpdateLevels);
+            updateLevels.onClick.AddListener(BlockLevels);
         }
-        public void UpdateLevels()
+        public void BlockLevels()
         {
             for (int i = levels.Length - 1; i >= LevelsOperative; --i)
             {
@@ -46,5 +49,17 @@ namespace RocketyRocket2
             }
 
         }
+        public void UnblockLevels()
+        {
+            for (int i = 0; i < LevelsOperative; ++i)
+            {
+                levels[i].image.color = UnblockedLevel;
+                levels[i].GetComponentInChildren<TextMeshProUGUI>().color = UnblockedText;    
+                levels[i].enabled = true;
+                levels[i].interactable = true;
+            }
+        }
+
+
     }
 }

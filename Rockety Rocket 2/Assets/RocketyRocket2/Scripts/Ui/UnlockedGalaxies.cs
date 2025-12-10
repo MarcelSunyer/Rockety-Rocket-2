@@ -79,8 +79,6 @@ namespace RocketyRocket2
                 galaxiesLocked = 3;
             }
 
-
-
             for (int i = Galaxies.Length - 1; i >= galaxiesLocked; --i)
             {
                 Galaxies[i].image.color = Color.black;
