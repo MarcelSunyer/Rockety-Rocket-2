@@ -60,5 +60,45 @@ namespace RocketyRocket2
             }
         }
 
+        public void BlockGalaxies(int galaxiesBlocked)
+        {
+            if (galaxiesBlocked == 4)
+            {
+                galaxiesLocked = 0;
+            }
+            if (galaxiesBlocked == 3)
+            {
+                galaxiesLocked = 1;
+            }
+            if (galaxiesBlocked == 2)
+            {
+                galaxiesLocked = 2;
+            }
+            if (galaxiesBlocked == 1)
+            {
+                galaxiesLocked = 3;
+            }
+
+
+
+            for (int i = Galaxies.Length - 1; i >= galaxiesLocked; --i)
+            {
+                Galaxies[i].image.color = Color.black;
+                Galaxies[i].GetComponentInChildren<SpriteRenderer>().color = Color.black;
+
+                Galaxies[i].interactable = false;
+
+            }
+
+            for (int i = 0; i <= galaxiesLocked; ++i)
+            {
+                Galaxies[i].image.color = color;
+                Galaxies[i].GetComponentInChildren<SpriteRenderer>().color = Color.white;
+
+                Galaxies[i].interactable = true;
+
+            }
+        }
+
     }
 }

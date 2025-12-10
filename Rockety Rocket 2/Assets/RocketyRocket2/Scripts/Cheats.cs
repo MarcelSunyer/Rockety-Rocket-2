@@ -27,6 +27,7 @@ public class Cheats : MonoBehaviour
             RocketyRocket2Game.Instance.SaveGameManager.Level_Red = 0;
             unlockedGalaxies.UnlockGalxies();
             hackActive = !hackActive;
+            unlockedGalaxies.BlockGalaxies(4);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -38,7 +39,8 @@ public class Cheats : MonoBehaviour
             RocketyRocket2Game.Instance.SaveGameManager.Level_Purple = 0;
             RocketyRocket2Game.Instance.SaveGameManager.Level_Red = 0;
             unlockedGalaxies.UnlockGalxies();       
-            hackActive = !hackActive;        
+            hackActive = !hackActive;
+            unlockedGalaxies.BlockGalaxies(3);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -49,6 +51,7 @@ public class Cheats : MonoBehaviour
             RocketyRocket2Game.Instance.SaveGameManager.Level_Red = 0;
             unlockedGalaxies.UnlockGalxies();
             hackActive = !hackActive;
+            unlockedGalaxies.BlockGalaxies(2);
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
@@ -59,6 +62,7 @@ public class Cheats : MonoBehaviour
 
             unlockedGalaxies.UnlockGalxies();
             hackActive = !hackActive;
+            unlockedGalaxies.BlockGalaxies(1);
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
