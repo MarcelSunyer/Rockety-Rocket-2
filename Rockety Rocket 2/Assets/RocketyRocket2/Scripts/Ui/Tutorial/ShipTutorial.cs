@@ -10,7 +10,12 @@ namespace RocketyRocket2
         public GameObject Ship;
         public ParticleSystem particle;
         public float ShipMovement;
+
+        public GameObject Astronaut;
+        public ParticleSystem AstronautParticles;
+
         private Vector2 InitialPosition;
+        
 
         private void Start()
         {
@@ -29,6 +34,9 @@ namespace RocketyRocket2
                 yield return tween.WaitForCompletion();
                 Ship.GetComponent<RectTransform>().anchoredPosition = InitialPosition;
                 particle.Stop();
+                Astronaut.SetActive(false);
+                AstronautParticles.Play();
+
                 yield return new WaitForSeconds(1.5f);
             }
         }

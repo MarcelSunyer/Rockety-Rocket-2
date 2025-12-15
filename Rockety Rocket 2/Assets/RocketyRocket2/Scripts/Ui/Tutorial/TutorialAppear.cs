@@ -40,7 +40,7 @@ namespace RocketyRocket2
         void Start()
         {
 
-            particles.SetActive(false);
+           particles.SetActive(false);
            shipState.currentState = ShipController.StateShip.Stop;
            cam.GetComponent<CameraFollow>().enabled = false;
 
@@ -76,7 +76,7 @@ namespace RocketyRocket2
 
             if (shipTutorial != null)
             {
-                tween = shipTutorial.DOFade(0f, 1f);
+                //tween = shipTutorial.DOFade(0f, 1f);
                 tween.Play();
             }
 
@@ -90,7 +90,6 @@ namespace RocketyRocket2
                 tween = notendGameplay.DOFade(0f, 1f);
                 tween.Play();
             }
-
            
             cam.GetComponent<CameraFollow>().enabled = true;
             yield return new WaitForSeconds(2);
@@ -104,7 +103,7 @@ namespace RocketyRocket2
                 arrow.enabled = false;
             }
             //Activar particulas de boost al terminar el tutorial
-            particles.SetActive(true);
+            //particles.SetActive(true);
             if(tutorialScript != null)
             { 
                 tutorialScript.enabled = false;
