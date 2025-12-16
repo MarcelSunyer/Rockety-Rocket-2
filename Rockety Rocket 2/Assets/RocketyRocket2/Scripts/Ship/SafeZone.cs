@@ -23,12 +23,19 @@ namespace RocketyRocket2
         private SpriteRenderer sprite;
 
         [SerializeField] private GameObject endLevelUI;
+
+        [SerializeField] private AstronautsCounter canPass;
+
         void Start()
         {
             sprite = GetComponent<SpriteRenderer>();
             if (shipController == null)
             {
                 shipController = GameObject.Find("Ship").GetComponent<ShipController>();
+            }
+            if (canPass != null)
+            {
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
             }
         }
 
@@ -40,6 +47,12 @@ namespace RocketyRocket2
                 StartCoroutine(UpdateColor());
             }
 
+            if(canPass != null)
+            {
+                if(canPass.canFinish)
+                    gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
+            }
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -111,7 +124,10 @@ namespace RocketyRocket2
         private IEnumerator NextLevelAppear()
         {
             yield return new WaitForSeconds(1);
-            endLevelUI.gameObject.SetActive(true);
+            if (endLevelUI != null)
+            {
+                endLevelUI.gameObject.SetActive(true);
+            }
             shipController.boost_particle_1.gameObject.SetActive(false);
             shipController.boost_particle_2.gameObject.SetActive(false);
             shipController.boost_particle_3.gameObject.SetActive(false);

@@ -3330,6 +3330,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5268262}
     m_Modifications:
+    - target: {fileID: 1145052942649452110, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 2183584428938603034, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: Astronaut
       value: 
@@ -3422,6 +3426,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6026596814698181471, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+      propertyPath: m_text
+      value: RESCUE THE ASTRONAUTS BEFORE IT'S TOO LATE!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026596814698181471, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+      propertyPath: m_fontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026596814698181471, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 48
+      objectReference: {fileID: 0}
     - target: {fileID: 7380490142454833144, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3500,7 +3516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7380490142454833144, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000061035156
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7380490142454833144, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3513,6 +3529,14 @@ PrefabInstance:
     - target: {fileID: 7380490142454833144, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883612165432541268, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 202
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883612165432541268, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 8903380556954231886, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: cam
@@ -3548,6 +3572,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8903380556954231886, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: notendGameplay
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903380556954231886, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+      propertyPath: tutorialScript
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -10140,8 +10168,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2137142212}
   - component: {fileID: 2137142211}
-  - component: {fileID: 2137142214}
   - component: {fileID: 2137142213}
+  - component: {fileID: 2137142214}
   m_Layer: 0
   m_Name: End
   m_TagString: Untagged
@@ -10237,6 +10265,7 @@ MonoBehaviour:
   startUpdateColor: 0
   shipController: {fileID: 1448262378}
   endLevelUI: {fileID: 180860181}
+  canPass: {fileID: 0}
 --- !u!61 &2137142214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15218,6 +15247,14 @@ PrefabInstance:
     - target: {fileID: 7325495018755074532, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.037
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653459336055550561, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -28.900024
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653459336055550561, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -64.100006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
