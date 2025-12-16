@@ -27,6 +27,8 @@ namespace RocketyRocket2
 
         [SerializeField] private ShipTutorial tutorialScript;
 
+        [SerializeField] private TutorialAstronaut tutorialAstronaut;
+            
         [SerializeField] private SpriteRenderer goal;
 
         [SerializeField] private SpriteRenderer arrow; 
@@ -39,8 +41,9 @@ namespace RocketyRocket2
 
         void Start()
         {
+           if(particles != null)
+                particles.SetActive(false);
 
-           particles.SetActive(false);
            shipState.currentState = ShipController.StateShip.Stop;
            cam.GetComponent<CameraFollow>().enabled = false;
 
@@ -108,7 +111,10 @@ namespace RocketyRocket2
             { 
                 tutorialScript.enabled = false;
             }
-           
+            if (tutorialAstronaut != null)
+            {
+                tutorialAstronaut.enabled = false;
+            }
             shipState.enabled = true;
             shipState.currentState = ShipController.StateShip.Playing;
 

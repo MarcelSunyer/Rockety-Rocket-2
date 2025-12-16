@@ -7,15 +7,14 @@ namespace RocketyRocket2
 {
     public class Astronaut : MonoBehaviour
     {
-        public GameObject AstronautCollected;
+        public GameObject AstronautGot;
         [SerializeField] private ParticleSystem[] particleSystems;
-
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.CompareTag("Ship"))
             {
-                var tmp = AstronautCollected.GetComponent<TextMeshProUGUI>();
+                var tmp = AstronautGot.GetComponent<TextMeshProUGUI>();
 
                 if (int.TryParse(tmp.text, out int value))
                 {

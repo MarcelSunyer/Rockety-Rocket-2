@@ -39,7 +39,7 @@ namespace RocketyRocket2
         // Update is called once per frame
         void Update()
         {
-            if(gameObject.GetComponent<TextMeshProUGUI>().text == AstronautsGot.GetComponent<TextMeshProUGUI>().text)
+            if(int.Parse(gameObject.GetComponent<TextMeshProUGUI>().text) == int.Parse(AstronautsGot.GetComponent<TextMeshProUGUI>().text))
             {
                 canFinish = true;
             }
