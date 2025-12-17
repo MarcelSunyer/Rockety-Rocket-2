@@ -9067,6 +9067,7 @@ MonoBehaviour:
   startUpdateColor: 0
   shipController: {fileID: 1448262378}
   endLevelUI: {fileID: 180860181}
+  canPass: {fileID: 0}
 --- !u!61 &2137142214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9464,10 +9465,10 @@ SceneRoots:
   - {fileID: 1452119466}
   - {fileID: 1251456066}
   - {fileID: 1935031540}
-  - {fileID: 2137142212}
   - {fileID: 4949894651558947202}
   - {fileID: 1015391395}
   - {fileID: 1185047601010162980}
+  - {fileID: 2137142212}
   - {fileID: 5268262}
   - {fileID: 1974989052}
   - {fileID: 374112679}

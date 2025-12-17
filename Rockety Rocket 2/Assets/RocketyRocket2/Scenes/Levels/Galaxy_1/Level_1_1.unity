@@ -9491,6 +9491,7 @@ MonoBehaviour:
   startUpdateColor: 0
   shipController: {fileID: 1448262378}
   endLevelUI: {fileID: 180860181}
+  canPass: {fileID: 0}
 --- !u!61 &2137142214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9668,6 +9669,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.037
       objectReference: {fileID: 0}
+    - target: {fileID: 8653459336055550561, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -28.900024
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653459336055550561, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -64.100006
+      objectReference: {fileID: 0}
     - target: {fileID: 8980951526198230892, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_SortingOrder
       value: 176
@@ -9696,6 +9705,18 @@ PrefabInstance:
     - target: {fileID: 640507296309546468, guid: d16395826747f7f4cac904e791cf6830, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043763457834803853, guid: d16395826747f7f4cac904e791cf6830, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2368179127577456829, guid: d16395826747f7f4cac904e791cf6830, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635407950140583158, guid: d16395826747f7f4cac904e791cf6830, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4676829929410551140, guid: d16395826747f7f4cac904e791cf6830, type: 3}
       propertyPath: m_IsActive
@@ -9792,6 +9813,10 @@ PrefabInstance:
     - target: {fileID: 8724450969297842984, guid: d16395826747f7f4cac904e791cf6830, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932334507459703528, guid: d16395826747f7f4cac904e791cf6830, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9990,10 +10015,10 @@ SceneRoots:
   - {fileID: 2095046}
   - {fileID: 1251456066}
   - {fileID: 1935031540}
-  - {fileID: 2137142212}
   - {fileID: 4949894651558947202}
   - {fileID: 1015391395}
-  - {fileID: 5268262}
   - {fileID: 1185047601010162980}
+  - {fileID: 5268262}
+  - {fileID: 2137142212}
   - {fileID: 1974989052}
   - {fileID: 374112679}
