@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_3/Level_3_1_Tutorial.unity
+- path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_3/Level_3_2.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
