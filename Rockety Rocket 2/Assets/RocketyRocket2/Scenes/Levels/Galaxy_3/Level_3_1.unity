@@ -3326,6 +3326,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &953281118 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+  m_PrefabInstance: {fileID: 953281116}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7d8121fc98b4643994fa7d9bbc2185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &953281119 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7345021560943995986, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+  m_PrefabInstance: {fileID: 953281116}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8e68ecc370450479b39c4e2042f9c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1006627151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3703,7 +3725,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.5
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -10095,15 +10117,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3ca46f065133ff4db1004336d851289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GalaxyNum: 1
+  GalaxyNum: 3
   PlanetNum: 1
   idle: {r: 1, g: 1, b: 1, a: 1}
   idleColor: {r: 0.28235295, g: 0.5921569, b: 1, a: 1}
   lerpSpeed: 1
   startUpdateColor: 0
-  shipController: {fileID: 0}
+  shipController: {fileID: 953281118}
   endLevelUI: {fileID: 180860181}
-  canPass: {fileID: 0}
+  canPass: {fileID: 953281119}
 --- !u!61 &2137142214
 BoxCollider2D:
   m_ObjectHideFlags: 0

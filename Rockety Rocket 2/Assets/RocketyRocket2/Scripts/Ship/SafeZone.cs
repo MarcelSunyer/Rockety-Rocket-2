@@ -90,7 +90,7 @@ namespace RocketyRocket2
                     }
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
                 }
-                if (GalaxyNum == 3 && PlanetNum != 6)
+                if (GalaxyNum == 3)
                 {
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Purple = PlanetNum + 1;
                     if (RocketyRocket2Game.Instance.SaveGameManager.Level_Purple == 7 && RocketyRocket2Game.Instance.SaveGameManager.Level_Orange == 0)
@@ -100,7 +100,7 @@ namespace RocketyRocket2
                     }
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
                 }
-                if (GalaxyNum == 4 && PlanetNum != 6)
+                if (GalaxyNum == 4)
                 {
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Orange = PlanetNum + 1;
                     if (RocketyRocket2Game.Instance.SaveGameManager.Level_Orange == 7 && RocketyRocket2Game.Instance.SaveGameManager.Level_Red == 0)
@@ -111,7 +111,7 @@ namespace RocketyRocket2
                     }
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
                 }
-                if (GalaxyNum == 5 && PlanetNum != 6)
+                if (GalaxyNum == 5)
                 {
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Red = PlanetNum + 1;
                     RocketyRocket2Game.Instance.SaveGameManager.Save();

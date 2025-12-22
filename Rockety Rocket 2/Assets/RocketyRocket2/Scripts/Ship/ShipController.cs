@@ -119,6 +119,7 @@ namespace RocketyRocket2
 
             if(Input.GetKeyDown(KeyCode.H))
             {
+                safeZone.GetComponent<BoxCollider2D>().enabled = true;
                 safeZone.transform.position = gameObject.transform.position ;
             }
         }
