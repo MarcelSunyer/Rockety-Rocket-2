@@ -22,7 +22,7 @@ namespace RocketyRocket2
         {
             if (Astronauts.Length == 0 || Astronauts[0].gameObject == null)
             {
-                father.SetActive(false);
+                father.SetActive(true);
             }
             else
             {
