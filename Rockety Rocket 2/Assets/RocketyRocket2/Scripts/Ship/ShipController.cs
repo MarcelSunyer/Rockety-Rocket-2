@@ -126,7 +126,6 @@ namespace RocketyRocket2
 
         private void MoveShip()
         {
-
             if(stopToPlay)
             {
                 boost_particle_1.gameObject.SetActive(true);
@@ -196,11 +195,21 @@ namespace RocketyRocket2
 
         public void Boost(InputAction.CallbackContext context)
         {
-            boostInput = context.ReadValue<Vector2>().y;
-            boost_particle_1.Play();
-            boost_particle_2.Play();
-            boost_particle_3.Play();
+            boostInput = context.ReadValue<float>();
+            if (boostInput > 0)
+            {
+                boost_particle_1.Play();
+                boost_particle_2.Play();
+                boost_particle_3.Play();
+            }
+            else
+            {
+                boost_particle_1.Stop();
+                boost_particle_2.Stop();
+                boost_particle_3.Stop();
+            }
         }
+
 
         public void ShipDestroyed()
         {
