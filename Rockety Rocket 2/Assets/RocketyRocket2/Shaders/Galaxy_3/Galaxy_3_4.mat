@@ -81,15 +81,15 @@ Material:
     - _TrailLength: 3
     - _TrailSmoothness: 0.67
     m_Colors:
-    - _BackgroundColor: {r: 0.15360776, g: 0.02055892, b: 0.3962264, a: 1}
+    - _BackgroundColor: {r: 0.39986226, g: 0.07075471, b: 1, a: 1}
     - _CautionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 0, b: 0, a: 1}
     - _CriticalColor: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _GoodColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 0.91421115, g: 0.8066038, b: 1, a: 1}
+    - _MainColor: {r: 0, g: 1, b: 0.6535425, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SecondaryColor: {r: 0.9198853, g: 0.7122642, b: 1, a: 1}
-    - _TertiaryColor: {r: 0.49699405, g: 0.2971698, b: 1, a: 0.65882355}
+    - _SecondaryColor: {r: 1, g: 0, b: 0.46949816, a: 1}
+    - _TertiaryColor: {r: 0.5702678, g: 0.0046724924, b: 0.990566, a: 0.65882355}
     - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_BuildTextureStacks: []
