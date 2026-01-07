@@ -5219,8 +5219,8 @@ Transform:
   m_GameObject: {fileID: 140255950}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.86, y: -6.37, z: 0.043967873}
-  m_LocalScale: {x: 3.3056543, y: 3.3056543, z: 3.3056543}
+  m_LocalPosition: {x: -6.54, y: -2.33, z: 0.043967873}
+  m_LocalScale: {x: 1.3188238, y: 1.3188238, z: 1.3188238}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 470931041}
@@ -11515,8 +11515,8 @@ Transform:
   m_GameObject: {fileID: 443307891}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.73, y: -3.78, z: 0.043967873}
-  m_LocalScale: {x: 0.36535946, y: 0.36535946, z: 0.36535946}
+  m_LocalPosition: {x: -8.58, y: -2.96, z: 0.043967873}
+  m_LocalScale: {x: 0.25233185, y: 0.25233185, z: 0.25233185}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 470931041}
@@ -17248,13 +17248,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828211815}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.311294, w: 0.9503137}
-  m_LocalPosition: {x: 0.7, y: 1.63, z: 0.043967873}
-  m_LocalScale: {x: 0.37909514, y: 0.37909514, z: 0.37909514}
+  m_LocalRotation: {x: -0, y: -0, z: -0.5531054, w: 0.83311135}
+  m_LocalPosition: {x: 8.85, y: -7.01, z: 0.043967873}
+  m_LocalScale: {x: 1.3072717, y: 1.3072717, z: 1.3072717}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 470931041}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -36.274}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -67.161}
 --- !u!212 &828211817
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17297,7 +17297,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -30
   m_Sprite: {fileID: 21300000, guid: b8f13d7b7c1edca42b7142f5320c858e, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.02745098}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.13333334}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17471,8 +17471,8 @@ Transform:
   m_GameObject: {fileID: 890119064}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.61, y: -2.48, z: 0.043967873}
-  m_LocalScale: {x: 0.19527379, y: 0.19527379, z: 0.19527379}
+  m_LocalPosition: {x: -8.33, y: -1.74, z: 0.043967873}
+  m_LocalScale: {x: 0.16593195, y: 0.16593195, z: 0.16593195}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 470931041}
@@ -23369,7 +23369,7 @@ Transform:
   m_GameObject: {fileID: 1251456063}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.31, y: 4.34, z: -1}
+  m_LocalPosition: {x: 6.94, y: -2.15, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23570,13 +23570,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440425955}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.93, y: 1.19, z: 0.043967873}
-  m_LocalScale: {x: 1.1999451, y: 1.1999451, z: 1.1999451}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7653952, w: 0.64356047}
+  m_LocalPosition: {x: -8.02, y: -6.89, z: 0.043967873}
+  m_LocalScale: {x: 3.0772593, y: 3.0772593, z: 3.0772593}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 470931041}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 99.884}
 --- !u!212 &1440425957
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23619,7 +23619,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -30
   m_Sprite: {fileID: 21300000, guid: 1774ce9bc3bb0fe438e40a6a2b53f45e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.07058824}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.12941177}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -29872,7 +29872,7 @@ Transform:
   m_GameObject: {fileID: 2137142210}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.75, y: 4, z: 24.9}
+  m_LocalPosition: {x: 6.79, y: -2.03, z: 24.9}
   m_LocalScale: {x: 4.43087, y: 4.43087, z: 4.43087}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29891,7 +29891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3ca46f065133ff4db1004336d851289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GalaxyNum: 3
+  GalaxyNum: 4
   PlanetNum: 1
   idle: {r: 1, g: 1, b: 1, a: 1}
   idleColor: {r: 0.28235295, g: 0.5921569, b: 1, a: 1}
