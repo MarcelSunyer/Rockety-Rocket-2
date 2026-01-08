@@ -7967,6 +7967,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6994306115702865171, guid: ae8790dcaaa327f41b85819403659571, type: 3}
   m_PrefabInstance: {fileID: 1023418205}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1028871513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5232005615090170494, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+  m_PrefabInstance: {fileID: 1185047601010162980}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1192356005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24314,6 +24319,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1503214588}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: currentState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: textDestroyed
       value: 
       objectReference: {fileID: 226423236}
@@ -24394,11 +24403,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
---- !u!1 &1185047601010162981 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5232005615090170494, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
-  m_PrefabInstance: {fileID: 1185047601010162980}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3340036974566246108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24735,7 +24739,7 @@ PrefabInstance:
     - target: {fileID: 8903380556954231886, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: particles
       value: 
-      objectReference: {fileID: 1185047601010162981}
+      objectReference: {fileID: 1028871513}
     - target: {fileID: 8903380556954231886, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: shipState
       value: 
@@ -24746,6 +24750,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8903380556954231886, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: notendGameplay
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903380556954231886, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+      propertyPath: tutorialScript
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8903380556954231886, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
