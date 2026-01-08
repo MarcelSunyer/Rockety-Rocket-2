@@ -6,25 +6,32 @@ namespace RocketyRocket2
 {
     public class Bullet : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        public ParticleSystem Death;
+        public int TimeAlive;
+        private void Start()
         {
-        
+            StartCoroutine(CountDown());
         }
 
-        // Update is called once per frame
-        void Update()
+        private IEnumerator CountDown()
         {
-        
+            yield return new WaitForSeconds(TimeAlive);
+            Death.Play();
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            yield return new WaitForSeconds(0.4f);
+            gameObject.SetActive(false);
         }
-        private void OnTriggerEnter2D(Collider2D collision)
+        // Start is called before the first frame update
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            if(collision.CompareTag("Ship"))
+            if(collision.collider.CompareTag("Ship"))
             {
-                this.gameObject.GetComponent<ParticleSystem>().Stop();
-                Destroy(this.gameObject);
+                gameObject.SetActive(false);
             }
         }
-        
+
+
+
     }
 }
