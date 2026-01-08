@@ -12,6 +12,7 @@ TagManager:
   - MoveCamDown
   - Blade
   - Astronaut
+  - Bullet
   layers:
   - Default
   - TransparentFX
