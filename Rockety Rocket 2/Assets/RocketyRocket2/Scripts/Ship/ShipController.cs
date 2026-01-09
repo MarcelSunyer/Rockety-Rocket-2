@@ -35,7 +35,7 @@ namespace RocketyRocket2
         public ParticleSystem destroy_particle_1;
         public ParticleSystem destroy_particle_2;
         public ParticleSystem destroy_particle_3;
-       
+
         public GameObject[] skins;
 
         [Header("TimeToStart")]
@@ -51,10 +51,19 @@ namespace RocketyRocket2
         [SerializeField] private Slider sliderBoost;
         [SerializeField] private bool activeBoost = true;
 
+        [Header("Astronauts")]
+        public Astronaut[] Astronauts;
+        public GameObject TextLostaFriend;
+        public bool friendDied;
+        private bool particelsPlayed;
+
+
         private GameObject safeZone;
 
         void Start()
         {
+            particelsPlayed = false;    
+            friendDied = false;
             safeZone = GameObject.Find("End");
 
             if (skins != null)
@@ -82,7 +91,7 @@ namespace RocketyRocket2
         }
         void FixedUpdate()
         {
-            switch(currentState)
+            switch (currentState)
             {
                 case StateShip.Stop:
                     StopShip();
@@ -117,16 +126,23 @@ namespace RocketyRocket2
                 }
             }
 
-            if(Input.GetKeyDown(KeyCode.H))
+            if (Input.GetKeyDown(KeyCode.H))
             {
                 safeZone.GetComponent<BoxCollider2D>().enabled = true;
-                safeZone.transform.position = gameObject.transform.position ;
+                safeZone.transform.position = gameObject.transform.position;
+            }
+            for (int i = 0; i < Astronauts.Length; i++)
+            {
+                if (Astronauts[i].IsDeath)
+                {
+                    StartCoroutine(AstronautDeath());
+                }
             }
         }
 
         private void MoveShip()
         {
-            if(stopToPlay)
+            if (stopToPlay)
             {
                 boost_particle_1.gameObject.SetActive(true);
                 boost_particle_2.gameObject.SetActive(true);
@@ -140,19 +156,18 @@ namespace RocketyRocket2
             saveForce = direction * boostInput * boostForce;
             rigidbody2D.AddForce(saveForce);
             saveVelocity = rigidbody2D.velocity;
-            
+
         }
 
         private void StopShip()
         {
-           
             rotationInput = 0;
 
             stopToPlay = true;
             boostInput = 0;
-            if (sliderBoost != null && activeBoost)
+            if (sliderBoost != null && activeBoost || friendDied)
             {
-                if (sliderBoost.value >= sliderBoost.maxValue)
+                if (sliderBoost.value >= sliderBoost.maxValue || friendDied)
                 {
                     StartCoroutine(StopParticles());
                     if (rigidbody2D.rotation == 0)
@@ -173,7 +188,7 @@ namespace RocketyRocket2
                         return;
                     }
 
-                   
+
                 }
             }
             rigidbody2D.AddForce(Vector2.zero);
@@ -219,9 +234,13 @@ namespace RocketyRocket2
                 skins[i].SetActive(false);
 
             }
-            destroy_particle_1.Play();
-            destroy_particle_2.Play();
-            destroy_particle_3.Play();
+            if (!particelsPlayed)
+            {
+                destroy_particle_1.Play();
+                destroy_particle_2.Play();
+                destroy_particle_3.Play();
+                particelsPlayed = true;
+            }
 
             boost_particle_1.Stop();
             boost_particle_2.Stop();
@@ -231,9 +250,12 @@ namespace RocketyRocket2
             boost_particle_2.gameObject.SetActive(false);
             boost_particle_3.gameObject.SetActive(false);
 
-            gameObject.GetComponent<Collider2D>().enabled = false;
 
+            gameObject.GetComponent<Collider2D>().enabled = false;
+            
             StartCoroutine(DestroyShip());
+            
+         
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
@@ -244,27 +266,51 @@ namespace RocketyRocket2
         }
         private IEnumerator DestroyShip()
         {
-            currentState = StateShip.Stop;
-            yield return new WaitForSeconds(1);
-            if(FadeDeath)
-                FadeDeath.gameObject.SetActive(true);
+            if (!friendDied)
+            {
+                currentState = StateShip.Stop;
+                yield return new WaitForSeconds(1);
+                if (FadeDeath)
+                    FadeDeath.gameObject.SetActive(true);
                 Tween tween = FadeDeath.DOFade(0.8f, 1);
                 tween.Play();
 
-            yield return tween.WaitForCompletion();
+                yield return tween.WaitForCompletion();
 
-            textDestroyed.SetActive(true);
+                textDestroyed.SetActive(true);
 
-            yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(1f);
 
 
-            for (int i = 0; i < DeathButtons.Length; ++i)
-            {
-                DeathButtons[i].gameObject.SetActive(true);
-                yield return new WaitForSeconds(0.75f);
+                for (int i = 0; i < DeathButtons.Length; ++i)
+                {
+                    DeathButtons[i].gameObject.SetActive(true);
+                    yield return new WaitForSeconds(0.75f);
+                }
+
+                Destroy(this.gameObject);
             }
+            else
+            {
+                if (FadeDeath)
+                    FadeDeath.gameObject.SetActive(true);
+                Tween tween = FadeDeath.DOFade(0.8f, 1);
+                tween.Play();
 
-            Destroy(this.gameObject);
+                yield return tween.WaitForCompletion();
+                if(TextLostaFriend != null)
+                    TextLostaFriend.SetActive(true);
+
+                yield return new WaitForSeconds(1f);
+
+                for (int i = 0; i < DeathButtons.Length; ++i)
+                {
+                    DeathButtons[i].gameObject.SetActive(true);
+                    yield return new WaitForSeconds(0.75f);
+                }
+                
+                Destroy(this.gameObject);
+            }
         }
 
         private IEnumerator WaitToStart()
@@ -273,6 +319,16 @@ namespace RocketyRocket2
             currentState = StateShip.Playing;
         }
 
+        private IEnumerator AstronautDeath()
+        {
+            friendDied = true;
+            StopShip();
+            yield return new WaitForSeconds(3.5f);
+
+            ShipDestroyed();
+
+
+        }
     }
 }
 
