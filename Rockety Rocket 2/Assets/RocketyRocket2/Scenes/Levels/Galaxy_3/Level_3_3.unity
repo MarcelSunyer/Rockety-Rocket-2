@@ -11744,7 +11744,7 @@ MonoBehaviour:
   GalaxyNum: 3
   PlanetNum: 3
   idle: {r: 1, g: 1, b: 1, a: 1}
-  idleColor: {r: 0.28235295, g: 0.5921569, b: 1, a: 1}
+  idleColor: {r: 0.85882354, g: 0.4, b: 0.7254902, a: 1}
   lerpSpeed: 1
   startUpdateColor: 0
   shipController: {fileID: 1448262378}

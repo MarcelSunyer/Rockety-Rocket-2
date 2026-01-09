@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 59354832}
   - component: {fileID: 59354830}
   m_Layer: 5
-  m_Name: Level_1_4
+  m_Name: Level_1_4_Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -398,6 +398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 73265739}
   - component: {fileID: 73265740}
+  - component: {fileID: 73265741}
   m_Layer: 0
   m_Name: SMC
   m_TagString: Untagged
@@ -453,6 +454,27 @@ MonoBehaviour:
   - {fileID: 371924671}
   - {fileID: 1336192997}
   updateLevels: {fileID: 743865109}
+--- !u!114 &73265741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73265738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ff266235884fc4687ee3d4aa99bdd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Levels:
+  - {fileID: 1792315170}
+  - {fileID: 705080099}
+  - {fileID: 1481127646}
+  - {fileID: 989180362}
+  - {fileID: 371924671}
+  - {fileID: 1336192997}
+  galaxy: 4
+  fade: {fileID: 274621051}
 --- !u!1 &81155632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,7 +1518,7 @@ GameObject:
   - component: {fileID: 145822095}
   - component: {fileID: 145822094}
   m_Layer: 5
-  m_Name: Level_5_1
+  m_Name: Level_5_1_Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2461,6 +2483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 246332500}
   - component: {fileID: 246332501}
+  - component: {fileID: 246332502}
   m_Layer: 0
   m_Name: Messier 32
   m_TagString: Untagged
@@ -2516,6 +2539,27 @@ MonoBehaviour:
   - {fileID: 129442692}
   - {fileID: 1712428106}
   updateLevels: {fileID: 122088669}
+--- !u!114 &246332502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246332499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ff266235884fc4687ee3d4aa99bdd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Levels:
+  - {fileID: 145822094}
+  - {fileID: 862177231}
+  - {fileID: 118126466}
+  - {fileID: 2100533553}
+  - {fileID: 129442692}
+  - {fileID: 1712428106}
+  galaxy: 5
+  fade: {fileID: 274621051}
 --- !u!1 &262375004
 GameObject:
   m_ObjectHideFlags: 0
@@ -8738,7 +8782,7 @@ GameObject:
   - component: {fileID: 971766931}
   - component: {fileID: 971766930}
   m_Layer: 5
-  m_Name: Level_3_1
+  m_Name: Level_3_1_Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9940,7 +9984,7 @@ GameObject:
   - component: {fileID: 1132623468}
   - component: {fileID: 1132623466}
   m_Layer: 5
-  m_Name: Level_1_1
+  m_Name: Level_1_1_Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13041,6 +13085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1460525079}
   - component: {fileID: 1460525080}
+  - component: {fileID: 1460525081}
   m_Layer: 0
   m_Name: LMC
   m_TagString: Untagged
@@ -13096,6 +13141,27 @@ MonoBehaviour:
   - {fileID: 1139498185}
   - {fileID: 262375005}
   updateLevels: {fileID: 722295465}
+--- !u!114 &1460525081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460525078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ff266235884fc4687ee3d4aa99bdd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Levels:
+  - {fileID: 971766930}
+  - {fileID: 1904588602}
+  - {fileID: 620904273}
+  - {fileID: 1438639771}
+  - {fileID: 1139498185}
+  - {fileID: 262375005}
+  galaxy: 3
+  fade: {fileID: 274621051}
 --- !u!1 &1466725527
 GameObject:
   m_ObjectHideFlags: 0
@@ -15943,7 +16009,7 @@ GameObject:
   - component: {fileID: 1792315171}
   - component: {fileID: 1792315170}
   m_Layer: 5
-  m_Name: Level_4_1
+  m_Name: Level_4_1_Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15992,19 +16058,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1792315171}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 213162369}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: Galaxy_1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1792315171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16609,7 +16663,7 @@ GameObject:
   - component: {fileID: 1809898831}
   - component: {fileID: 1809898830}
   m_Layer: 5
-  m_Name: Level_2_1
+  m_Name: Level_2_1_Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

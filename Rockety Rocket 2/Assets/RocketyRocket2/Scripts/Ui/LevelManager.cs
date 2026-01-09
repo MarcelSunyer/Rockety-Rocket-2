@@ -19,10 +19,6 @@ namespace RocketyRocket2
             for (int i = 0; i < Levels.Length; i++)
             {
                 string levelName = Levels[i].name;
-                if (i == 0)
-                {
-                    levelName = Levels[i].name + "_Tutorial";
-                }
                 
                 Levels[i].onClick.AddListener(()=> LoadLevel(levelName));
             }
@@ -40,7 +36,7 @@ namespace RocketyRocket2
             Tween tween = fade.DOFade(1,0.5f);
             tween.Play();
 
-            yield return tween.WaitForCompletion();
+            yield return new WaitForSeconds(2);
 
             SceneManager.LoadScene(levelName);
         }

@@ -35,7 +35,10 @@ namespace RocketyRocket2
             }
             if (canPass != null)
             {
-                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                if (canPass.Astronauts[0] != null)
+                {
+                    gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                }
             }
         }
 

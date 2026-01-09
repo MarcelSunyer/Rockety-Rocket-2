@@ -13,6 +13,7 @@ TagManager:
   - Blade
   - Astronaut
   - Bullet
+  - Turret
   layers:
   - Default
   - TransparentFX
