@@ -20391,7 +20391,7 @@ MonoBehaviour:
   boost_particle_3: {fileID: 8003996110163766185}
   rigidbody2D: {fileID: 2453129131777752473}
   rotationSpeed: 125
-  boostForce: 2
+  boostForce: 2.5
   boostInput: 0
   destroy_particle_1: {fileID: 7445564198846638568}
   destroy_particle_2: {fileID: 2615149264386213728}
@@ -20410,6 +20410,9 @@ MonoBehaviour:
   valueBoost: 2
   sliderBoost: {fileID: 5302014562166046088}
   activeBoost: 1
+  Astronauts: []
+  TextLostaFriend: {fileID: 0}
+  friendDied: 0
 --- !u!1 &2968015558697662207
 GameObject:
   m_ObjectHideFlags: 0
