@@ -10,10 +10,10 @@ namespace RocketyRocket2
         public int TimeAlive;
         private void Start()
         {
-            StartCoroutine(CountDown());
+            StartCoroutine(CountDown(TimeAlive));
         }
 
-        private IEnumerator CountDown()
+        private IEnumerator CountDown(float TimeAlive)
         {
             yield return new WaitForSeconds(TimeAlive);
             Death.Play();
@@ -28,6 +28,11 @@ namespace RocketyRocket2
             if(collision.collider.CompareTag("Ship"))
             {
                 gameObject.SetActive(false);
+            }
+
+            if (collision.collider.CompareTag("Asteroid"))
+            {
+                StartCoroutine(CountDown(0));
             }
         }
 

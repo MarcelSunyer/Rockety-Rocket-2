@@ -90,6 +90,6 @@ Material:
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _SecondaryColor: {r: 1, g: 0.9098039, b: 0.9478387, a: 1}
-    - _TertiaryColor: {r: 1, g: 0.102836676, b: 0, a: 0.65882355}
+    - _TertiaryColor: {r: 1, g: 0.39841667, b: 0, a: 0.65882355}
     - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_BuildTextureStacks: []
