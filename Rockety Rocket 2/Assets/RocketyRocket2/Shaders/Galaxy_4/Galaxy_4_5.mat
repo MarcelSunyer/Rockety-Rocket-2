@@ -61,7 +61,7 @@ Material:
     - _CometSpeed: 10
     - _Cutoff: 0
     - _EdgeBlurDistance: 0.2
-    - _EdgeBlurStrength: 2
+    - _EdgeBlurStrength: 3.4
     - _EnableExternalAlpha: 0
     - _Exposure: 1
     - _GalaxyRadius: 2
@@ -81,7 +81,7 @@ Material:
     - _TrailLength: 3
     - _TrailSmoothness: 0.67
     m_Colors:
-    - _BackgroundColor: {r: 0.7176471, g: 0.5864819, b: 0.07058824, a: 1}
+    - _BackgroundColor: {r: 0.7176471, g: 0.40281498, b: 0.07058824, a: 1}
     - _CautionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 0, b: 0, a: 1}
     - _CriticalColor: {r: 1, g: 1, b: 1, a: 1}

@@ -94,12 +94,33 @@ EditorBuildSettings:
     guid: 403d62cf562f3cb45acc6fbdceec6f1d
   - enabled: 1
     path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_4/Level_4_4.unity
-    guid: 74a21f10bbb58e346bfc4ce4a9ed1066
+    guid: e5b1b98a242833d44a0b7f7055cb244c
   - enabled: 1
     path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_4/Level_4_5.unity
-    guid: e5b1b98a242833d44a0b7f7055cb244c
+    guid: 74a21f10bbb58e346bfc4ce4a9ed1066
   - enabled: 1
     path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_4/Level_4_6.unity
     guid: 436f11654d76fbf4fa5b23a5fe628126
+  - enabled: 1
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_5/Level_5_1_Tutorial.unity
+    guid: fa39eadbfe18d4a44a48c99a609b52dd
+  - enabled: 1
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_5/Level_5_1.unity
+    guid: c54b1eba0c11e0d4da0aa6011f5005c3
+  - enabled: 1
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_5/Level_5_2.unity
+    guid: 49d8ba5303d0c3448aa648fd3e5f609b
+  - enabled: 1
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_5/Level_5_3.unity
+    guid: 35af75fdfeac9354cb604e130050c42c
+  - enabled: 1
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_5/Level_5_4.unity
+    guid: 1c8cff5cee2e19e4293a643a682bbc99
+  - enabled: 1
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_5/Level_5_5.unity
+    guid: f2fc7a9dba6d5f6428daa027b1782e26
+  - enabled: 1
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_5/Level_5_6.unity
+    guid: e24d1e73c2b95584c8e9174e7152fbbb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 5cae969e405f9d9448804d113d248d09, type: 3}
