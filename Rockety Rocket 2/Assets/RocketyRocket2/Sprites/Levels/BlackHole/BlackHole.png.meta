@@ -1,0 +1,378 @@
+fileFormatVersion: 2
+guid: f940f4a484fa56548b1cea0e325aa345
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: matthieu-rappeneau-black-hole-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2275653e28a3b47aebacc3cb3860ea
+      internalID: -414498169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: matthieu-rappeneau-black-hole-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1ec238d52a9f14998cb5a4cadf1011
+      internalID: 413287591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: matthieu-rappeneau-black-hole-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5734d79ca70607847a450576e7c5da63
+      internalID: 899753462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: matthieu-rappeneau-black-hole-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189a301c7b2e7d4429c7f82f61bc98e3
+      internalID: -2123991690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: matthieu-rappeneau-black-hole-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2614432907292914c9be9286c298a86a
+      internalID: -335044310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: matthieu-rappeneau-black-hole-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67136a407247abf409a0c16b7a931788
+      internalID: 159593526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: matthieu-rappeneau-black-hole-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4df705e8c954df408c06818fe2d0be3
+      internalID: 1356113653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: matthieu-rappeneau-black-hole-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec89837bcd337749a0709e9aecc43d2
+      internalID: 604236827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: matthieu-rappeneau-black-hole-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f6c0427e73870f498913a24c50734df
+      internalID: -1809682274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: matthieu-rappeneau-black-hole-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b5fe9059c537d4ab867d487948cd20
+      internalID: 2138124939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: matthieu-rappeneau-black-hole-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d2095197a850a54b8c0b9139cb65c9c
+      internalID: 1132992492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: matthieu-rappeneau-black-hole-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 11000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e22418191fc3d2459870a3888e8d740
+      internalID: 2109765375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      matthieu-rappeneau-black-hole-Sheet_0: -414498169
+      matthieu-rappeneau-black-hole-Sheet_1: 413287591
+      matthieu-rappeneau-black-hole-Sheet_10: 1132992492
+      matthieu-rappeneau-black-hole-Sheet_11: 2109765375
+      matthieu-rappeneau-black-hole-Sheet_2: 899753462
+      matthieu-rappeneau-black-hole-Sheet_3: -2123991690
+      matthieu-rappeneau-black-hole-Sheet_4: -335044310
+      matthieu-rappeneau-black-hole-Sheet_5: 159593526
+      matthieu-rappeneau-black-hole-Sheet_6: 1356113653
+      matthieu-rappeneau-black-hole-Sheet_7: 604236827
+      matthieu-rappeneau-black-hole-Sheet_8: -1809682274
+      matthieu-rappeneau-black-hole-Sheet_9: 2138124939
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
