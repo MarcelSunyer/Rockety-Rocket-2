@@ -35,7 +35,7 @@ namespace RocketyRocket2
 
 
             }
-            if (collision.gameObject.CompareTag("Asteroid"))
+            if (collision.gameObject.CompareTag("Asteroid") || collision.gameObject.CompareTag("Bullet"))
             {
                 StartCoroutine(Die());
 

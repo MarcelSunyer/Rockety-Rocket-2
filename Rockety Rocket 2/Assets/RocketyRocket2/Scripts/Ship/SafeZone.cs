@@ -64,7 +64,7 @@ namespace RocketyRocket2
 
                 startUpdateColor = true;
 
-                shipController.rigidbody2D.drag = 5f;
+                shipController.rigidbody2D.linearDamping = 5f;
                 shipController.boostInput = 0;
 
                 shipController.boost_particle_1.Stop();

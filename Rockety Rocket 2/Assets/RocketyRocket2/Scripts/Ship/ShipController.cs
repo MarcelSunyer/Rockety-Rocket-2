@@ -45,6 +45,8 @@ namespace RocketyRocket2
         public Image FadeDeath;
         public Button[] DeathButtons;
         public GameObject textDestroyed;
+        public bool BlackHoleDeath = false;
+
 
         [Header("Boost")]
         public float valueBoost;
@@ -138,6 +140,18 @@ namespace RocketyRocket2
                     StartCoroutine(AstronautDeath());
                 }
             }
+            if(BlackHoleDeath)
+            {
+
+                Sequence seq_ = DOTween.Sequence();
+                Tween tween = seq_.Join(gameObject.transform.DOScale(new Vector3(0,0,0),1));
+                seq_.Join(gameObject.transform.DORotate(new Vector3(0,0,630),1,RotateMode.FastBeyond360));
+                seq_.Play();
+
+                tween.WaitForCompletion();
+                
+                StopShip();
+            }
         }
 
         private void MoveShip()
@@ -147,7 +161,7 @@ namespace RocketyRocket2
                 boost_particle_1.gameObject.SetActive(true);
                 boost_particle_2.gameObject.SetActive(true);
                 boost_particle_3.gameObject.SetActive(true);
-                rigidbody2D.velocity = saveVelocity;
+                rigidbody2D.linearVelocity = saveVelocity;
                 stopToPlay = false;
             }
             rigidbody2D.rotation -= rotationInput * rotationSpeed * Time.fixedDeltaTime;
@@ -155,7 +169,7 @@ namespace RocketyRocket2
             Vector2 direction = transform.up;
             saveForce = direction * boostInput * boostForce;
             rigidbody2D.AddForce(saveForce);
-            saveVelocity = rigidbody2D.velocity;
+            saveVelocity = rigidbody2D.linearVelocity;
 
         }
 
@@ -192,7 +206,7 @@ namespace RocketyRocket2
                 }
             }
             rigidbody2D.AddForce(Vector2.zero);
-            rigidbody2D.velocity = Vector2.zero;
+            rigidbody2D.linearVelocity = Vector2.zero;
         }
 
         public IEnumerator StopParticles()

@@ -29,6 +29,10 @@ namespace RocketyRocket2
             {
                 gameObject.SetActive(false);
             }
+            if (collision.collider.CompareTag("BlackHole"))
+            {
+                gameObject.SetActive(false);
+            }
 
             if (collision.collider.CompareTag("Asteroid"))
             {

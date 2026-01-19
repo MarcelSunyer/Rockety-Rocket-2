@@ -55,7 +55,7 @@ namespace RocketyRocket2
                     Vector2 direction = (Ship.transform.position - gameObject.transform.position).normalized;
 
                     // LOCK movement
-                    rb.velocity = direction * SpeedBullet;
+                    rb.linearVelocity = direction * SpeedBullet;
                 }
             }
                

@@ -1,3 +1,8 @@
+GridBrush
+UnityEditor
+GridBrushEditor
+GridBrushEditorBase
+GridSelection
 CinemachineUniversalPixelPerfect
 UnityEngine
 Experimental
@@ -7,6 +12,15 @@ Light2D
 Light2DBlendStyle
 PixelPerfectCamera
 Renderer2DData
+RenderObjectsPass
+UnityEngine
+Experimental
+Rendering
+Universal
+FullScreenPassRendererFeature
+
+RenderQueueType
+RenderObjects
 AssetModificationProcessor
 
 Sysroot
@@ -101,12 +115,10 @@ AnimatorJobExtensions
 MuscleHandle
 ExpressionEvaluator
 UnityEditor
-NumericFieldDraggerUtility
-PixelPerfectRendering
+EventModifiers
 UnityEngine
-Experimental
-U2D
-SpriteBone
+IMUGI
+NumericFieldDraggerUtility
 Profiler
 PhotoCaptureFileOutputFormat
 XR
@@ -119,6 +131,7 @@ CapturePixelFormat
 WebCamMode
 CameraParameters
 PlayerLoopSystemInternal
+Experimental
 LowLevel
 PlayerLoopSystem
 PlayerLoop
@@ -135,6 +148,8 @@ PlayerConnection
 IConnectionState
 VertexAttribute
 Rendering
+LightUnit
+HighDefinition
 RenderingThreadingMode
 RayTracingSubMeshFlags
 RayTracingInstanceCullingFlags
@@ -152,9 +167,16 @@ RayTracingAccelerationStructure
 RendererList
 RendererUtils
 RendererListStatus
-RayTracingShader
+RayTracingShaderHelpURLAttribute
+PixelPerfectRendering
+U2D
+SpriteBone
 LocalizationAsset
 UnityEditor
+CurrentPlayer
+Unity
+Multiplayer
+Playmode
 SpriteShapeParameters
 UnityEngine
 Experimental
