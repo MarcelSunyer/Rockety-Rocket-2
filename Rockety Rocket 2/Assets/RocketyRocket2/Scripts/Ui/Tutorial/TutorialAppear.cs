@@ -106,7 +106,10 @@ namespace RocketyRocket2
                 arrow.enabled = false;
             }
             //Activar particulas de boost al terminar el tutorial
-            particles.SetActive(true);
+            if (particles != null)
+            {
+                particles.SetActive(true);
+            }
             if(tutorialScript != null)
             { 
                 tutorialScript.enabled = false;

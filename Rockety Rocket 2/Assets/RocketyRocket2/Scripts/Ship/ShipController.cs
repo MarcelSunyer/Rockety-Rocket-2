@@ -85,10 +85,7 @@ namespace RocketyRocket2
                     }
                 }
             }
-            if (activeBoost)
-            {
-                sliderBoost.gameObject.SetActive(true);
-            }
+           
             boostForce = boostForce / 30000;
         }
         void FixedUpdate()
@@ -331,6 +328,11 @@ namespace RocketyRocket2
         {
             yield return new WaitForSeconds(TimeToStart);
             currentState = StateShip.Playing;
+            if (activeBoost)
+            {
+                sliderBoost.gameObject.SetActive(true);
+            }
+
         }
 
         private IEnumerator AstronautDeath()
