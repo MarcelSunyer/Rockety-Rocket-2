@@ -1,48 +1,56 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace RocketyRocket2
 {
     public class UIAnimation : MonoBehaviour
     {
         public Image m_Image;
-
         public Sprite[] m_SpriteArray;
-        public float m_Speed = 1;
+        public float m_Speed = 1f;
 
         private int m_IndexSprite;
-        Coroutine m_CorotineAnim;
-        bool IsDone;
+        private Coroutine m_CoroutineAnim;
 
-        private void Start()
+        void OnEnable()
         {
-            Func_PlayUIAnim();
-        }
-        public void Func_PlayUIAnim()
-        {
-            IsDone = false;
-            StartCoroutine(Func_PlayAnimUI());
+            StartAnimation();
         }
 
-        public void Func_StopUIAnim()
+        void OnDisable()
         {
-            IsDone = true;
-            StopCoroutine(Func_PlayAnimUI());
+            StopAnimation();
         }
-        IEnumerator Func_PlayAnimUI()
+
+        void StartAnimation()
         {
-            yield return new WaitForSeconds(m_Speed/10);
-            if (m_IndexSprite >= m_SpriteArray.Length)
+            m_IndexSprite = 0;
+
+            if (m_CoroutineAnim != null)
+                StopCoroutine(m_CoroutineAnim);
+
+            m_CoroutineAnim = StartCoroutine(PlayAnimUI());
+        }
+
+        void StopAnimation()
+        {
+            if (m_CoroutineAnim != null)
             {
-                m_IndexSprite = 0;
+                StopCoroutine(m_CoroutineAnim);
+                m_CoroutineAnim = null;
             }
-            m_Image.sprite = m_SpriteArray[m_IndexSprite];
-            m_IndexSprite += 1;
-            if (IsDone == false)
-                m_CorotineAnim = StartCoroutine(Func_PlayAnimUI());
+        }
+
+        IEnumerator PlayAnimUI()
+        {
+            while (true)
+            {
+                m_Image.sprite = m_SpriteArray[m_IndexSprite];
+                m_IndexSprite = (m_IndexSprite + 1) % m_SpriteArray.Length;
+
+                yield return new WaitForSeconds(m_Speed/10);
+            }
         }
     }
 }
-
