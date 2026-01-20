@@ -146,11 +146,15 @@ namespace RocketyRocket2
                 seq_.Play();
 
                 tween.WaitForCompletion();
-                
                 StopShip();
+                StartCoroutine(DestroyShipOnHole());
             }
         }
-
+        private IEnumerator DestroyShipOnHole()
+        {
+            yield return new WaitForSeconds(1f);
+            ShipDestroyed();
+        }
         private void MoveShip()
         {
             if (stopToPlay)
