@@ -23,24 +23,21 @@ namespace RocketyRocket2
             gameObject.SetActive(false);
         }
         // Start is called before the first frame update
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.collider.CompareTag("Ship"))
+            if (collision.CompareTag("Ship"))
             {
                 gameObject.SetActive(false);
             }
-            if (collision.collider.CompareTag("BlackHole"))
+            if (collision.CompareTag("BlackHole"))
             {
                 gameObject.SetActive(false);
             }
 
-            if (collision.collider.CompareTag("Asteroid"))
+            if (collision.CompareTag("Asteroid"))
             {
                 StartCoroutine(CountDown(0));
             }
         }
-
-
-
     }
 }

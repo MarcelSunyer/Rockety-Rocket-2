@@ -797,7 +797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextLevelIsTutorial: 0
-  Galaxy: 3
+  Galaxy: 5
   IsNextLevelAnotherGalxy: 0
   startEndLevel: {fileID: 193019144}
   buttonContinue: {fileID: 2126972074}
@@ -5499,7 +5499,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.8901961, g: 0.7254902, b: 0.49803922, a: 0.40392157}
+      maxColor: {r: 0.79607844, g: 0.24313726, b: 0.16862746, a: 0.40392157}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

@@ -279,6 +279,13 @@ namespace RocketyRocket2
                 ShipDestroyed();
             }
         }
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Bullet") )
+            {
+                ShipDestroyed();
+            }
+        }
         private IEnumerator DestroyShip()
         {
             if (!friendDied)

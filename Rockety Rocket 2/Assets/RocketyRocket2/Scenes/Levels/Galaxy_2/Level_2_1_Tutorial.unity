@@ -5802,7 +5802,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  - {fileID: 2100000, guid: e2fb6d57280523b408a8b8abd0011522, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13155,7 +13155,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -13180,7 +13180,7 @@ Transform:
   m_GameObject: {fileID: 1251456063}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.01, y: -0.5, z: -1}
+  m_LocalPosition: {x: -0.6, y: 1.1, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24617,6 +24617,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5268262}
     m_Modifications:
+    - target: {fileID: 789121607218201197, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 1145052942649452110, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -13.000076
@@ -24628,6 +24632,10 @@ PrefabInstance:
     - target: {fileID: 2183584428938603034, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3460699455926071559, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 3797320339823524701, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: m_Name
@@ -24728,6 +24736,10 @@ PrefabInstance:
     - target: {fileID: 6026596814698181471, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: m_margin.z
       value: 144.60117
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026596814698181471, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 7380490142454833144, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: m_Pivot.x

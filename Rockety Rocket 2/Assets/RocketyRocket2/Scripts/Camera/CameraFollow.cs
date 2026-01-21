@@ -12,7 +12,11 @@ namespace RocketyRocket2
         [SerializeField] private float smoothSpeed = 0.2f;
 
         private Vector3 velocity = Vector3.zero;
-
+        private void Start()
+        {
+            Tween tween = gameObject.GetComponent<Camera>().DOOrthoSize(4.5f,2);
+            tween.Play();
+        }
         void LateUpdate()
         {
             if (ship == null) return;
