@@ -4453,11 +4453,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9
+  orthographic size: 3.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4482,7 +4482,7 @@ Transform:
   m_GameObject: {fileID: 1251456063}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.47, y: -0.38, z: -1}
+  m_LocalPosition: {x: 6.59, y: -0.34, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4503,6 +4503,8 @@ MonoBehaviour:
   ship: {fileID: 1448262379}
   deadZoneSize: {x: 0.5, y: 0.5}
   smoothSpeed: 1
+  startGame: 0
+  firstGames: 1
 --- !u!114 &1251456068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10766,13 +10768,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935031538}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -4.2623, y: -0.31231, z: 0}
   m_LocalScale: {x: 3.9149842, y: 3.9149842, z: 3.9149842}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!224 &1936280489 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5803756345735491628, guid: d16395826747f7f4cac904e791cf6830, type: 3}
@@ -12040,6 +12042,10 @@ PrefabInstance:
       propertyPath: 'DeathButtons.Array.data[2]'
       value: 
       objectReference: {fileID: 532723405}
+    - target: {fileID: 5882256274731073297, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 16.499878
+      objectReference: {fileID: 0}
     - target: {fileID: 6422946686635243674, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
@@ -12058,19 +12064,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7325495018755074532, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7325495018755074532, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7325495018755074532, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7325495018755074532, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00032246578
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7325495018755074532, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -12082,7 +12088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7325495018755074532, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.037
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17587,7 +17593,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1INFORMATION!"
+  m_text: '!INFORMATION!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 250055005e4e0f5459930e0ed8872c64, type: 2}
   m_sharedMaterial: {fileID: -67380637403349598, guid: 250055005e4e0f5459930e0ed8872c64, type: 2}

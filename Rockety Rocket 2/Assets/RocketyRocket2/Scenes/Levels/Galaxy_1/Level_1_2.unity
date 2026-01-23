@@ -2391,7 +2391,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9
+  orthographic size: 3.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2416,7 +2416,7 @@ Transform:
   m_GameObject: {fileID: 1251456063}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.18, y: 0.4, z: -1}
+  m_LocalPosition: {x: 6.12, y: 5.04, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2437,6 +2437,8 @@ MonoBehaviour:
   ship: {fileID: 1448262379}
   deadZoneSize: {x: 0.5, y: 0.5}
   smoothSpeed: 1
+  startGame: 0
+  firstGames: 1
 --- !u!114 &1251456068
 MonoBehaviour:
   m_ObjectHideFlags: 0

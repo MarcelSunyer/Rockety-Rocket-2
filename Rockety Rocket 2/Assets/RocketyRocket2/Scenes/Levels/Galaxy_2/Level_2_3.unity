@@ -4365,6 +4365,7 @@ MonoBehaviour:
   ship: {fileID: 1448262379}
   deadZoneSize: {x: 0.5, y: 0.5}
   smoothSpeed: 1
+  startGame: 0
 --- !u!114 &1251456068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11755,6 +11756,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 769200065555892689, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283061483780035133, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 2632728655352967896, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_Name
       value: Ship
@@ -11769,6 +11778,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416393691484280215, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4876315936959099005, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4876315936959099005, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4876315936959099005, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
@@ -11819,6 +11840,10 @@ PrefabInstance:
       propertyPath: 'DeathButtons.Array.data[2]'
       value: 
       objectReference: {fileID: 1987575527}
+    - target: {fileID: 6422946686635243674, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 6815551594989270999, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0

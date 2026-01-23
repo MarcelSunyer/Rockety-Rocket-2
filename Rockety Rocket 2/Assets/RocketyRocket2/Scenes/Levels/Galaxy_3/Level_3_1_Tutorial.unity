@@ -8545,6 +8545,7 @@ MonoBehaviour:
   ship: {fileID: 1448262379}
   deadZoneSize: {x: 0.5, y: 0.5}
   smoothSpeed: 1
+  startGame: 0
 --- !u!114 &1251456068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20017,7 +20018,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1INFORMATION!"
+  m_text: '!INFORMATION!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 250055005e4e0f5459930e0ed8872c64, type: 2}
   m_sharedMaterial: {fileID: -67380637403349598, guid: 250055005e4e0f5459930e0ed8872c64, type: 2}

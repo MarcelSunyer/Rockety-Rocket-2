@@ -23199,6 +23199,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5268262}
     m_Modifications:
     - target: {fileID: 789121607218201197, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+      propertyPath: m_text
+      value: '!INFORMATION!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 789121607218201197, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
       objectReference: {fileID: 0}
@@ -23738,6 +23742,7 @@ MonoBehaviour:
   ship: {fileID: 1448262379}
   deadZoneSize: {x: 0.5, y: 0.5}
   smoothSpeed: 1
+  startGame: 0
 --- !u!114 &1251456068
 MonoBehaviour:
   m_ObjectHideFlags: 0

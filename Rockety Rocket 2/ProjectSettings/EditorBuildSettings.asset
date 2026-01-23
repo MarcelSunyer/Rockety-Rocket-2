@@ -24,13 +24,16 @@ EditorBuildSettings:
     path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_1/Level_1_3.unity
     guid: aa85e8c61d85a23428a12a53463405ff
   - enabled: 1
-    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_1/Level_1_4_Tutorial.unity
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_1/Level_1_5_Tutorial.unity
     guid: f3fae5b31592320449770d619c5f0bca
   - enabled: 1
-    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_1/Level_1_4.unity
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_1/Level_1_5.unity
     guid: bae34cb3a33de5042a20ee1877862c42
   - enabled: 1
-    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_1/Level_1_5.unity
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_1/Level_1_4_Tutorial.unity
+    guid: 3250a395f030b9f48b816d0db91c13b7
+  - enabled: 1
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_1/Level_1_4.unity
     guid: d9ffa95fa8c5dfd41b7a5eaea0b62dac
   - enabled: 1
     path: Assets/RocketyRocket2/Scenes/Levels/Test.unity
@@ -90,13 +93,13 @@ EditorBuildSettings:
     path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_4/Level_4_2.unity
     guid: 7c4cd1a02e8836e4d907ba78039c3abf
   - enabled: 1
-    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_4/Level_4_3.unity
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_4/Level_4_4.unity
     guid: 403d62cf562f3cb45acc6fbdceec6f1d
   - enabled: 1
-    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_4/Level_4_4.unity
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_4/Level_4_5.unity
     guid: e5b1b98a242833d44a0b7f7055cb244c
   - enabled: 1
-    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_4/Level_4_5.unity
+    path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_4/Level_4_3.unity
     guid: 74a21f10bbb58e346bfc4ce4a9ed1066
   - enabled: 1
     path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_4/Level_4_6.unity

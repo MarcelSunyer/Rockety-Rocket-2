@@ -11,14 +11,23 @@ namespace RocketyRocket2
         [SerializeField] private Vector2 deadZoneSize = new Vector2(2f, 2f); // width, height
         [SerializeField] private float smoothSpeed = 0.2f;
 
+        public bool startGame = false;
+        public bool firstGames =false;
+
         private Vector3 velocity = Vector3.zero;
-        private void Start()
-        {
-            Tween tween = gameObject.GetComponent<Camera>().DOOrthoSize(4.5f,2);
-            tween.Play();
-        }
+
         void LateUpdate()
         {
+            if (Input.anyKeyDown)
+            {
+                Tween tween = gameObject.GetComponent<Camera>().DOOrthoSize(3.25f, 2);
+                tween.Play();
+                startGame = true;
+            }
+            if(!startGame || firstGames)
+            {
+                return;
+            }
             if (ship == null) return;
 
             Vector3 camPos = transform.position;
