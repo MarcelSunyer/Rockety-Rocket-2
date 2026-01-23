@@ -4245,6 +4245,9 @@ MonoBehaviour:
   ship: {fileID: 1448262379}
   deadZoneSize: {x: 0.5, y: 0.5}
   smoothSpeed: 1
+  boost: {fileID: 1185047601010162982}
+  startGame: 0
+  firstGames: 0
 --- !u!114 &1251456068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10830,7 +10833,7 @@ PrefabInstance:
       objectReference: {fileID: 532723405}
     - target: {fileID: 5232005615090170494, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6668755274084144732, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_LocalScale.x
@@ -10917,6 +10920,11 @@ PrefabInstance:
 --- !u!1 &1185047601010162981 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2373948655042672162, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+  m_PrefabInstance: {fileID: 1185047601010162980}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1185047601010162982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5232005615090170494, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
   m_PrefabInstance: {fileID: 1185047601010162980}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

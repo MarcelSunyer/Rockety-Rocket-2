@@ -10,12 +10,16 @@ namespace RocketyRocket2
         [SerializeField] private Transform ship;
         [SerializeField] private Vector2 deadZoneSize = new Vector2(2f, 2f); // width, height
         [SerializeField] private float smoothSpeed = 0.2f;
-
+        [SerializeField]  private GameObject boost;
         public bool startGame = false;
         public bool firstGames =false;
 
+        private bool waitSeconds = false;
         private Vector3 velocity = Vector3.zero;
-
+        private void Start()
+        {
+            StartCoroutine(ActiveBoost());
+        }
         void LateUpdate()
         {
             if (Input.anyKeyDown)
@@ -23,11 +27,13 @@ namespace RocketyRocket2
                 Tween tween = gameObject.GetComponent<Camera>().DOOrthoSize(3.25f, 2);
                 tween.Play();
                 startGame = true;
+                
             }
-            if(!startGame || firstGames)
+            if(!startGame)
             {
                 return;
             }
+            if (!waitSeconds) return;
             if (ship == null) return;
 
             Vector3 camPos = transform.position;
@@ -51,20 +57,28 @@ namespace RocketyRocket2
                 targetPos.x = shipPos.x - deadZoneSize.x * 0.5f;
             }
 
-            if (shipPos.y < bottom) 
-            { 
-                targetPos.y = (shipPos.y) + (deadZoneSize.y * 0.5f); 
+            if (shipPos.y < bottom)
+            {
+                targetPos.y = (shipPos.y) + (deadZoneSize.y * 0.5f);
             }
 
             if (shipPos.y > top)
             {
                 targetPos.y = (shipPos.y) - (deadZoneSize.y * 0.5f);
-                
+
             }
 
-            targetPos.z = camPos.z;  
-            transform.position = Vector3.SmoothDamp(camPos, targetPos, ref velocity, smoothSpeed) ;
+            targetPos.z = camPos.z;
+            transform.position = Vector3.SmoothDamp(camPos, targetPos, ref velocity, smoothSpeed);
+        }
+        private IEnumerator ActiveBoost()
+        {
+            if (firstGames)
+                yield return new WaitForSeconds(0.5f);
 
+            waitSeconds = true;
+            yield return new WaitForSeconds(0.7f);
+            boost.SetActive(true);
 
         }
     }
