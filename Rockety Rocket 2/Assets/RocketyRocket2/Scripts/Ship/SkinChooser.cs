@@ -32,6 +32,7 @@ public class SkinChooser : MonoBehaviour
     public Vector3 position_R_Right;
 
     public Button SkinSelector;
+    public ParticleSystem[] particles;
 
     int safeIndexRight = 3;
     int safeIndexCenter = 4;
@@ -189,5 +190,10 @@ public class SkinChooser : MonoBehaviour
     {
         skinSelected = centerIndex;
         RocketyRocket2Game.Instance.SaveGameManager.Skin = skinSelected;
+
+        for (int i = 0; i < particles.Length; i++)
+        {
+            particles[i].Play();
+        }
     }
 }
