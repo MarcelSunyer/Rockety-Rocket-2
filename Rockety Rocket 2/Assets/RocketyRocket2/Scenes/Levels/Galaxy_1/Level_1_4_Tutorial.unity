@@ -1102,7 +1102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36646fbde3e0364ab9872e3ac9ca224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevelIsTutorial: 0
+  NextLevelIsTutorial: 1
   Galaxy: 1
   IsNextLevelAnotherGalxy: 0
   startEndLevel: {fileID: 5256622344116083105}
