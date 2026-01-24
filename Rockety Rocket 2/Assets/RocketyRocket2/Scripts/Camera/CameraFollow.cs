@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace RocketyRocket2
 {
@@ -22,7 +23,21 @@ namespace RocketyRocket2
         }
         void LateUpdate()
         {
-            if (Input.anyKeyDown)
+            if (Input.anyKeyDown || Gamepad.current != null && (
+                        Gamepad.current.aButton.IsPressed() ||
+                        Gamepad.current.bButton.IsPressed() ||
+                        Gamepad.current.xButton.IsPressed() ||
+                        Gamepad.current.yButton.IsPressed() ||
+                        Gamepad.current.rightTrigger.IsPressed() ||
+                        Gamepad.current.leftTrigger.IsPressed() ||
+                        Gamepad.current.leftShoulder.IsPressed() ||
+                        Gamepad.current.leftStick.IsPressed() ||
+                        Gamepad.current.leftStickButton.IsPressed() ||
+                        Gamepad.current.rightShoulder.IsPressed() ||
+                        Gamepad.current.rightStick.IsPressed() ||
+                        Gamepad.current.rightStickButton.IsPressed() ||
+                        Gamepad.current.leftStick.IsPressed() ||
+                        Gamepad.current.rightStick.IsPressed()))
             {
                 Tween tween = gameObject.GetComponent<Camera>().DOOrthoSize(3.25f, 2);
                 tween.Play();

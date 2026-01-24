@@ -52,6 +52,8 @@ namespace RocketyRocket2
         public float valueBoost;
         [SerializeField] private Slider sliderBoost;
         [SerializeField] private bool activeBoost = true;
+        private bool started= false;
+        private bool coroutineStarted = false;
 
         [Header("Astronauts")]
         public Astronaut[] Astronauts;
@@ -71,8 +73,7 @@ namespace RocketyRocket2
             if (skins != null)
             {
                 currentState = StateShip.Stop;
-                StartCoroutine(WaitToStart());
-
+                
                 for (int i = 0; i < skins.Length; i++)
                 {
                     if (skins[i].name == "Skin_" + RocketyRocket2Game.Instance.SaveGameManager.Skin)
@@ -148,6 +149,33 @@ namespace RocketyRocket2
                 tween.WaitForCompletion();
                 StopShip();
                 StartCoroutine(DestroyShipOnHole());
+            }
+            if (!started && (
+                    Input.anyKeyDown ||
+                    (Gamepad.current != null && (
+                        Gamepad.current.aButton.IsPressed() ||
+                        Gamepad.current.bButton.IsPressed() ||
+                        Gamepad.current.xButton.IsPressed() ||
+                        Gamepad.current.yButton.IsPressed() ||
+                        Gamepad.current.rightTrigger.IsPressed() ||
+                        Gamepad.current.leftTrigger.IsPressed() ||
+                        Gamepad.current.leftShoulder.IsPressed() ||
+                        Gamepad.current.leftStick.IsPressed() ||
+                        Gamepad.current.leftStickButton.IsPressed() ||
+                        Gamepad.current.rightShoulder.IsPressed() ||
+                        Gamepad.current.rightStick.IsPressed() ||
+                        Gamepad.current.rightStickButton.IsPressed() ||
+                        Gamepad.current.leftStick.IsPressed() ||
+                        Gamepad.current.rightStick.IsPressed()))
+            ))
+            {
+                started = true;
+            }
+
+            if (started && !coroutineStarted)
+            {
+                coroutineStarted = true;
+                StartCoroutine(StartShip());
             }
         }
         private IEnumerator DestroyShipOnHole()
@@ -335,10 +363,11 @@ namespace RocketyRocket2
             }
         }
 
-        private IEnumerator WaitToStart()
+        private IEnumerator StartShip()
         {
-            yield return new WaitForSeconds(TimeToStart);
+            yield return new WaitForSeconds(1);
             currentState = StateShip.Playing;
+            Debug.Log("State:Playing");
             if (activeBoost)
             {
                 sliderBoost.gameObject.SetActive(true);
