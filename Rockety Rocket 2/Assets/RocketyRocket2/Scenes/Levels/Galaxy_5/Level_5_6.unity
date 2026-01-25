@@ -548,6 +548,7 @@ MonoBehaviour:
   NextLevelIsTutorial: 1
   Galaxy: 5
   IsNextLevelAnotherGalxy: 1
+  IsEnd: 1
   startEndLevel: {fileID: 193019144}
   buttonContinue: {fileID: 2126972074}
   buttonTryAgain: {fileID: 481427909}
@@ -1684,7 +1685,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0ffa0a0eae10c5d44be052f57fc853aa, type: 2}
+  - {fileID: 2100000, guid: fcff29ee9654a4f49bf48a8039bebd7e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

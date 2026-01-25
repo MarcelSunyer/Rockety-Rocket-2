@@ -14,6 +14,7 @@ namespace RocketyRocket2
 
         public bool IsNextLevelAnotherGalxy;
 
+        public bool IsEnd = false;
         public StartEndLevel startEndLevel;
 
         [SerializeField] private Button buttonContinue;
@@ -76,6 +77,10 @@ namespace RocketyRocket2
             startEndLevel.CloseAnim();
             yield return new WaitForSeconds(2);
 
+            if(IsEnd)
+            {
+                SceneManager.LoadScene("Congrations");
+            }
             if (IsNextLevelAnotherGalxy)
             {
                 switch (Galaxy)

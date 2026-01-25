@@ -125,6 +125,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_5/Level_5_6.unity
     guid: e24d1e73c2b95584c8e9174e7152fbbb
+  - enabled: 1
+    path: Assets/RocketyRocket2/Scenes/Levels/Congrations.unity
+    guid: d068f53ed8e2ee943bbe8276993cb014
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 5cae969e405f9d9448804d113d248d09, type: 3}
   m_UseUCBPForAssetBundles: 0
