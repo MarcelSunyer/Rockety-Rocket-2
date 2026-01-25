@@ -67,7 +67,7 @@ Material:
     - _GalaxyRadius: 2
     - _Glossiness: 0.5
     - _GoodThreshold: 0.5
-    - _Intensity: 1.4
+    - _Intensity: 1.6
     - _Metallic: 0.43
     - _Randomness: 2
     - _Rotation: 0
@@ -81,15 +81,16 @@ Material:
     - _TrailLength: 3
     - _TrailSmoothness: 0.67
     m_Colors:
-    - _BackgroundColor: {r: 0.7176471, g: 0.40281498, b: 0.07058824, a: 1}
+    - _BackgroundColor: {r: 0.26415092, g: 0.051085785, b: 0.09396099, a: 1}
     - _CautionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 0, b: 0, a: 1}
     - _CriticalColor: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _GoodColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainColor: {r: 1, g: 0, b: 0, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SecondaryColor: {r: 1, g: 0.5361175, b: 0, a: 1}
-    - _TertiaryColor: {r: 1, g: 0, b: 0.010103226, a: 0.65882355}
+    - _SecondaryColor: {r: 0.48235294, g: 0.07058822, b: 0.13061081, a: 1}
+    - _TertiaryColor: {r: 1, g: 0.33225694, b: 0, a: 0.65882355}
     - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
