@@ -38,9 +38,6 @@ namespace RocketyRocket2
 
         public GameObject[] skins;
 
-        [Header("TimeToStart")]
-        public float TimeToStart;
-
         [Header("DeathStuff")]
         public Image FadeDeath;
         public Button[] DeathButtons;
@@ -66,6 +63,7 @@ namespace RocketyRocket2
 
         void Start()
         {
+            currentState = StateShip.Stop;
             particelsPlayed = false;    
             friendDied = false;
             safeZone = GameObject.Find("End");
@@ -88,6 +86,7 @@ namespace RocketyRocket2
             }
            
             boostForce = boostForce / 30000;
+            
         }
         void FixedUpdate()
         {
@@ -366,12 +365,12 @@ namespace RocketyRocket2
         private IEnumerator StartShip()
         {
             yield return new WaitForSeconds(1);
-            currentState = StateShip.Playing;
             Debug.Log("State:Playing");
             if (activeBoost)
             {
                 sliderBoost.gameObject.SetActive(true);
             }
+            currentState = StateShip.Playing;
 
         }
 

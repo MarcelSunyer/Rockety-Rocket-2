@@ -1064,6 +1064,7 @@ MonoBehaviour:
   NextLevelIsTutorial: 0
   Galaxy: 1
   IsNextLevelAnotherGalxy: 0
+  IsEnd: 0
   startEndLevel: {fileID: 193019144}
   buttonContinue: {fileID: 2126972074}
   buttonTryAgain: {fileID: 481427909}
@@ -1671,7 +1672,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3959922740387019359, guid: dce92f0eb5007a9439ffd3ad4eef9c08, type: 3}
+  m_Sprite: {fileID: -7782414052709316472, guid: 0ce76f8981cf3f144a34cdac7db0f5d9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1703,10 +1704,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Image: {fileID: 290352787}
   m_SpriteArray:
-  - {fileID: 3959922740387019359, guid: dce92f0eb5007a9439ffd3ad4eef9c08, type: 3}
-  - {fileID: 97614201824372231, guid: dce92f0eb5007a9439ffd3ad4eef9c08, type: 3}
-  - {fileID: -2131511339028966158, guid: dce92f0eb5007a9439ffd3ad4eef9c08, type: 3}
-  - {fileID: 1231617355499715529, guid: dce92f0eb5007a9439ffd3ad4eef9c08, type: 3}
+  - {fileID: -7782414052709316472, guid: 0ce76f8981cf3f144a34cdac7db0f5d9, type: 3}
+  - {fileID: 6948555462199200625, guid: 0ce76f8981cf3f144a34cdac7db0f5d9, type: 3}
+  - {fileID: 1346097334574854409, guid: 0ce76f8981cf3f144a34cdac7db0f5d9, type: 3}
+  - {fileID: 4458169659190939905, guid: 0ce76f8981cf3f144a34cdac7db0f5d9, type: 3}
   m_Speed: 2
 --- !u!1 &316071517
 GameObject:
