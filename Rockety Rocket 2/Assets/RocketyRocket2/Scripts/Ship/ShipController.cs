@@ -322,9 +322,11 @@ namespace RocketyRocket2
         }
         private IEnumerator DestroyShip()
         {
+            sliderBoost.gameObject.SetActive(false);
             if (!friendDied)
             {
                 currentState = StateShip.Stop;
+                
                 yield return new WaitForSeconds(1);
                 if (FadeDeath)
                     FadeDeath.gameObject.SetActive(true);
