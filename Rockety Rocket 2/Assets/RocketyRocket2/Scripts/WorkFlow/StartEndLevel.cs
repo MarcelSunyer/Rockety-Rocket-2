@@ -21,6 +21,8 @@ namespace RocketyRocket2
         [SerializeField] private float fadeTimeInOut;
         private void Start()
         {
+            upImage.SetActive(true); 
+            downImage.SetActive(true);
             if(arrow != null)
                 arrow.enabled = false;
 

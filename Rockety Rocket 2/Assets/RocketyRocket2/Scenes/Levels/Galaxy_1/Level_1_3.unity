@@ -978,7 +978,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 470931041}
   - {fileID: 941090109}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1224,7 +1223,7 @@ Transform:
   - {fileID: 718004912}
   - {fileID: 2065576806}
   - {fileID: 253817378}
-  m_Father: {fileID: 374112679}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &480974936 stripped
 Transform:
@@ -9255,6 +9254,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2188367688562611133, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2632728655352967896, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_Name
       value: Ship
@@ -9547,3 +9550,4 @@ SceneRoots:
   - {fileID: 1974989052}
   - {fileID: 374112679}
   - {fileID: 552416765}
+  - {fileID: 470931041}

@@ -688,6 +688,7 @@ MonoBehaviour:
   NextLevelIsTutorial: 1
   Galaxy: 1
   IsNextLevelAnotherGalxy: 1
+  IsEnd: 0
   startEndLevel: {fileID: 5256622344116083105}
   buttonContinue: {fileID: 2126972074}
   buttonTryAgain: {fileID: 481427909}
@@ -1360,7 +1361,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 470931041}
   - {fileID: 941090109}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1872,7 +1872,7 @@ Transform:
   - {fileID: 140255951}
   - {fileID: 1440425956}
   - {fileID: 828211816}
-  m_Father: {fileID: 374112679}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &473751765 stripped
 Transform:
@@ -11204,3 +11204,4 @@ SceneRoots:
   - {fileID: 1974989052}
   - {fileID: 374112679}
   - {fileID: 1736505758}
+  - {fileID: 470931041}

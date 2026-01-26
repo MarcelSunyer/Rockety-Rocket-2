@@ -50,9 +50,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4866864051882e8489665cad1946dbe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTutorial: 0
   upImage: {fileID: 7310256273183325254}
   downImage: {fileID: 2223860195653957956}
-  isTutorial: 0
   cameraFollow: {fileID: 0}
   arrow: {fileID: 0}
   goal: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3899261750447718378
 RectTransform:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4163058165207588453
 RectTransform:
   m_ObjectHideFlags: 0

@@ -351,7 +351,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1837251418}
     m_Modifications:
     - target: {fileID: 7770723023435819314, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
       propertyPath: m_Name
@@ -457,6 +457,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 10.146984, y: 35.049435}
   m_EdgeRadius: 0
+--- !u!4 &58488481 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8570925931595186867, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
+  m_PrefabInstance: {fileID: 58488478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &140255950
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +609,7 @@ MonoBehaviour:
   NextLevelIsTutorial: 0
   Galaxy: 4
   IsNextLevelAnotherGalxy: 0
+  IsEnd: 0
   startEndLevel: {fileID: 193019144}
   buttonContinue: {fileID: 2126972074}
   buttonTryAgain: {fileID: 481427909}
@@ -1341,7 +1347,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1837251418}
     m_Modifications:
     - target: {fileID: 5068778354579579931, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
       propertyPath: m_Radius
@@ -1360,6 +1366,14 @@ PrefabInstance:
       value: Turret (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8570925931595186867, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.28404993
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570925931595186867, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.28404993
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570925931595186867, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.16
       objectReference: {fileID: 0}
@@ -1373,7 +1387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8570925931595186867, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.0071810437
+      value: -0.007181044
       objectReference: {fileID: 0}
     - target: {fileID: 8570925931595186867, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1385,7 +1399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8570925931595186867, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.9999742
+      value: -0.99997425
       objectReference: {fileID: 0}
     - target: {fileID: 8570925931595186867, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1459,6 +1473,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 16.757166, y: 14.172733}
   m_EdgeRadius: 0
+--- !u!4 &280617249 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8570925931595186867, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
+  m_PrefabInstance: {fileID: 280617246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &281339798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,7 +1495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &281339799
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2426,7 +2445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &451732593
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2518,7 +2537,7 @@ Transform:
   - {fileID: 140255951}
   - {fileID: 1440425956}
   - {fileID: 828211816}
-  m_Father: {fileID: 1837251418}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &481427907
 GameObject:
@@ -10731,9 +10750,10 @@ Transform:
   m_Children:
   - {fileID: 251288840}
   - {fileID: 941090109}
-  - {fileID: 470931041}
   - {fileID: 2045461391}
   - {fileID: 6837165}
+  - {fileID: 58488481}
+  - {fileID: 280617249}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1844709283
@@ -12522,6 +12542,5 @@ SceneRoots:
   - {fileID: 5268262}
   - {fileID: 1974989052}
   - {fileID: 1837251418}
-  - {fileID: 58488478}
-  - {fileID: 280617246}
   - {fileID: 1911286053}
+  - {fileID: 470931041}

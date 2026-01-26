@@ -648,6 +648,7 @@ MonoBehaviour:
   NextLevelIsTutorial: 0
   Galaxy: 5
   IsNextLevelAnotherGalxy: 0
+  IsEnd: 0
   startEndLevel: {fileID: 193019144}
   buttonContinue: {fileID: 2126972074}
   buttonTryAgain: {fileID: 481427909}
@@ -1496,7 +1497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &281339799
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2565,7 +2566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &451732593
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2657,7 +2658,7 @@ Transform:
   - {fileID: 140255951}
   - {fileID: 1440425956}
   - {fileID: 828211816}
-  m_Father: {fileID: 1837251418}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &481427907
 GameObject:
@@ -10687,7 +10688,6 @@ Transform:
   m_Children:
   - {fileID: 251288840}
   - {fileID: 941090109}
-  - {fileID: 470931041}
   - {fileID: 2045461391}
   - {fileID: 6837165}
   - {fileID: 174322177}
@@ -12289,3 +12289,4 @@ SceneRoots:
   - {fileID: 1974989052}
   - {fileID: 1837251418}
   - {fileID: 230000822}
+  - {fileID: 470931041}
