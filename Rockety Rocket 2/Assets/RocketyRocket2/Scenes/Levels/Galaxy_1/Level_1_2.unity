@@ -485,6 +485,7 @@ MonoBehaviour:
   NextLevelIsTutorial: 0
   Galaxy: 1
   IsNextLevelAnotherGalxy: 0
+  IsEnd: 0
   startEndLevel: {fileID: 5256622344116083105}
   buttonContinue: {fileID: 2126972074}
   buttonTryAgain: {fileID: 481427909}
@@ -9241,6 +9242,10 @@ PrefabInstance:
       propertyPath: textDestroyed
       value: 
       objectReference: {fileID: 1953751663}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: canPressAnyKey
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: DeathButtons.Array.size
       value: 3

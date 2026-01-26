@@ -19,6 +19,7 @@ namespace RocketyRocket2
         private Vector3 velocity = Vector3.zero;
         private void Start()
         {
+            
             StartCoroutine(ActiveBoost());
         }
         void LateUpdate()
@@ -39,9 +40,9 @@ namespace RocketyRocket2
                         Gamepad.current.leftStick.IsPressed() ||
                         Gamepad.current.rightStick.IsPressed()))
             {
-                Tween tween = gameObject.GetComponent<Camera>().DOOrthoSize(3.25f, 2);
-                tween.Play();
-                startGame = true;
+
+                StartCoroutine(StartGamePlay());
+               
                 
             }
             if(!startGame)
@@ -86,7 +87,17 @@ namespace RocketyRocket2
             targetPos.z = camPos.z;
             transform.position = Vector3.SmoothDamp(camPos, targetPos, ref velocity, smoothSpeed);
         }
-        private IEnumerator ActiveBoost()
+        private IEnumerator StartGamePlay()
+        {
+            ship.GetComponent<ShipController>().StartCoroutine(
+                ship.GetComponent<ShipController>().StartShip()
+            );
+            yield return new WaitForSeconds(0.5f);
+            Tween tween = gameObject.GetComponent<Camera>().DOOrthoSize(3.25f, 2);
+            tween.Play();
+            startGame = true;
+        }
+            private IEnumerator  ActiveBoost()
         {
             if (firstGames)
                 yield return new WaitForSeconds(0.5f);

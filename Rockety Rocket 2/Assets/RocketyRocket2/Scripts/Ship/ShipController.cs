@@ -61,6 +61,10 @@ namespace RocketyRocket2
 
         private GameObject safeZone;
 
+        public bool canPressAnyKey = true;
+
+        [SerializeField] private GameObject PressAnyKey;
+
         void Start()
         {
             currentState = StateShip.Stop;
@@ -84,7 +88,10 @@ namespace RocketyRocket2
                     }
                 }
             }
-           
+           if(!canPressAnyKey)
+            {
+                PressAnyKey.gameObject.SetActive(false);
+            }
             boostForce = boostForce / 30000;
             
         }
@@ -150,7 +157,7 @@ namespace RocketyRocket2
                 StartCoroutine(DestroyShipOnHole());
             }
             if (!started && (
-                    Input.anyKeyDown ||
+                    Input.anyKeyDown || Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(1) ||
                     (Gamepad.current != null && (
                         Gamepad.current.aButton.IsPressed() ||
                         Gamepad.current.bButton.IsPressed() ||
@@ -362,16 +369,22 @@ namespace RocketyRocket2
             }
         }
 
-        private IEnumerator StartShip()
+        public IEnumerator StartShip()
         {
-            yield return new WaitForSeconds(1);
+            if(canPressAnyKey)
+            {
+                Tween tween = PressAnyKey.GetComponent<RectTransform>().transform.DOMoveY(-600, 2);
+                tween.Play();
+                yield return tween.WaitForCompletion();
+            }
             Debug.Log("State:Playing");
             if (activeBoost)
             {
                 sliderBoost.gameObject.SetActive(true);
             }
             currentState = StateShip.Playing;
-
+            yield return new WaitForSeconds(1);
+            PressAnyKey.gameObject.SetActive(false);
         }
 
         private IEnumerator AstronautDeath()

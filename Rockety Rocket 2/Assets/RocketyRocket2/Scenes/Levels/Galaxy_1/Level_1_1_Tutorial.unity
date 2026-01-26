@@ -11999,6 +11999,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 226423236}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: canPressAnyKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: DeathButtons.Array.size
       value: 3
       objectReference: {fileID: 0}
