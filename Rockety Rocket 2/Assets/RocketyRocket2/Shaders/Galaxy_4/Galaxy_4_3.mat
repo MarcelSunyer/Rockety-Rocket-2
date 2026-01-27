@@ -89,7 +89,7 @@ Material:
     - _GoodColor: {r: 1, g: 1, b: 1, a: 1}
     - _MainColor: {r: 0.3301887, g: 0.20146461, b: 0.026477398, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SecondaryColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SecondaryColor: {r: 1, g: 0, b: 0, a: 1}
     - _TertiaryColor: {r: 0.5943396, g: 0.19199124, b: 0.053266272, a: 0.65882355}
     - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_BuildTextureStacks: []
