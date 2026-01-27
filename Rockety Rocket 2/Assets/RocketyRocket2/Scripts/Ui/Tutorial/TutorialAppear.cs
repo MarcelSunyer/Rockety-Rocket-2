@@ -119,7 +119,7 @@ namespace RocketyRocket2
                 tutorialAstronaut.enabled = false;
             }
             shipState.enabled = true;
-            shipState.currentState = ShipController.StateShip.Playing;
+            //shipState.currentState = ShipController.StateShip.Playing;
 
             yield return new WaitForSeconds(1);
 

@@ -13,7 +13,7 @@ namespace RocketyRocket2
         {
             Stop,
             Playing,
-            WithoutControls
+            Pause
         }
         public StateShip currentState = StateShip.Playing;
         private Vector2 saveForce = Vector2.zero;
@@ -58,15 +58,18 @@ namespace RocketyRocket2
         public bool friendDied;
         private bool particelsPlayed;
 
+        private Vector2 pausedVelocity;
+        private float pausedAngularVelocity;
 
         private GameObject safeZone;
 
         public bool canPressAnyKey = true;
 
         [SerializeField] private GameObject PressAnyKey;
-
+        private bool justResumed = false;
         void Start()
         {
+
             currentState = StateShip.Stop;
             particelsPlayed = false;    
             friendDied = false;
@@ -97,17 +100,24 @@ namespace RocketyRocket2
         }
         void FixedUpdate()
         {
+            if (currentState == StateShip.Pause)
+            {
+                boost_particle_1.gameObject.SetActive(false);
+                boost_particle_2.gameObject.SetActive(false);
+                boost_particle_3.gameObject.SetActive(false);
+                return;
+            }
+
             switch (currentState)
             {
-                case StateShip.Stop:
-                    StopShip();
-                    break;
                 case StateShip.Playing:
                     MoveShip();
                     break;
-                case StateShip.WithoutControls:
+                case StateShip.Stop:
+                    StopShip();
                     break;
             }
+
 
             if (sliderBoost != null && activeBoost)
             {
@@ -191,22 +201,20 @@ namespace RocketyRocket2
         }
         private void MoveShip()
         {
-            if (stopToPlay)
-            {
-                boost_particle_1.gameObject.SetActive(true);
-                boost_particle_2.gameObject.SetActive(true);
-                boost_particle_3.gameObject.SetActive(true);
-                rigidbody2D.linearVelocity = saveVelocity;
-                stopToPlay = false;
-            }
-            rigidbody2D.rotation -= rotationInput * rotationSpeed * Time.fixedDeltaTime;
+            float newRotation =
+                rigidbody2D.rotation - rotationInput * rotationSpeed * Time.fixedDeltaTime;
+
+            rigidbody2D.MoveRotation(newRotation);
 
             Vector2 direction = transform.up;
-            saveForce = direction * boostInput * boostForce;
-            rigidbody2D.AddForce(saveForce);
-            saveVelocity = rigidbody2D.linearVelocity;
+            Vector2 force = direction * boostInput * boostForce;
+            rigidbody2D.AddForce(force);
 
+            saveVelocity = rigidbody2D.linearVelocity;
         }
+
+
+
 
         private void StopShip()
         {
@@ -399,6 +407,47 @@ namespace RocketyRocket2
 
 
         }
+        public void Pause()
+        {
+            if (currentState == StateShip.Pause)
+                return;
+
+            currentState = StateShip.Pause;
+
+            // Guardamos estado físico
+            pausedVelocity = rigidbody2D.linearVelocity;
+            pausedAngularVelocity = rigidbody2D.angularVelocity;
+
+            // Paramos físicas
+            rigidbody2D.linearVelocity = Vector2.zero;
+            rigidbody2D.angularVelocity = 0f;
+            rigidbody2D.simulated = false;
+
+            // Cortamos inputs
+            rotationInput = 0f;
+            boostInput = 0f;
+
+            // Partículas OFF
+            boost_particle_1.gameObject.SetActive(false);
+            boost_particle_2.gameObject.SetActive(false);
+            boost_particle_3.gameObject.SetActive(false);
+        }
+
+
+        public void Resume()
+        {
+            rigidbody2D.simulated = true;
+
+            rigidbody2D.linearVelocity = saveVelocity;
+
+            currentState = StateShip.Playing;
+
+            this.enabled = true;
+            boost_particle_1.gameObject.SetActive(true);
+            boost_particle_2.gameObject.SetActive(true);
+            boost_particle_3.gameObject.SetActive(true);
+        }
+
     }
 }
 

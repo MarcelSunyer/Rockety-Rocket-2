@@ -17,14 +17,20 @@ namespace RocketyRocket2
 
         public bool Range;
 
+        private GameObject pauseMenu;
         void Start()
         {
             Ship = GameObject.Find("Ship");
             StartCoroutine(ShootBullet());
+            pauseMenu = GameObject.Find("PauseMenu");
         }
 
         void FixedUpdate()
         {
+            if(pauseMenu.GetComponent<PauseMenu>().pauseActive)
+            {
+                return;
+            }
             if (Range)
             {
                 Vector2 direction = Ship.transform.position - transform.position;

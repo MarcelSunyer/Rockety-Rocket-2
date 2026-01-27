@@ -17,7 +17,7 @@ namespace RocketyRocket2
 
         [SerializeField] private ShipController shipController;
 
-        [SerializeField] private bool pauseActive = false;
+        public bool pauseActive = false;
 
         [SerializeField] private Button resumePause;
 
@@ -70,7 +70,8 @@ namespace RocketyRocket2
                     bladeStop[i].BladeCanMove = false;
             }
 
-            shipController.currentState = StateShip.Stop;
+            shipController.Pause();
+
             pauseMenu.SetActive(true);
             pauseActive = true;
             
@@ -82,7 +83,7 @@ namespace RocketyRocket2
 
             if (restartLevel != null)
                 restartLevel.gameObject.SetActive(true);
-
+            shipController.enabled = false;
         }
 
         private void PauseDisable()
@@ -93,7 +94,7 @@ namespace RocketyRocket2
                     bladeStop[i].BladeCanMove = true;
             }
 
-            shipController.currentState = StateShip.Playing;
+            shipController.Resume();
             pauseMenu.SetActive(false);
 
             if (resumePause != null)
