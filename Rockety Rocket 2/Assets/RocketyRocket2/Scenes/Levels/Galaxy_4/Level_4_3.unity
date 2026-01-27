@@ -2626,6 +2626,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405346901}
   m_CullTransparentMesh: 1
+--- !u!114 &426851551 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6140877745121986779, guid: 07156247122480e4dacca4158551259b, type: 3}
+  m_PrefabInstance: {fileID: 1844709283}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &443057608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5192,6 +5203,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1518970489 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2259193397388872915, guid: 07156247122480e4dacca4158551259b, type: 3}
+  m_PrefabInstance: {fileID: 1844709283}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1572707912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3972510571050319790, guid: 07156247122480e4dacca4158551259b, type: 3}
+  m_PrefabInstance: {fileID: 1844709283}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1606155547
@@ -10407,6 +10440,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2259193397388872915, guid: 07156247122480e4dacca4158551259b, type: 3}
+      propertyPath: m_Navigation.m_SelectOnUp
+      value: 
+      objectReference: {fileID: 1572707912}
+    - target: {fileID: 2259193397388872915, guid: 07156247122480e4dacca4158551259b, type: 3}
+      propertyPath: m_Navigation.m_SelectOnDown
+      value: 
+      objectReference: {fileID: 426851551}
     - target: {fileID: 3749444410926207905, guid: 07156247122480e4dacca4158551259b, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -10447,6 +10488,14 @@ PrefabInstance:
       propertyPath: 'bladeStop.Array.data[3]'
       value: 
       objectReference: {fileID: 209432561}
+    - target: {fileID: 6140877745121986779, guid: 07156247122480e4dacca4158551259b, type: 3}
+      propertyPath: m_Navigation.m_SelectOnUp
+      value: 
+      objectReference: {fileID: 1518970489}
+    - target: {fileID: 6140877745121986779, guid: 07156247122480e4dacca4158551259b, type: 3}
+      propertyPath: m_Navigation.m_SelectOnDown
+      value: 
+      objectReference: {fileID: 1572707912}
     - target: {fileID: 8202211516721520224, guid: 07156247122480e4dacca4158551259b, type: 3}
       propertyPath: m_IsActive
       value: 0

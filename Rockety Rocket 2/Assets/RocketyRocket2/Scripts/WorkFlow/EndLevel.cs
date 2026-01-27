@@ -28,11 +28,17 @@ namespace RocketyRocket2
         void Start()
         {
             if (buttonContinue != null)
+            {
                 buttonContinue.onClick.AddListener(LoadNextLevel);
+                buttonContinue.Select();
+            }
 
             if (buttonTryAgain != null)
+            {
                 buttonTryAgain.onClick.AddListener(LoadLevelWithoutTutorial);
-
+                if(buttonContinue == null)
+                    buttonTryAgain.Select();
+            }
             if (buttonMainMenu != null)
                 buttonMainMenu.onClick.AddListener(GoMainMenu);
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static RocketyRocket2.ShipController;
@@ -48,13 +49,14 @@ namespace RocketyRocket2
 
             if(TutorialIsActive == null)
             {
-                if (!pauseActive && Input.GetKeyDown(KeyCode.Escape))
+                if (!pauseActive && Input.GetKeyDown(KeyCode.Escape) || Gamepad.current.startButton.isPressed)
                 {
+                    resumePause.Select();
                     PauseActive();
                     return;
                 }
 
-            } else if(!pauseActive && Input.GetKeyDown(KeyCode.Escape) && !TutorialIsActive.active)
+            } else if(!pauseActive && Input.GetKeyDown(KeyCode.Escape) || Gamepad.current.startButton.isPressed && !TutorialIsActive.active )
             {
                 PauseActive();
                 return;

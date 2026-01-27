@@ -24,26 +24,29 @@ namespace RocketyRocket2
         }
         void LateUpdate()
         {
-            if (Input.anyKeyDown || Gamepad.current != null && (
-                        Gamepad.current.aButton.IsPressed() ||
-                        Gamepad.current.bButton.IsPressed() ||
-                        Gamepad.current.xButton.IsPressed() ||
-                        Gamepad.current.yButton.IsPressed() ||
-                        Gamepad.current.rightTrigger.IsPressed() ||
-                        Gamepad.current.leftTrigger.IsPressed() ||
-                        Gamepad.current.leftShoulder.IsPressed() ||
-                        Gamepad.current.leftStick.IsPressed() ||
-                        Gamepad.current.leftStickButton.IsPressed() ||
-                        Gamepad.current.rightShoulder.IsPressed() ||
-                        Gamepad.current.rightStick.IsPressed() ||
-                        Gamepad.current.rightStickButton.IsPressed() ||
-                        Gamepad.current.leftStick.IsPressed() ||
-                        Gamepad.current.rightStick.IsPressed()))
+            if (!startGame)
             {
+                if (Input.anyKeyDown || Gamepad.current != null && (
+                            Gamepad.current.aButton.IsPressed() ||
+                            Gamepad.current.bButton.IsPressed() ||
+                            Gamepad.current.xButton.IsPressed() ||
+                            Gamepad.current.yButton.IsPressed() ||
+                            Gamepad.current.rightTrigger.IsPressed() ||
+                            Gamepad.current.leftTrigger.IsPressed() ||
+                            Gamepad.current.leftShoulder.IsPressed() ||
+                            Gamepad.current.leftStick.IsPressed() ||
+                            Gamepad.current.leftStickButton.IsPressed() ||
+                            Gamepad.current.rightShoulder.IsPressed() ||
+                            Gamepad.current.rightStick.IsPressed() ||
+                            Gamepad.current.rightStickButton.IsPressed() ||
+                            Gamepad.current.leftStick.IsPressed() ||
+                            Gamepad.current.rightStick.IsPressed()))
+                {
 
-                StartCoroutine(StartGamePlay());
-               
-                
+                    StartCoroutine(StartGamePlay());
+
+
+                }
             }
             if(!startGame)
             {
