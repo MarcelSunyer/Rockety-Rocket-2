@@ -49,7 +49,7 @@ namespace RocketyRocket2
         public float valueBoost;
         [SerializeField] private Slider sliderBoost;
         [SerializeField] private bool activeBoost = true;
-        private bool started= false;
+        public bool started= false;
         private bool coroutineStarted = false;
 
         [Header("Astronauts")]
