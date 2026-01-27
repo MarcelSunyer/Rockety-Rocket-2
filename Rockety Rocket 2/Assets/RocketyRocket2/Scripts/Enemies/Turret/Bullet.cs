@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace RocketyRocket2
@@ -7,37 +6,92 @@ namespace RocketyRocket2
     public class Bullet : MonoBehaviour
     {
         public ParticleSystem Death;
-        public int TimeAlive;
-        private void Start()
+        public int TimeAlive = 5;
+
+        private Rigidbody2D rb;
+        private PauseMenu pauseMenu;
+
+        private Vector2 savedVelocity;
+        private float countdownRemaining;
+        private bool isPaused = false;
+
+        private void Awake()
         {
-            StartCoroutine(CountDown(TimeAlive));
+            rb = GetComponent<Rigidbody2D>();
+            pauseMenu = GameObject.Find("PauseMenu").GetComponent<PauseMenu>();
         }
 
-        private IEnumerator CountDown(float TimeAlive)
+        private void OnEnable()
         {
-            yield return new WaitForSeconds(TimeAlive);
+            countdownRemaining = TimeAlive;
+            StartCoroutine(CountDownRoutine());
+        }
+
+        private void FixedUpdate()
+        {
+            if (pauseMenu.pauseActive)
+            {
+                if (!isPaused)
+                {
+                    // Guardamos velocidad y detenemos la f�sica
+                    savedVelocity = rb.linearVelocity;
+                    rb.linearVelocity = Vector2.zero;
+                    rb.simulated = false;
+                    isPaused = true;
+                }
+            }
+            else
+            {
+                if (isPaused)
+                {
+                    // Restauramos f�sica
+                    rb.simulated = true;
+                    rb.linearVelocity = savedVelocity;
+                    isPaused = false;
+                }
+            }
+        }
+
+        private IEnumerator CountDownRoutine()
+        {
+            while (countdownRemaining > 0)
+            {
+                if (!pauseMenu.pauseActive)
+                {
+                    countdownRemaining -= Time.deltaTime;
+                }
+                yield return null;
+            }
+
             Death.Play();
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+
             yield return new WaitForSeconds(0.4f);
+
             gameObject.SetActive(false);
         }
-        // Start is called before the first frame update
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag("Ship"))
-            {
-                gameObject.SetActive(false);
-            }
-            if (collision.CompareTag("BlackHole"))
+            if (collision.CompareTag("Ship") || collision.CompareTag("BlackHole"))
             {
                 gameObject.SetActive(false);
             }
 
             if (collision.CompareTag("Asteroid"))
             {
-                StartCoroutine(CountDown(0));
+                StartCoroutine(CountDownImmediate());
             }
+        }
+
+        private IEnumerator CountDownImmediate()
+        {
+            Death.Play();
+            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+            yield return new WaitForSeconds(0.4f);
+            gameObject.SetActive(false);
         }
     }
 }

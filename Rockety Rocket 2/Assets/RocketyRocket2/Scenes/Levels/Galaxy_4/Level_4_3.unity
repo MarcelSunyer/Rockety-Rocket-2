@@ -977,7 +977,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1564954368496562363, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
       propertyPath: MovementSpeed
-      value: 2.3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1564954368496562363, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
       propertyPath: shipController
@@ -985,31 +985,31 @@ PrefabInstance:
       objectReference: {fileID: 1448262378}
     - target: {fileID: 1564954368496562363, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
       propertyPath: positionsToMove.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1564954368496562363, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
       propertyPath: positionsToMove.Array.data[0].x
-      value: -13
+      value: -13.23
       objectReference: {fileID: 0}
     - target: {fileID: 1564954368496562363, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
       propertyPath: positionsToMove.Array.data[0].y
-      value: 5.23
+      value: 4.49
       objectReference: {fileID: 0}
     - target: {fileID: 1564954368496562363, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
       propertyPath: positionsToMove.Array.data[1].x
-      value: -10.91
+      value: -10.25
       objectReference: {fileID: 0}
     - target: {fileID: 1564954368496562363, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
       propertyPath: positionsToMove.Array.data[1].y
-      value: 7
+      value: 6.75
       objectReference: {fileID: 0}
     - target: {fileID: 1564954368496562363, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
       propertyPath: positionsToMove.Array.data[2].x
-      value: -1.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1564954368496562363, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
       propertyPath: positionsToMove.Array.data[2].y
-      value: -1.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1564954368496562363, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
       propertyPath: positionsToMove.Array.data[3].x
@@ -1037,11 +1037,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6638487183352323669, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.54
+      value: -10.25
       objectReference: {fileID: 0}
     - target: {fileID: 6638487183352323669, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.5
+      value: 6.75
       objectReference: {fileID: 0}
     - target: {fileID: 6638487183352323669, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11271,7 +11271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: valueBoost
-      value: 1.75
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: TimeToStart
