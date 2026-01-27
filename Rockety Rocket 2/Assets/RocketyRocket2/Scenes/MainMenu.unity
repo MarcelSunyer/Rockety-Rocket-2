@@ -173,10 +173,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 1792315170}
+    m_SelectOnDown: {fileID: 1792315170}
+    m_SelectOnLeft: {fileID: 1792315170}
+    m_SelectOnRight: {fileID: 1792315170}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -6431,7 +6431,7 @@ MonoBehaviour:
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 502381734}
     m_SelectOnDown: {fileID: 2100533553}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnLeft: {fileID: 502381734}
     m_SelectOnRight: {fileID: 862177231}
   m_Transition: 2
   m_Colors:
@@ -13629,6 +13629,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 379867204}
+  - component: {fileID: 379867205}
   m_Layer: 0
   m_Name: '---------Settings-------- '
   m_TagString: Untagged
@@ -13656,6 +13657,21 @@ Transform:
   - {fileID: 1334404451}
   m_Father: {fileID: 503819299}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &379867205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379867203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0265c73893e6148b419272017faaa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: RocketyRocket2::RocketyRocket2.SettingsManager
+  fullScrean: {fileID: 2013878185}
+  fxAudio: {fileID: 895605289}
+  musicAudio: {fileID: 1334404452}
 --- !u!1 &435420411
 GameObject:
   m_ObjectHideFlags: 0
@@ -19495,10 +19511,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 145822094}
+    m_SelectOnDown: {fileID: 145822094}
+    m_SelectOnLeft: {fileID: 145822094}
+    m_SelectOnRight: {fileID: 145822094}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -20177,8 +20193,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286405169
-  m_fontColor: {r: 0.19206122, g: 0.3536051, b: 0.49056602, a: 1}
+    rgba: 4287393349
+  m_fontColor: {r: 0.27058825, g: 0.43137258, b: 0.54901963, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -20910,7 +20926,7 @@ MonoBehaviour:
     m_SelectOnUp: {fileID: 1466725529}
     m_SelectOnDown: {fileID: 262375005}
     m_SelectOnLeft: {fileID: 1904588602}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 1438639771}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -21060,10 +21076,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 1809898830}
+    m_SelectOnDown: {fileID: 1809898830}
+    m_SelectOnLeft: {fileID: 1809898830}
+    m_SelectOnRight: {fileID: 1809898830}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -28426,7 +28442,7 @@ MonoBehaviour:
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 1466725529}
     m_SelectOnDown: {fileID: 1438639771}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnLeft: {fileID: 1466725529}
     m_SelectOnRight: {fileID: 1904588602}
   m_Transition: 2
   m_Colors:
@@ -42575,10 +42591,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 971766930}
+    m_SelectOnDown: {fileID: 971766930}
+    m_SelectOnLeft: {fileID: 971766930}
+    m_SelectOnRight: {fileID: 971766930}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -55096,7 +55112,7 @@ MonoBehaviour:
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 50389320}
     m_SelectOnDown: {fileID: 989180362}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnLeft: {fileID: 50389320}
     m_SelectOnRight: {fileID: 705080099}
   m_Transition: 2
   m_Colors:
@@ -55764,7 +55780,7 @@ MonoBehaviour:
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 624330959}
     m_SelectOnDown: {fileID: 1505369314}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnLeft: {fileID: 624330959}
     m_SelectOnRight: {fileID: 2009726498}
   m_Transition: 2
   m_Colors:
@@ -56720,8 +56736,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294901833
-  m_fontColor: {r: 0.28778648, g: 0, b: 1, a: 1}
+    rgba: 4289412218
+  m_fontColor: {r: 0.4784314, g: 0.23529413, b: 0.67058825, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

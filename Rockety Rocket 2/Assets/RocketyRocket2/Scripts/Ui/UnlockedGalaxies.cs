@@ -46,7 +46,7 @@ namespace RocketyRocket2
                 Galaxies[i].image.color = Color.black;
                 Galaxies[i].GetComponentInChildren<SpriteRenderer>().color = Color.black;
 
-                Galaxies[i].interactable = false;
+                Galaxies[i].enabled = false;
 
             }
 
@@ -55,7 +55,7 @@ namespace RocketyRocket2
                 Galaxies[i].image.color = color;
                 Galaxies[i].GetComponentInChildren<SpriteRenderer>().color = Color.white;
 
-                Galaxies[i].interactable = true;
+                Galaxies[i].enabled = true;
 
             }
         }
