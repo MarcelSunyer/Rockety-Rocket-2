@@ -67,6 +67,9 @@ namespace RocketyRocket2
 
         [SerializeField] private GameObject PressAnyKey;
         private bool justResumed = false;
+
+        [SerializeField] private AudioSource boost;
+
         void Start()
         {
 
@@ -130,6 +133,7 @@ namespace RocketyRocket2
 
             if (boostInput == 0)
             {
+                boost.Stop();
                 boost_particle_1.Stop();
                 boost_particle_2.Stop();
                 boost_particle_3.Stop();
@@ -138,8 +142,10 @@ namespace RocketyRocket2
             {
                 if (sliderBoost != null && activeBoost)
                 {
+                    
                     sliderBoost.value += valueBoost;
                 }
+                SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.Boost, boost, 1f);
             }
 
             if (Input.GetKeyDown(KeyCode.H))
@@ -194,6 +200,7 @@ namespace RocketyRocket2
                 StartCoroutine(StartShip());
             }
         }
+
         private IEnumerator DestroyShipOnHole()
         {
             yield return new WaitForSeconds(1f);
