@@ -14,9 +14,9 @@ namespace RocketyRocket2
         public int Galaxy;
         public int Skin;
 
-        //public bool FullScrean;
-        //public float FxSound;
-        //public float Music;
+        public int FullScreen;
+        public int FxSound;
+        public int Music;
 
         public void Save()
         {
@@ -29,6 +29,10 @@ namespace RocketyRocket2
             PlayerPrefs.SetInt("Galaxy", Galaxy);
 
             PlayerPrefs.SetInt("Skin", Skin);
+
+            PlayerPrefs.SetInt("FullScreen", FullScreen);
+            PlayerPrefs.SetInt("FxSound", FxSound);
+            PlayerPrefs.SetInt("Music", Music);
 
             PlayerPrefs.Save();
         }
@@ -43,10 +47,14 @@ namespace RocketyRocket2
 
             Galaxy = PlayerPrefs.GetInt("Galaxy", 1);
             Skin = PlayerPrefs.GetInt("Skin", 0);
+
+            FullScreen = PlayerPrefs.GetInt("FullScreen", 1);
+            FxSound = PlayerPrefs.GetInt("FxSound", 1);
+            Music = PlayerPrefs.GetInt("Music", 1);
         }   
 
 
-        //PlayerPrefs.SetInt
+
       
     }
 }

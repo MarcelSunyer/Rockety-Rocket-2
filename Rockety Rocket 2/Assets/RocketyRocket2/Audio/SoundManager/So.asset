@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef4bb77517d23b48a6a4240217b8c75, type: 3}
+  m_Name: So
+  m_EditorClassIdentifier: RocketyRocket2::RocketyRocket2.SoundManager.SoundsSO
+  sounds:
+  - name: SpacialAmbience_1
+    volume: 0.025
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: a242f1acb5a1f9846ab82f8009fc21c7, type: 3}
+  - name: TurretShoot
+    volume: 1
+    mixer: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 7ab2437def911d447913cad68b8a5e5f, type: 3}
+  - name: Boost
+    volume: 1
+    mixer: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 50a971551c003924f916943e319ee8ba, type: 3}
+  - name: UiSound
+    volume: 1
+    mixer: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 4ac450367328d6c4286f2a8bac7682b4, type: 3}
+  - name: UiMovement
+    volume: 1
+    mixer: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 8502f16a29b306f4fb3ed02e1d2c503e, type: 3}

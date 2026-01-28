@@ -6,7 +6,12 @@ namespace RocketyRocket2.SoundManager
     {
         public enum SoundType
         {
-            //Put sound names in here
+            SpacialAmbience_1,
+            TurretShoot,
+            Boost,
+            UiSound,
+            UiMovement,
+
         }
     }
 }

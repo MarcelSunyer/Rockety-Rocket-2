@@ -15,6 +15,7 @@ namespace RocketyRocket2.SoundManager
 
             private void Awake()
             {
+                DontDestroyOnLoad(gameObject);
                 if (!instance)
                 {
                     instance = this;

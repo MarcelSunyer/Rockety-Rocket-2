@@ -40,8 +40,13 @@ namespace RocketyRocket2
         public Button Messier32Back;
 
         [SerializeField] private Image fade;
+        public AudioSource AmbienceSound;
+
         private void Start()
         {
+            if(RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 1)
+                SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.SpacialAmbience_1, AmbienceSound);
+            
             if (canvasFather != null)
             {
                 screenWidth = canvasFather.rect.width;
