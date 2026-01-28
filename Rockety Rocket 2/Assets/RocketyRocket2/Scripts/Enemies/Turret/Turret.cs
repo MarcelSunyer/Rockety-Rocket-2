@@ -13,6 +13,8 @@ namespace RocketyRocket2
         public int SpeedBullet;
         public float SecondsToShoot;
 
+        public AudioSource shoot;
+
         private GameObject Ship;
 
         public bool Range;
@@ -48,6 +50,7 @@ namespace RocketyRocket2
                 yield return new WaitForSeconds(SecondsToShoot);
                 if (Range)
                 {
+                    SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.TurretShoot, shoot);
                     GameObject bullet = Instantiate(Bullet);
 
                     // Spawn position in world space
