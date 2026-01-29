@@ -15,6 +15,8 @@ namespace RocketyRocket2.SoundManager
             Boost,
             UiSound,
             UiMovement,
+            GamePlay_1, 
+            GamePlay_2,
 
         }
     }

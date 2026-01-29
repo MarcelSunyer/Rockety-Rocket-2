@@ -8624,6 +8624,11 @@ Transform:
   - {fileID: 1350769130}
   m_Father: {fileID: 374112679}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1771855719 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1409247393864809734, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+  m_PrefabInstance: {fileID: 1185047601010162980}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1771972849 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4089143232478022370, guid: d16395826747f7f4cac904e791cf6830, type: 3}
@@ -8749,6 +8754,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!82 &1865042410 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1237176933953375794, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+  m_PrefabInstance: {fileID: 1185047601010162980}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1868514102
 GameObject:
   m_ObjectHideFlags: 0
@@ -9604,6 +9614,14 @@ PrefabInstance:
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
       objectReference: {fileID: 0}
+    - target: {fileID: 1409247393864809734, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_Volume
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409247393864809734, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 50a971551c003924f916943e319ee8ba, type: 3}
     - target: {fileID: 2188367688562611133, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -9641,6 +9659,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: booOst
+      value: 
+      objectReference: {fileID: 1771855719}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: FadeDeath
       value: 
       objectReference: {fileID: 396959877}
@@ -9669,6 +9691,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: gamePlayMusic_1
+      value: 
+      objectReference: {fileID: 1865042410}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: DeathButtons.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -9690,7 +9716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5882256274731073297, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 16.49997
+      value: 16.5
       objectReference: {fileID: 0}
     - target: {fileID: 6422946686635243674, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'

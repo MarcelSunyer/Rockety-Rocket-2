@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 namespace RocketyRocket2
@@ -67,9 +68,22 @@ namespace RocketyRocket2
 
         [SerializeField] private GameObject PressAnyKey;
         private bool justResumed = false;
+
+        [SerializeField] public AudioSource booOst;
+        [SerializeField] private AudioSource gamePlayMusic_1;
+
+        public GameObject AudioManager;
+
+        private bool boostSoundPlaying = false;
         void Start()
         {
 
+            if(!GameObject.Find("AudioManager"))
+            {
+                Instantiate(AudioManager);
+            }
+
+            SoundManager.SoundManager.PlaySound(GetRandomAmbience(), gamePlayMusic_1, 0.08f);
             currentState = StateShip.Stop;
             particelsPlayed = false;    
             friendDied = false;
@@ -118,7 +132,6 @@ namespace RocketyRocket2
                     break;
             }
 
-
             if (sliderBoost != null && activeBoost)
             {
                 if (sliderBoost.value >= sliderBoost.maxValue)
@@ -126,16 +139,33 @@ namespace RocketyRocket2
                     currentState = StateShip.Stop;
                 }
             }
-            //Slider value reversed
 
             if (boostInput == 0)
             {
+                // STOP boost
+                if (boostSoundPlaying)
+                {
+                    StartCoroutine(SoundManager.SoundManager.FadeOut(booOst, 0.4f));
+                    boostSoundPlaying = false;
+                }
+
                 boost_particle_1.Stop();
                 boost_particle_2.Stop();
                 boost_particle_3.Stop();
             }
             else
             {
+                // START boost
+                if (!boostSoundPlaying)
+                {
+                    SoundManager.SoundManager.PlaySound(
+                        SoundManager.SoundValues.SoundType.Boost,
+                        booOst,0.08f
+                    );
+
+                    boostSoundPlaying = true;
+                }
+
                 if (sliderBoost != null && activeBoost)
                 {
                     sliderBoost.value += valueBoost;
@@ -409,6 +439,8 @@ namespace RocketyRocket2
         }
         public void Pause()
         {
+            booOst.Stop();
+            gamePlayMusic_1.Stop();
             if (currentState == StateShip.Pause)
                 return;
 
@@ -436,6 +468,7 @@ namespace RocketyRocket2
 
         public void Resume()
         {
+            SoundManager.SoundManager.PlaySound(GetRandomAmbience(), gamePlayMusic_1, 0.04f);
             rigidbody2D.simulated = true;
 
             rigidbody2D.linearVelocity = saveVelocity;
@@ -448,6 +481,17 @@ namespace RocketyRocket2
             boost_particle_3.gameObject.SetActive(true);
         }
 
+        private SoundManager.SoundValues.SoundType GetRandomAmbience()
+        {
+            SoundManager.SoundValues.SoundType[] ambiences =
+            {
+        SoundManager.SoundValues.SoundType.GamePlay_1,
+        SoundManager.SoundValues.SoundType.GamePlay_2,
+    };
+
+            return ambiences[Random.Range(0, ambiences.Length)];
+        }
     }
+
 }
 

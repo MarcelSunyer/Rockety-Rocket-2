@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 using static RocketyRocket2.SoundManager.SoundValues;
@@ -8,43 +9,55 @@ namespace RocketyRocket2.SoundManager
     [RequireComponent(typeof(AudioSource))]
     public class SoundManager : MonoBehaviour
     {
-        
-            [SerializeField] private SoundsSO SO;
-            private static SoundManager instance = null;
-            private AudioSource audioSource;
 
-            private void Awake()
+        [SerializeField] private SoundsSO SO;
+        private static SoundManager instance = null;
+        private AudioSource audioSource;
+
+        private void Awake()
+        {
+            DontDestroyOnLoad(gameObject);
+            if (!instance)
             {
-                DontDestroyOnLoad(gameObject);
-                if (!instance)
-                {
-                    instance = this;
-                    audioSource = GetComponent<AudioSource>();
-                }
+                instance = this;
+                audioSource = GetComponent<AudioSource>();
             }
-
-            public static void PlaySound(SoundType sound, AudioSource source = null, float volume = 1)
-            {
-                SoundList soundList = instance.SO.sounds[(int)sound];
-                AudioClip[] clips = soundList.sounds;
-                AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
-
-                if (source)
-                {
-                    source.outputAudioMixerGroup = soundList.mixer;
-                    source.clip = randomClip;
-                    source.volume = volume * soundList.volume;
-                    source.Play();
-                }
-                else
-                {
-                    instance.audioSource.outputAudioMixerGroup = soundList.mixer;
-                    instance.audioSource.PlayOneShot(randomClip, volume * soundList.volume);
-                }
-            }
-
-
         }
+
+        public static void PlaySound(SoundType sound, AudioSource source = null, float volume = 1)
+        {
+            SoundList soundList = instance.SO.sounds[(int)sound];
+            AudioClip[] clips = soundList.sounds;
+            AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
+
+            if (source)
+            {
+                source.outputAudioMixerGroup = soundList.mixer;
+                source.clip = randomClip;
+                source.volume = volume * soundList.volume;
+                source.Play();
+            }
+            else
+            {
+                instance.audioSource.outputAudioMixerGroup = soundList.mixer;
+                instance.audioSource.PlayOneShot(randomClip, volume * soundList.volume);
+            }
+        }
+        public static IEnumerator FadeOut(AudioSource source, float duration)
+        {
+            float startVolume = source.volume;
+
+            while (source.volume > 0)
+            {
+                source.volume -= startVolume * Time.deltaTime / duration;
+                yield return null;
+            }
+
+            source.Stop();
+            source.volume = startVolume;
+        }
+
+    }
 
         [Serializable]
         public struct SoundList

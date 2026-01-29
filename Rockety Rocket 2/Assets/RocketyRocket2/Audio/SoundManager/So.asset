@@ -15,51 +15,56 @@ MonoBehaviour:
   sounds:
   - name: Ambience_1
     volume: 1
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
     sounds:
     - {fileID: 8300000, guid: ff0dc912bcfcecc4da567c4fe123a516, type: 3}
   - name: Ambience_2
     volume: 1
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
     sounds:
     - {fileID: 8300000, guid: 814e5e9d5b9879043b3e2d5fad94081d, type: 3}
   - name: Ambience_3
     volume: 1
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
     sounds:
     - {fileID: 8300000, guid: 5d6cbe413acbf6f4f98ad10e4fbd409c, type: 3}
   - name: Ambience_4
     volume: 1
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
     sounds:
     - {fileID: 8300000, guid: ad18e0910bf1052459bf2eb18647c451, type: 3}
   - name: Ambience_5
     volume: 1
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
     sounds:
     - {fileID: 8300000, guid: 8a6472a9fc49a0e418dad4145b212f66, type: 3}
   - name: TurretShoot
     volume: 1
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
     sounds:
     - {fileID: 8300000, guid: 7ab2437def911d447913cad68b8a5e5f, type: 3}
-  - name: StartBoost
-    volume: 1
-    mixer: {fileID: 0}
-    sounds:
-    - {fileID: 8300000, guid: 2f83a6c341c51974b9fb3dccacdd69c9, type: 3}
   - name: Boost
     volume: 1
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
     sounds:
     - {fileID: 8300000, guid: 50a971551c003924f916943e319ee8ba, type: 3}
   - name: UiSound
     volume: 1
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
     sounds:
     - {fileID: 8300000, guid: 4ac450367328d6c4286f2a8bac7682b4, type: 3}
   - name: UiMovement
     volume: 1
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
     sounds:
     - {fileID: 8300000, guid: 8502f16a29b306f4fb3ed02e1d2c503e, type: 3}
+  - name: GamePlay_1
+    volume: 1
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: ed8b1082e2520364ab5d39c1be6a3b92, type: 3}
+  - name: GamePlay_2
+    volume: 1
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: b2f0a55f282615247820e08333ab7175, type: 3}
