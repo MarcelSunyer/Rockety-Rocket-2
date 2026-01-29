@@ -55653,6 +55653,7 @@ MonoBehaviour:
   - {fileID: 1632894658}
   - {fileID: 807636923}
   - {fileID: 435420412}
+  Collected: {fileID: 7019941151936773603}
 --- !u!1 &1809898829
 GameObject:
   m_ObjectHideFlags: 0
@@ -63705,6 +63706,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de83caff21ee45d43803d9bbfa0377ed, type: 3}
+--- !u!82 &7019941151936773603 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6803871920459260753, guid: de83caff21ee45d43803d9bbfa0377ed, type: 3}
+  m_PrefabInstance: {fileID: 7019941151936773602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7271985500344851816
 PrefabInstance:
   m_ObjectHideFlags: 0

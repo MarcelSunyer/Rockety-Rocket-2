@@ -21,7 +21,8 @@ namespace RocketyRocket2.SoundManager
             DeathMusic,
             WinMusic,
             Collected,
-
+            BulletDead,
+            cUCARACHA,
         }
     }
 }

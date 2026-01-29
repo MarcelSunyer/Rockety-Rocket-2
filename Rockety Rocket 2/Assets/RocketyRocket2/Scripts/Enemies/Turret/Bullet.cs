@@ -90,7 +90,6 @@ namespace RocketyRocket2
         private IEnumerator CountDownImmediate()
         {
             Death.Play();
-            SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.TurretShoot,deathSound);
             GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<SpriteRenderer>().enabled = false;
             yield return new WaitForSeconds(0.4f);

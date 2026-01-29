@@ -84,28 +84,12 @@ namespace RocketyRocket2
                 Instantiate(AudioManager);
             }
           
-            SoundManager.SoundManager.PlaySound(GetRandomAmbience(), gamePlayMusic, 0.08f);
+            SoundManager.SoundManager.PlaySound(GetRandomAmbience(), gamePlayMusic, 0.15f);
             currentState = StateShip.Stop;
             particelsPlayed = false;    
             friendDied = false;
             safeZone = GameObject.Find("End");
 
-            if (skins != null)
-            {
-                currentState = StateShip.Stop;
-                
-                for (int i = 0; i < skins.Length; i++)
-                {
-                    if (skins[i].name == "Skin_" + RocketyRocket2Game.Instance.SaveGameManager.Skin)
-                    {
-                        skins[i].SetActive(true);
-                    }
-                    else
-                    {
-                        skins[i].SetActive(false);
-                    }
-                }
-            }
            if(!canPressAnyKey)
             {
                 PressAnyKey.gameObject.SetActive(false);
@@ -178,11 +162,14 @@ namespace RocketyRocket2
                 safeZone.GetComponent<BoxCollider2D>().enabled = true;
                 safeZone.transform.position = gameObject.transform.position;
             }
-            for (int i = 0; i < Astronauts.Length; i++)
+            if (Astronauts[0] != null)
             {
-                if (Astronauts[i].IsDeath)
+                for (int i = 0; i < Astronauts.Length; i++)
                 {
-                    StartCoroutine(AstronautDeath());
+                    if (Astronauts[i].IsDeath)
+                    {
+                        StartCoroutine(AstronautDeath());
+                    }
                 }
             }
             if(BlackHoleDeath)

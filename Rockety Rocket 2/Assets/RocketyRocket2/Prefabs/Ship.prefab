@@ -14774,6 +14774,57 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &926373815360428371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 979599970224355629}
+  - component: {fileID: 2081277028186741594}
+  m_Layer: 0
+  m_Name: SkinChooser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &979599970224355629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926373815360428371}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7325495018755074532}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2081277028186741594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926373815360428371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e00cbb9dd28876a43a91dec76884a3c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: RocketyRocket2::RocketyRocket2.SkinAdder
+  skins:
+  - {fileID: 2968015558697662207}
+  - {fileID: 3137822412048240022}
+  - {fileID: 3159356288621029904}
+  - {fileID: 1148455791346119224}
+  - {fileID: 8574251344904661531}
+  - {fileID: 3678315551788339174}
 --- !u!1 &955505213112205037
 GameObject:
   m_ObjectHideFlags: 0
@@ -20897,6 +20948,7 @@ Transform:
   m_LocalScale: {x: 3.884516, y: 3.884516, z: 3.884516}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 979599970224355629}
   - {fileID: 851993326529227607}
   - {fileID: 1946102888831675219}
   - {fileID: 1734044532941175903}
@@ -26791,7 +26843,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.621
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -32061,7 +32113,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.621
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
