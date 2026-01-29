@@ -68,3 +68,23 @@ MonoBehaviour:
     mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
     sounds:
     - {fileID: 8300000, guid: b2f0a55f282615247820e08333ab7175, type: 3}
+  - name: Death
+    volume: 1
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: a5cf6ae5f889aa043a7277f808fed7dd, type: 3}
+  - name: DeathMusic
+    volume: 1
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 720013ddc2659dc45bb59f32547633ba, type: 3}
+  - name: WinMusic
+    volume: 1
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: b107c05d2fd015d4f90e11b9bf311058, type: 3}
+  - name: Collected
+    volume: 1
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: d2bd5b502a3050d498647d10930241d6, type: 3}

@@ -21,7 +21,7 @@ namespace RocketyRocket2
                 {
                     if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound == 1)
                     {
-                        SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.UiMovement, soundSource);
+                        SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.UiMovement, soundSource,0.05f);
                     }
                 }
                 lastSelected = es.currentSelectedGameObject;
@@ -35,7 +35,7 @@ namespace RocketyRocket2
                 {
                     if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound == 1)
                     {
-                        SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.UiSound, soundSource);
+                        SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.UiSound, soundSource, 0.1f);
                     }
                 }
             }

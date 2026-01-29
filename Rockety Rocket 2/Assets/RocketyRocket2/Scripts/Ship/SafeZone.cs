@@ -26,11 +26,15 @@ namespace RocketyRocket2
 
         [SerializeField] private AstronautsCounter canPass;
 
-        [SerializeField] private AudioSource win;
+        private AudioSource musicNormal;
+
+        private AudioSource WinMusic;
 
         void Start()
         {
-            win = GameObject.Find("WinSound").GetComponent<AudioSource>();
+            musicNormal = GameObject.Find("GameMusic").GetComponent<AudioSource>();
+            WinMusic = GameObject.Find("WinMusic")?.GetComponent<AudioSource>();
+
             sprite = GetComponent<SpriteRenderer>();
             if (shipController == null)
             {
@@ -64,9 +68,11 @@ namespace RocketyRocket2
         {
             if (collision.CompareTag("Ship"))
             {
+                musicNormal.gameObject.SetActive(false);
+                //SoundManager.SoundManager.FadeOut(musicNormal, 0.5f);
+                SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.WinMusic, WinMusic, 0.015f);
                 shipController.booOst.Stop();
-                SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.TurretShoot,win);
-
+                
                 startUpdateColor = true;
 
                 shipController.rigidbody2D.linearDamping = 5f;

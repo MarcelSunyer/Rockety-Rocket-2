@@ -63697,7 +63697,11 @@ PrefabInstance:
       value: Audios
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3080388646787390872, guid: de83caff21ee45d43803d9bbfa0377ed, type: 3}
+    - {fileID: 9091337292548692481, guid: de83caff21ee45d43803d9bbfa0377ed, type: 3}
+    - {fileID: 8381741158729689811, guid: de83caff21ee45d43803d9bbfa0377ed, type: 3}
+    - {fileID: 5739852653467148706, guid: de83caff21ee45d43803d9bbfa0377ed, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de83caff21ee45d43803d9bbfa0377ed, type: 3}

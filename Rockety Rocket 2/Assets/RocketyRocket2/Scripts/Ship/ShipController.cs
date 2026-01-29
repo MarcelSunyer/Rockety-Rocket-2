@@ -69,21 +69,22 @@ namespace RocketyRocket2
         [SerializeField] private GameObject PressAnyKey;
         private bool justResumed = false;
 
-        [SerializeField] public AudioSource booOst;
-        [SerializeField] private AudioSource gamePlayMusic_1;
+        public AudioSource booOst;
+        public AudioSource gamePlayMusic;
+        public AudioSource death;
+        public AudioSource gameOver;
 
         public GameObject AudioManager;
 
         private bool boostSoundPlaying = false;
         void Start()
         {
-
-            if(!GameObject.Find("AudioManager"))
+            if (!GameObject.Find("AudioManager"))
             {
                 Instantiate(AudioManager);
             }
-
-            SoundManager.SoundManager.PlaySound(GetRandomAmbience(), gamePlayMusic_1, 0.08f);
+          
+            SoundManager.SoundManager.PlaySound(GetRandomAmbience(), gamePlayMusic, 0.08f);
             currentState = StateShip.Stop;
             particelsPlayed = false;    
             friendDied = false;
@@ -160,7 +161,7 @@ namespace RocketyRocket2
                 {
                     SoundManager.SoundManager.PlaySound(
                         SoundManager.SoundValues.SoundType.Boost,
-                        booOst,0.08f
+                        booOst,0.1f
                     );
 
                     boostSoundPlaying = true;
@@ -315,6 +316,10 @@ namespace RocketyRocket2
 
         public void ShipDestroyed()
         {
+            StartCoroutine(SoundManager.SoundManager.FadeOut(gamePlayMusic, 0.3f));
+            SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.Death, death, 0.02f);
+            SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.DeathMusic, gameOver, 0.02f);
+
             for (int i = 0; i < skins.Length; i++)
             {
 
@@ -384,7 +389,7 @@ namespace RocketyRocket2
                     yield return new WaitForSeconds(0.75f);
                 }
 
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
             }
             else
             {
@@ -440,7 +445,7 @@ namespace RocketyRocket2
         public void Pause()
         {
             booOst.Stop();
-            gamePlayMusic_1.Stop();
+            gamePlayMusic.Stop();
             if (currentState == StateShip.Pause)
                 return;
 
@@ -468,7 +473,7 @@ namespace RocketyRocket2
 
         public void Resume()
         {
-            SoundManager.SoundManager.PlaySound(GetRandomAmbience(), gamePlayMusic_1, 0.04f);
+            SoundManager.SoundManager.PlaySound(GetRandomAmbience(), gamePlayMusic, 0.04f);
             rigidbody2D.simulated = true;
 
             rigidbody2D.linearVelocity = saveVelocity;

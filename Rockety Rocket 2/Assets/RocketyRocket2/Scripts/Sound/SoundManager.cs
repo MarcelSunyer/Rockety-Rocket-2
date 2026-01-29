@@ -56,10 +56,9 @@ namespace RocketyRocket2.SoundManager
             source.Stop();
             source.volume = startVolume;
         }
-
     }
 
-        [Serializable]
+    [Serializable]
         public struct SoundList
         {
             [HideInInspector] public string name;

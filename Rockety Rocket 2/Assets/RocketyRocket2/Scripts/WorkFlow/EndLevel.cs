@@ -22,22 +22,24 @@ namespace RocketyRocket2
         [SerializeField] private Button buttonMainMenu;
         [SerializeField] private Button quitButton;
 
-
+        private ShipController shipController;
 
         // Start is called before the first frame update
         void Start()
         {
+
             if (buttonContinue != null)
             {
                 buttonContinue.onClick.AddListener(LoadNextLevel);
                 buttonContinue.Select();
             }
-
+            
             if (buttonTryAgain != null)
             {
                 buttonTryAgain.onClick.AddListener(LoadLevelWithoutTutorial);
                 if(buttonContinue == null)
                     buttonTryAgain.Select();
+
             }
             if (buttonMainMenu != null)
                 buttonMainMenu.onClick.AddListener(GoMainMenu);
@@ -53,7 +55,7 @@ namespace RocketyRocket2
 
         private void LoadLevelWithoutTutorial()
         {
-            StartCoroutine(LoadLevelWithoutTutorialAnimationClose());
+           StartCoroutine(LoadLevelWithoutTutorialAnimationClose());
         }
 
         private void GoMainMenu()
@@ -199,6 +201,7 @@ namespace RocketyRocket2
 
         private IEnumerator LoadLevelWithoutTutorialAnimationClose()
         {
+
             if(buttonContinue != null)
                 buttonContinue.enabled = false;
             

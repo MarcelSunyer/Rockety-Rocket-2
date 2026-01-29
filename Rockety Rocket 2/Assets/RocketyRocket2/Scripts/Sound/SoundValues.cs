@@ -17,6 +17,10 @@ namespace RocketyRocket2.SoundManager
             UiMovement,
             GamePlay_1, 
             GamePlay_2,
+            Death,
+            DeathMusic,
+            WinMusic,
+            Collected,
 
         }
     }

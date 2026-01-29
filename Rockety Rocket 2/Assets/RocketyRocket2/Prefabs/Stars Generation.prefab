@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8150596021168122275}
+  - component: {fileID: 1247111474092971132}
   m_Layer: 0
   m_Name: Stars Generation
   m_TagString: Untagged
@@ -34,6 +35,14 @@ Transform:
   - {fileID: 6831086405813721170}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1247111474092971132
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814681779351861260}
+  m_Enabled: 1
 --- !u!1 &4350923101449439834
 GameObject:
   m_ObjectHideFlags: 0

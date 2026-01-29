@@ -13,12 +13,16 @@ namespace RocketyRocket2
         public bool IsDeath;
 
         private GameObject astronautDied;
-        
-
+        public ShipController ship;
+        public AudioSource collected;
         private void Start()
         {
+            
             IsDeath = false;
             astronautDied = GameObject.Find("AstronautDestroyed");
+            AstronautGot = GameObject.Find("AstronautsGot");
+            collected = GameObject.Find("Collected").GetComponent<AudioSource>();
+            
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -32,8 +36,6 @@ namespace RocketyRocket2
                 }
 
                 StartCoroutine(AstrnautCollected());
-
-
             }
             if (collision.gameObject.CompareTag("Asteroid") || collision.gameObject.CompareTag("Bullet"))
             {
@@ -73,8 +75,8 @@ namespace RocketyRocket2
                 gameObject.transform.Rotate(0,0,50);
                 yield return new WaitForSeconds(0.035f);
             }
-            
 
+            SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.Collected, collected, 0.005f);
             for (int i = 0; i < particleSystems.Length; i++)
             {
                 particleSystems[i].Play();
