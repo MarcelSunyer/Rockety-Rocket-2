@@ -76,7 +76,10 @@ namespace RocketyRocket2
                 yield return new WaitForSeconds(0.035f);
             }
 
-            SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.Collected, collected, 0.005f);
+            if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound == 1)
+            {
+                SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.Collected, collected, 0.005f);
+            }
             for (int i = 0; i < particleSystems.Length; i++)
             {
                 particleSystems[i].Play();

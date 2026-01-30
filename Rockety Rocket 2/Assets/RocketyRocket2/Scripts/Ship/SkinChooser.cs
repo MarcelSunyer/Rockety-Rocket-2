@@ -201,11 +201,14 @@ namespace RocketyRocket2
         {
             SkinSelector.enabled = false;
 
-            SoundManager.SoundManager.PlaySound(
+            if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound == 1)
+            {
+                SoundManager.SoundManager.PlaySound(
                 SoundManager.SoundValues.SoundType.Collected,
                 Collected,
                 0.02f
             );
+            }
 
             skinSelected = centerIndex;
             RocketyRocket2Game.Instance.SaveGameManager.Skin = skinSelected;

@@ -83,8 +83,12 @@ namespace RocketyRocket2
             {
                 Instantiate(AudioManager);
             }
-          
+
+            if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 1)
+            {
             SoundManager.SoundManager.PlaySound(GetRandomAmbience(), gamePlayMusic, 0.15f);
+                
+            }
             currentState = StateShip.Stop;
             particelsPlayed = false;    
             friendDied = false;
@@ -143,10 +147,13 @@ namespace RocketyRocket2
                 // START boost
                 if (!boostSoundPlaying)
                 {
-                    SoundManager.SoundManager.PlaySound(
-                        SoundManager.SoundValues.SoundType.Boost,
-                        booOst,0.1f
-                    );
+                    if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound == 1)
+                    {
+                        SoundManager.SoundManager.PlaySound(
+                            SoundManager.SoundValues.SoundType.Boost,
+                            booOst, 0.1f
+                        );
+                    }
 
                     boostSoundPlaying = true;
                 }
@@ -162,7 +169,7 @@ namespace RocketyRocket2
                 safeZone.GetComponent<BoxCollider2D>().enabled = true;
                 safeZone.transform.position = gameObject.transform.position;
             }
-            if (Astronauts[0] != null)
+            if (Astronauts != null)
             {
                 for (int i = 0; i < Astronauts.Length; i++)
                 {
@@ -304,8 +311,14 @@ namespace RocketyRocket2
         public void ShipDestroyed()
         {
             StartCoroutine(SoundManager.SoundManager.FadeOut(gamePlayMusic, 0.3f));
-            SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.Death, death, 0.02f);
-            SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.DeathMusic, gameOver, 0.02f);
+            if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound == 1)
+            {
+                SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.Death, death, 0.02f);
+            }
+            if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 1)
+            {
+                SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.DeathMusic, gameOver, 0.02f);
+            }
 
             for (int i = 0; i < skins.Length; i++)
             {
@@ -349,6 +362,7 @@ namespace RocketyRocket2
             {
                 ShipDestroyed();
             }
+            
         }
         private IEnumerator DestroyShip()
         {
@@ -460,7 +474,10 @@ namespace RocketyRocket2
 
         public void Resume()
         {
-            SoundManager.SoundManager.PlaySound(GetRandomAmbience(), gamePlayMusic, 0.04f);
+            if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 1)
+            {
+                SoundManager.SoundManager.PlaySound(GetRandomAmbience(), gamePlayMusic, 0.04f);
+            }
             rigidbody2D.simulated = true;
 
             rigidbody2D.linearVelocity = saveVelocity;

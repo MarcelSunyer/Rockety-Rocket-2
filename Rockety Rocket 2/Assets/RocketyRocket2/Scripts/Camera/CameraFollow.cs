@@ -17,44 +17,26 @@ namespace RocketyRocket2
 
         private bool waitSeconds = false;
         private Vector3 velocity = Vector3.zero;
+        private ShipController shipController;
         private void Start()
         {
-            
+            if (ship != null)
+                shipController = ship.GetComponent<ShipController>();
+
             StartCoroutine(ActiveBoost());
         }
         void LateUpdate()
         {
-            if (ship != null)
+            if (ship == null || shipController == null)
+                return;
+
+            if (!startGame)
             {
-                if (!startGame)
+                if (shipController.started)
                 {
-                    //if (Input.anyKeyDown || Gamepad.current != null && (
-                    //            Gamepad.current.aButton.IsPressed() ||
-                    //            Gamepad.current.bButton.IsPressed() ||
-                    //            Gamepad.current.xButton.IsPressed() ||
-                    //            Gamepad.current.yButton.IsPressed() ||
-                    //            Gamepad.current.rightTrigger.IsPressed() ||
-                    //            Gamepad.current.leftTrigger.IsPressed() ||
-                    //            Gamepad.current.leftShoulder.IsPressed() ||
-                    //            Gamepad.current.leftStick.IsPressed() ||
-                    //            Gamepad.current.leftStickButton.IsPressed() ||
-                    //            Gamepad.current.rightShoulder.IsPressed() ||
-                    //            Gamepad.current.rightStick.IsPressed() ||
-                    //            Gamepad.current.rightStickButton.IsPressed() ||
-                    //            Gamepad.current.leftStick.IsPressed() ||
-                    //            Gamepad.current.rightStick.IsPressed()))
-                    if (ship.gameObject.GetComponent<ShipController>().started)
-                    {
-
-                        StartCoroutine(StartGamePlay());
-
-
-                    }
+                    StartCoroutine(StartGamePlay());
                 }
-                if (!startGame)
-                {
-                    return;
-                }
+                return;
             }
             if (!waitSeconds) return;
             if (ship == null) return;

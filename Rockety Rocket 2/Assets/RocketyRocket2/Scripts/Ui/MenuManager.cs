@@ -45,6 +45,7 @@ namespace RocketyRocket2
 
         private void Start()
         {
+
             if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 1)
                 SoundManager.SoundManager.PlaySound(
                 GetRandomAmbience(),

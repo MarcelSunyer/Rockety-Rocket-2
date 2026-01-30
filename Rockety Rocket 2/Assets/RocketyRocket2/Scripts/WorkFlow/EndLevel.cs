@@ -23,11 +23,13 @@ namespace RocketyRocket2
         [SerializeField] private Button quitButton;
 
         private ShipController shipController;
+        private SafeZone zone;
 
         // Start is called before the first frame update
         void Start()
         {
-
+            zone = GameObject.Find("End").GetComponent<SafeZone>();
+            shipController = GameObject.Find("Ship").GetComponent<ShipController>();
             if (buttonContinue != null)
             {
                 buttonContinue.onClick.AddListener(LoadNextLevel);
@@ -55,7 +57,9 @@ namespace RocketyRocket2
 
         private void LoadLevelWithoutTutorial()
         {
-           StartCoroutine(LoadLevelWithoutTutorialAnimationClose());
+            
+            StartCoroutine(LoadLevelWithoutTutorialAnimationClose());
+            
         }
 
         private void GoMainMenu()
@@ -70,6 +74,7 @@ namespace RocketyRocket2
 
         private IEnumerator LoadNextLevelAnimationClose()
         {
+            StartCoroutine(SoundManager.SoundManager.FadeOut(zone.WinMusic, 1.5f));
             if (buttonContinue != null)
                 buttonContinue.enabled = false;
 
@@ -202,11 +207,20 @@ namespace RocketyRocket2
         private IEnumerator LoadLevelWithoutTutorialAnimationClose()
         {
 
-            if(buttonContinue != null)
+            if (buttonContinue != null)
+            {
                 buttonContinue.enabled = false;
-            
-            if(buttonTryAgain != null)
+                    StartCoroutine(SoundManager.SoundManager.FadeOut(zone.WinMusic, 1.5f));
+            }
+            else
+            {
+                StartCoroutine(SoundManager.SoundManager.FadeOut(shipController.gameOver, 1.5f));
+            }
+
+            if (buttonTryAgain != null)
+
                 buttonTryAgain.enabled = false;
+
 
             if (buttonMainMenu != null)
                 buttonMainMenu.enabled = false;
@@ -258,11 +272,19 @@ namespace RocketyRocket2
         private IEnumerator GoMainMenuAnimationClose()
         {
             if (buttonContinue != null)
+            {
                 buttonContinue.enabled = false;
+                StartCoroutine(SoundManager.SoundManager.FadeOut(zone.WinMusic, 1.5f));
+            }
+            else
+            {
+                StartCoroutine(SoundManager.SoundManager.FadeOut(shipController.gameOver,1.5f));
+            }
 
             if (buttonTryAgain != null)
+            {
                 buttonTryAgain.enabled = false;
-
+            }
             if (buttonMainMenu != null)
                 buttonMainMenu.enabled = false;
 
@@ -276,6 +298,15 @@ namespace RocketyRocket2
 
         private IEnumerator CloseGame()
         {
+            if (buttonContinue != null)
+            {
+                buttonContinue.enabled = false;
+                StartCoroutine(SoundManager.SoundManager.FadeOut(zone.WinMusic, 1.5f));
+            }
+            else
+            {
+                StartCoroutine(SoundManager.SoundManager.FadeOut(shipController.gameOver, 1.5f));
+            }
             yield return new WaitForSeconds(2);
             Application.Quit();
         }

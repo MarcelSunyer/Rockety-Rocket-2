@@ -50,7 +50,10 @@ namespace RocketyRocket2
                 yield return new WaitForSeconds(SecondsToShoot);
                 if (Range)
                 {
-                    SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.TurretShoot, shoot,0.000f);
+                    if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound == 1)
+                    {
+                        SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.TurretShoot, shoot, 0.000f);
+                    }
                     GameObject bullet = Instantiate(Bullet);
 
                     // Spawn position in world space

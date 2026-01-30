@@ -26,9 +26,9 @@ namespace RocketyRocket2
 
         [SerializeField] private AstronautsCounter canPass;
 
-        private AudioSource musicNormal;
+        public AudioSource musicNormal;
 
-        private AudioSource WinMusic;
+        public AudioSource WinMusic;
 
         void Start()
         {
@@ -68,9 +68,13 @@ namespace RocketyRocket2
         {
             if (collision.CompareTag("Ship"))
             {
-                musicNormal.gameObject.SetActive(false);
-                //SoundManager.SoundManager.FadeOut(musicNormal, 0.5f);
-                SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.WinMusic, WinMusic, 0.015f);
+
+                //musicNormal.gameObject.SetActive(false);
+                StartCoroutine(SoundManager.SoundManager.FadeOut(musicNormal, 1.5f));
+                if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 1)
+                {
+                    SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.WinMusic, WinMusic, 0.015f);
+                }
                 shipController.booOst.Stop();
                 
                 startUpdateColor = true;
