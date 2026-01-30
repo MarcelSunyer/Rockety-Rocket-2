@@ -717,6 +717,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6638487183352323669, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
   m_PrefabInstance: {fileID: 150558416}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &150558418 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1564954368496562363, guid: 4997dda6a6fd5c348a9df4a0fe9170c5, type: 3}
+  m_PrefabInstance: {fileID: 150558416}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5f991335b6e084f806fcb75ea0d08c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &180860181
 GameObject:
   m_ObjectHideFlags: 0
@@ -10744,6 +10755,8 @@ MonoBehaviour:
   shipController: {fileID: 1448262378}
   endLevelUI: {fileID: 180860181}
   canPass: {fileID: 0}
+  musicNormal: {fileID: 0}
+  WinMusic: {fileID: 0}
 --- !u!61 &2137142214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10976,6 +10989,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: BladeFunctions.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: 'DeathButtons.Array.data[0]'
       value: 
       objectReference: {fileID: 356064278}
@@ -10987,6 +11004,30 @@ PrefabInstance:
       propertyPath: 'DeathButtons.Array.data[2]'
       value: 
       objectReference: {fileID: 1987575527}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'BladeFunctions.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1038184977}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'BladeFunctions.Array.data[1]'
+      value: 
+      objectReference: {fileID: 105445604}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'BladeFunctions.Array.data[2]'
+      value: 
+      objectReference: {fileID: 411200963}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'BladeFunctions.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2147114097}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'BladeFunctions.Array.data[4]'
+      value: 
+      objectReference: {fileID: 150558418}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'BladeFunctions.Array.data[5]'
+      value: 
+      objectReference: {fileID: 540708450}
     - target: {fileID: 5232005615090170494, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_IsActive
       value: 0

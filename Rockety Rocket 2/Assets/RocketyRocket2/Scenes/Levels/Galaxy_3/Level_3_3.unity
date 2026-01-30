@@ -11785,6 +11785,8 @@ MonoBehaviour:
   shipController: {fileID: 1448262378}
   endLevelUI: {fileID: 180860181}
   canPass: {fileID: 835986124}
+  musicNormal: {fileID: 0}
+  WinMusic: {fileID: 0}
 --- !u!61 &2137142214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11897,7 +11899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: valueBoost
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: TimeToStart
@@ -11924,6 +11926,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: BladeFunctions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: 'DeathButtons.Array.data[0]'
       value: 
       objectReference: {fileID: 2096271341}
@@ -11935,6 +11941,22 @@ PrefabInstance:
       propertyPath: 'DeathButtons.Array.data[2]'
       value: 
       objectReference: {fileID: 532723405}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'BladeFunctions.Array.data[0]'
+      value: 
+      objectReference: {fileID: 616994057}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'BladeFunctions.Array.data[1]'
+      value: 
+      objectReference: {fileID: 491802782}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'BladeFunctions.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1060654211}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'BladeFunctions.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2105798514}
     - target: {fileID: 5232005615090170494, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_IsActive
       value: 0

@@ -2614,7 +2614,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '!YOU HAVE LET A BUDDY DIE ON THE DARKKNESS OF SPACE!
+  m_text: '!YOU HAVE LET A BUDDY DIE ON THE DARKNESS OF SPACE!
 
 '
   m_isRightToLeft: 0
@@ -4261,7 +4261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6956865748047952369, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
       propertyPath: SecondsToShoot
-      value: 1.7
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7770723023435819314, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
       propertyPath: m_Name
@@ -10550,6 +10550,8 @@ MonoBehaviour:
   shipController: {fileID: 1448262378}
   endLevelUI: {fileID: 180860181}
   canPass: {fileID: 835986124}
+  musicNormal: {fileID: 0}
+  WinMusic: {fileID: 0}
 --- !u!61 &2137142214
 BoxCollider2D:
   m_ObjectHideFlags: 0

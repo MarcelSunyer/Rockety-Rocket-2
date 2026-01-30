@@ -16,6 +16,8 @@ namespace RocketyRocket2
             Playing,
             Pause
         }
+
+        public BladeFunction[] BladeFunctions;
         public StateShip currentState = StateShip.Playing;
         private Vector2 saveForce = Vector2.zero;
         private Vector2 saveVelocity = Vector2.zero;
@@ -173,6 +175,7 @@ namespace RocketyRocket2
             {
                 for (int i = 0; i < Astronauts.Length; i++)
                 {
+
                     if (Astronauts[i].IsDeath)
                     {
                         StartCoroutine(AstronautDeath());
@@ -431,6 +434,20 @@ namespace RocketyRocket2
             currentState = StateShip.Playing;
             yield return new WaitForSeconds(1);
             PressAnyKey.gameObject.SetActive(false);
+
+            if (BladeFunctions != null)
+            {
+                for (int i = 0; i < BladeFunctions.Length; ++i)
+                {
+
+                    Color color = BladeFunctions[i].lineColor;
+
+                    color.a = Mathf.MoveTowards(color.a, 210f, 1.5f * Time.deltaTime);
+
+                    BladeFunctions[i].lineColor = color;
+
+                }
+            }
         }
 
         private IEnumerator AstronautDeath()

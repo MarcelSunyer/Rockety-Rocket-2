@@ -353,17 +353,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1837251418}
     m_Modifications:
+    - target: {fileID: 6956865748047952369, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
+      propertyPath: SecondsToShoot
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7770723023435819314, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
       propertyPath: m_Name
       value: Turret
       objectReference: {fileID: 0}
     - target: {fileID: 8570925931595186867, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.36
+      value: 7.03
       objectReference: {fileID: 0}
     - target: {fileID: 8570925931595186867, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 8570925931595186867, guid: b43799a0beac4d44cba1a6fcabc66b77, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12106,6 +12110,8 @@ MonoBehaviour:
   shipController: {fileID: 1448262378}
   endLevelUI: {fileID: 180860181}
   canPass: {fileID: 835986124}
+  musicNormal: {fileID: 0}
+  WinMusic: {fileID: 0}
 --- !u!61 &2137142214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12339,6 +12345,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 745286196}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: BladeFunctions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: 'DeathButtons.Array.data[0]'
       value: 
       objectReference: {fileID: 2096271341}
@@ -12350,6 +12360,14 @@ PrefabInstance:
       propertyPath: 'DeathButtons.Array.data[2]'
       value: 
       objectReference: {fileID: 532723405}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'BladeFunctions.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1060654211}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'BladeFunctions.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2105798514}
     - target: {fileID: 5232005615090170494, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_IsActive
       value: 0

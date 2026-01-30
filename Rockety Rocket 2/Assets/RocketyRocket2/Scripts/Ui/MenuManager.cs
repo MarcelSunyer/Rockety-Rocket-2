@@ -260,7 +260,7 @@ namespace RocketyRocket2
                 playingSound = false;
                 SoundManager.SoundManager.PlaySound(
                 GetRandomAmbience(),
-                AmbienceSound,0.05f
+                AmbienceSound,0.02f
                 );
             }
         }

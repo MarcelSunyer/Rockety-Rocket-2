@@ -11189,6 +11189,8 @@ MonoBehaviour:
   shipController: {fileID: 1448262378}
   endLevelUI: {fileID: 180860181}
   canPass: {fileID: 835986124}
+  musicNormal: {fileID: 0}
+  WinMusic: {fileID: 0}
 --- !u!61 &2137142214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11456,7 +11458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: activeBoost
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: sliderBoost
@@ -11737,9 +11739,9 @@ SceneRoots:
   - {fileID: 384585376}
   - {fileID: 1251456066}
   - {fileID: 1935031540}
-  - {fileID: 1185047601010162980}
   - {fileID: 2137142212}
   - {fileID: 5268262}
+  - {fileID: 1185047601010162980}
   - {fileID: 1974989052}
   - {fileID: 1837251418}
   - {fileID: 1902533996}
