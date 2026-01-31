@@ -52,7 +52,7 @@ MonoBehaviour:
   positionsToMove:
   - {x: 0, y: 0}
   shipController: {fileID: 0}
-  squareSize: 0.05
+  squareSize: 0.07
   gapBetweenSquares: 0.5
   lineColor: {r: 0.16078432, g: 0.91764706, b: 0.61960787, a: 0}
   lineThickness: 2

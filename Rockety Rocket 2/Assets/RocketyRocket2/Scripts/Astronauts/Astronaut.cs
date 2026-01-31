@@ -52,7 +52,7 @@ namespace RocketyRocket2
             {
                 gameObject.transform.localScale -= new Vector3(0.06f, 0.06f, 0f);
                 gameObject.transform.Rotate(0, 0, 50);
-                yield return new WaitForSeconds(0.055f);
+                yield return new WaitForSeconds(0.035f);
             }
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             for (int i = 0; i < death.Length; i++)

@@ -52,7 +52,7 @@ namespace RocketyRocket2
                 {
                     if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound == 1)
                     {
-                        SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.TurretShoot, shoot, 0.000f);
+                        SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.TurretShoot, shoot, 0.0015f);
                     }
                     GameObject bullet = Instantiate(Bullet);
 
