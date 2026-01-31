@@ -5511,7 +5511,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22894,6 +22894,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1448262378}
     - target: {fileID: 8903380556954231886, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+      propertyPath: PressAnyKey
+      value: 
+      objectReference: {fileID: 2133714354}
+    - target: {fileID: 8903380556954231886, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
       propertyPath: endTutorial
       value: 
       objectReference: {fileID: 0}
@@ -23163,6 +23167,9 @@ MonoBehaviour:
   ship: {fileID: 1448262379}
   deadZoneSize: {x: 0.5, y: 0.5}
   smoothSpeed: 1
+  lookAheadFactor: 1.5
+  maxLookAheadDistance: 3
+  lookAheadSmoothTime: 0.3
   boost: {fileID: 109828617}
   startGame: 0
   firstGames: 0
@@ -30465,6 +30472,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &2133714354 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2188367688562611133, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+  m_PrefabInstance: {fileID: 1185047601010162980}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2137142210
 GameObject:
   m_ObjectHideFlags: 0
@@ -30800,6 +30812,10 @@ PrefabInstance:
       propertyPath: 'Astronauts.Array.data[1]'
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8232927985859694719, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8653459336055550561, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -28.900024
@@ -30822,8 +30838,8 @@ SceneRoots:
   - {fileID: 1251456066}
   - {fileID: 1935031540}
   - {fileID: 2137142212}
-  - {fileID: 5268262}
   - {fileID: 1185047601010162980}
+  - {fileID: 5268262}
   - {fileID: 1974989052}
   - {fileID: 1837251418}
   - {fileID: 1340166386}

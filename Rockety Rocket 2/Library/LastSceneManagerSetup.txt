@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/RocketyRocket2/Scenes/Levels/Galaxy_1/Level_1_1.unity
+- path: Assets/RocketyRocket2/Scenes/MainMenuBootstrap.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

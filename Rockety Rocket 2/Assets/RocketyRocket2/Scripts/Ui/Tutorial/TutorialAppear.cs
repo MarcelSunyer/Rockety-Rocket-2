@@ -38,9 +38,13 @@ namespace RocketyRocket2
         //Fade background fadetoblack
         [SerializeField] private Image fade;
 
+        private GameObject PressAnyKey;
 
         void Start()
         {
+            PressAnyKey = GameObject.Find("PressAnyKey");
+            if (PressAnyKey != null)
+                PressAnyKey.SetActive(false);
            if(particles != null)
                 particles.SetActive(false);
 
@@ -49,12 +53,15 @@ namespace RocketyRocket2
 
 
            startGameplay.onClick.AddListener(StartGamePlay);
-           startGameplay.Select();
+           
            shipState.enabled = false;
 
            
         }
-
+        private void Update()
+        {
+            startGameplay.Select();
+        }
         private void StartGamePlay()
         {
             StartCoroutine(HideTutorialAndMove());
@@ -62,6 +69,9 @@ namespace RocketyRocket2
 
         private IEnumerator HideTutorialAndMove()
         {
+            if (PressAnyKey != null)
+                PressAnyKey.SetActive(true);
+            
             if (particleTutorial != null)
             {
                 particleTutorial.gameObject.SetActive(false);

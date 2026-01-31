@@ -52,6 +52,7 @@ namespace RocketyRocket2
 
         private void LoadNextLevel()
         {
+            RocketyRocket2Game.Instance.SaveGameManager.LevelsDeath = 0;
             StartCoroutine(LoadNextLevelAnimationClose());
         }
 
@@ -69,11 +70,13 @@ namespace RocketyRocket2
 
         private void QuitGame()
         {
+            MainBootstrap.SaveManager.LevelsDeath = 0;
             StartCoroutine(CloseGame());
         }
 
         private IEnumerator LoadNextLevelAnimationClose()
         {
+            MainBootstrap.SaveManager.LevelsDeath = 0;
             StartCoroutine(SoundManager.SoundManager.FadeOut(zone.WinMusic, 1.5f));
             if (buttonContinue != null)
                 buttonContinue.enabled = false;

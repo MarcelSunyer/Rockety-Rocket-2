@@ -1,6 +1,8 @@
 ﻿using DG.Tweening;
 using System.Collections;
+using Unity.VectorGraphics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -146,6 +148,7 @@ namespace RocketyRocket2
         }
         public void Quit()
         {
+            MainBootstrap.SaveManager.LevelsDeath = 0;
             RocketyRocket2Game.Instance.SaveGameManager.Save();
             Application.Quit();
 
@@ -249,6 +252,10 @@ namespace RocketyRocket2
 
         private void Update()
         {
+            if(Input.GetKeyDown(KeyCode.C))
+            {
+                SceneManager.LoadScene("Congrations");
+            }
             if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 0 && !playingSound)
             {
                 AmbienceSound.Stop();

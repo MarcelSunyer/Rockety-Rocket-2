@@ -46,6 +46,7 @@ namespace RocketyRocket2
         public Button[] DeathButtons;
         public GameObject textDestroyed;
         public bool BlackHoleDeath = false;
+        public Deaths counterDeaths;
 
 
         [Header("Boost")]
@@ -102,7 +103,7 @@ namespace RocketyRocket2
                 PressAnyKey.gameObject.SetActive(false);
             }
             boostForce = boostForce / 30000;
-            
+            counterDeaths.gameObject.SetActive(true);
         }
         void FixedUpdate()
         {
@@ -183,12 +184,16 @@ namespace RocketyRocket2
                     }
                 }
             }
-            if(BlackHoleDeath)
+            else
+            {
+
+            }
+            if (BlackHoleDeath)
             {
 
                 Sequence seq_ = DOTween.Sequence();
-                Tween tween = seq_.Join(gameObject.transform.DOScale(new Vector3(0,0,0),1));
-                seq_.Join(gameObject.transform.DORotate(new Vector3(0,0,630),1,RotateMode.FastBeyond360));
+                Tween tween = seq_.Join(gameObject.transform.DOScale(new Vector3(0, 0, 0), 1));
+                seq_.Join(gameObject.transform.DORotate(new Vector3(0, 0, 630), 1, RotateMode.FastBeyond360));
                 seq_.Play();
 
                 tween.WaitForCompletion();
@@ -247,6 +252,19 @@ namespace RocketyRocket2
 
         private void StopShip()
         {
+            if (BladeFunctions != null)
+            {
+                for (int i = 0; i < BladeFunctions.Length; ++i)
+                {
+
+                    Color color = BladeFunctions[i].lineColor;
+
+                    color.a = Mathf.MoveTowards(color.a, 0f, 1.5f * Time.deltaTime);
+
+                    BladeFunctions[i].lineColor = color;
+
+                }
+            }
             rotationInput = 0;
 
             stopToPlay = true;
@@ -370,6 +388,8 @@ namespace RocketyRocket2
         }
         private IEnumerator DestroyShip()
         {
+            RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.GobalDeaths += 1;
+            counterDeaths.AddDeath();
             sliderBoost.gameObject.SetActive(false);
             if (!friendDied)
             {

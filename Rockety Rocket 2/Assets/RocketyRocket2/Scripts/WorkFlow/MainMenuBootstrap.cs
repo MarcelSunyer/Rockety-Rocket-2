@@ -7,7 +7,6 @@ namespace RocketyRocket2
 {
     public class MainMenuBootstrap : MainBootstrap
     {
-       
         private void Start()
         {
             PrepareGame();

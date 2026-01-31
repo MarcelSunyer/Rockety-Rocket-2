@@ -21,29 +21,34 @@ namespace RocketyRocket2
         // Start is called before the first frame update
         void Start()
         {
-            if (Astronauts.Length == 0 || Astronauts[0].gameObject == null)
+            if (AstronautsGot != null)
             {
-                father.SetActive(false);
-            }
-            else
-            {
-                for (int i = 0; i < Astronauts.Length; i++)
+                if (Astronauts.Length == 0 || Astronauts[0].gameObject == null)
                 {
-                    TotalAstronauts += 1;
-                    AstronautsGot.GetComponent<TextMeshProUGUI>().text = 0.ToString();
+                    father.SetActive(false);
+                }
+                else
+                {
+                    for (int i = 0; i < Astronauts.Length; i++)
+                    {
+                        TotalAstronauts += 1;
+                        AstronautsGot.GetComponent<TextMeshProUGUI>().text = 0.ToString();
+                    }
                 }
             }
-
             gameObject.GetComponent<TextMeshProUGUI>().text = TotalAstronauts.ToString();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if(int.Parse(gameObject.GetComponent<TextMeshProUGUI>().text) == int.Parse(AstronautsGot.GetComponent<TextMeshProUGUI>().text))
+            if (AstronautsGot != null)
             {
-                
-                canFinish = true;
+                if (int.Parse(gameObject.GetComponent<TextMeshProUGUI>().text) == int.Parse(AstronautsGot.GetComponent<TextMeshProUGUI>().text))
+                {
+
+                    canFinish = true;
+                }
             }
         }
     }
