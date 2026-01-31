@@ -29,7 +29,7 @@ namespace RocketyRocket2
         public AudioSource musicNormal;
 
         public AudioSource WinMusic;
-
+        private bool played = false;
         void Start()
         {
             musicNormal = GameObject.Find("GameMusic").GetComponent<AudioSource>();
@@ -59,8 +59,15 @@ namespace RocketyRocket2
 
             if(canPass != null)
             {
-                if(canPass.canFinish)
+                if (canPass.canFinish && !played)
+                {
+                    played = true;
+                    if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound == 1)
+                    {
+                        SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.allAstronauts_Safe, shipController.astronautdeath, 0.04f);
+                    }
                     gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                }
 
             }
         }

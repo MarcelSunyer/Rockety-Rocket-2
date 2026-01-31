@@ -75,6 +75,7 @@ namespace RocketyRocket2
         public AudioSource gamePlayMusic;
         public AudioSource death;
         public AudioSource gameOver;
+        public AudioSource astronautdeath;
 
         public GameObject AudioManager;
 

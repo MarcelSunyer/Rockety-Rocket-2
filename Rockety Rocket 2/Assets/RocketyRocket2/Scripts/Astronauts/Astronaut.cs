@@ -17,7 +17,7 @@ namespace RocketyRocket2
         public AudioSource collected;
         private void Start()
         {
-            
+            ship = GameObject.Find("Ship").GetComponent<ShipController>();
             IsDeath = false;
             astronautDied = GameObject.Find("AstronautDestroyed");
             AstronautGot = GameObject.Find("AstronautsGot");
@@ -48,6 +48,11 @@ namespace RocketyRocket2
         {
             IsDeath = true;
             gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+            if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound == 1)
+            {
+                SoundManager.SoundManager.PlaySound(SoundManager.SoundValues.SoundType.Astronaut_die, ship.astronautdeath, 0.04f);
+
+            }
             while (gameObject.transform.localScale.x >= 0)
             {
                 gameObject.transform.localScale -= new Vector3(0.06f, 0.06f, 0f);

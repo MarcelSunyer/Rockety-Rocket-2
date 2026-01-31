@@ -17,6 +17,7 @@ namespace RocketyRocket2
         [SerializeField] private GameObject father;
 
         private int TotalAstronauts;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -41,6 +42,7 @@ namespace RocketyRocket2
         {
             if(int.Parse(gameObject.GetComponent<TextMeshProUGUI>().text) == int.Parse(AstronautsGot.GetComponent<TextMeshProUGUI>().text))
             {
+                
                 canFinish = true;
             }
         }

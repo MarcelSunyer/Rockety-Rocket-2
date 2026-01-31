@@ -98,3 +98,13 @@ MonoBehaviour:
     mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
     sounds:
     - {fileID: 8300000, guid: 0a84ff87c5a149e4085c3472f6d8fba3, type: 3}
+  - name: Astronaut_die
+    volume: 1
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 856a0d90f4da2b743a54a0580c25d1e0, type: 3}
+  - name: allAstronauts_Safe
+    volume: 1
+    mixer: {fileID: 24300002, guid: fe1aac4750f73a645b4746ea14c5c0ab, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: b52a4752a7c4e3a4a87f478e0a115a09, type: 3}

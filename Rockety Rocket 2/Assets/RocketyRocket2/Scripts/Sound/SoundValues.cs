@@ -23,6 +23,8 @@ namespace RocketyRocket2.SoundManager
             Collected,
             BulletDead,
             cUCARACHA,
+            Astronaut_die,
+            allAstronauts_Safe,
         }
     }
 }
