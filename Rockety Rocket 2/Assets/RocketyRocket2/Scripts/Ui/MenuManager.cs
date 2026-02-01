@@ -47,6 +47,10 @@ namespace RocketyRocket2
 
         private void Start()
         {
+            SoundManager.SoundManager.PlaySound(
+            GetRandomAmbience(),
+            AmbienceSound, 0.02f
+            );
 
             if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 1)
                 SoundManager.SoundManager.PlaySound(
@@ -148,7 +152,6 @@ namespace RocketyRocket2
         }
         public void Quit()
         {
-            MainBootstrap.SaveManager.LevelsDeath = 0;
             RocketyRocket2Game.Instance.SaveGameManager.Save();
             Application.Quit();
 

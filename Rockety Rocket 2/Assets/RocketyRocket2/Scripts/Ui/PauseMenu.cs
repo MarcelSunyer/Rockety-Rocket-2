@@ -30,10 +30,12 @@ namespace RocketyRocket2
         [SerializeField] private BladeFunction[] bladeStop;
 
 
+        private GameObject deaths;
 
         // Start is called before the first frame update
         void Start()
         {
+            deaths = GameObject.Find("Deaths");
             pauseMenu.SetActive(false);
 
             resumePause.onClick.AddListener(PauseDisable);
@@ -47,16 +49,15 @@ namespace RocketyRocket2
         void Update()
         {
 
-            if(TutorialIsActive == null)
-            {
-                if (!pauseActive && Input.GetKeyDown(KeyCode.Escape) || Gamepad.current.startButton.isPressed)
-                {
-                    resumePause.Select();
-                    PauseActive();
-                    return;
-                }
 
-            } else if(!pauseActive && Input.GetKeyDown(KeyCode.Escape) || Gamepad.current.startButton.isPressed && !TutorialIsActive )
+            if (Input.GetKeyDown(KeyCode.Escape) || Gamepad.current.startButton.isPressed)
+            {
+                resumePause.Select();
+                PauseActive();
+                return;
+            }
+
+            if (!pauseActive && Input.GetKeyDown(KeyCode.Escape) || Gamepad.current.startButton.isPressed && !TutorialIsActive)
             {
                 PauseActive();
                 return;
@@ -117,16 +118,19 @@ namespace RocketyRocket2
         {
             if(SEL_isTutorial.isTutorial)
             {
+                deaths.SetActive(false);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             }
             else
             {
+                deaths.SetActive(false);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
 
         private void ReturnMainMenu()
         {
+            deaths.SetActive(false);
             SceneManager.LoadScene("MainMenuBootstrap");
         }
     }

@@ -19,6 +19,8 @@ namespace RocketyRocket2
         public bool IsEnd = false;
         public StartEndLevel startEndLevel;
 
+        private GameObject deaths;
+
         [SerializeField] private Button buttonContinue;
         [SerializeField] private Button buttonTryAgain;
         [SerializeField] private Button buttonMainMenu;
@@ -30,6 +32,7 @@ namespace RocketyRocket2
         // Start is called before the first frame update
         void Start()
         {
+            deaths = GameObject.Find("Deaths");
             zone = GameObject.Find("End").GetComponent<SafeZone>();
             shipController = GameObject.Find("Ship").GetComponent<ShipController>();
             if (buttonContinue != null)
@@ -60,7 +63,7 @@ namespace RocketyRocket2
 
         private void LoadNextLevel()
         {
-            RocketyRocket2Game.Instance.SaveGameManager.LevelsDeath = 0;
+            deaths.SetActive(false);
             StartCoroutine(LoadNextLevelAnimationClose());
         }
 
@@ -78,13 +81,13 @@ namespace RocketyRocket2
 
         private void QuitGame()
         {
-            MainBootstrap.SaveManager.LevelsDeath = 0;
+            deaths.SetActive(false);
+
             StartCoroutine(CloseGame());
         }
 
         private IEnumerator LoadNextLevelAnimationClose()
         {
-            MainBootstrap.SaveManager.LevelsDeath = 0;
             StartCoroutine(SoundManager.SoundManager.FadeOut(zone.WinMusic, 1.5f));
             if (buttonContinue != null)
                 buttonContinue.enabled = false;
@@ -217,7 +220,7 @@ namespace RocketyRocket2
 
         private IEnumerator LoadLevelWithoutTutorialAnimationClose()
         {
-
+            deaths.SetActive(false);
             if (buttonContinue != null)
             {
                 buttonContinue.enabled = false;
@@ -282,6 +285,7 @@ namespace RocketyRocket2
 
         private IEnumerator GoMainMenuAnimationClose()
         {
+            deaths.SetActive(false);
             if (buttonContinue != null)
             {
                 buttonContinue.enabled = false;

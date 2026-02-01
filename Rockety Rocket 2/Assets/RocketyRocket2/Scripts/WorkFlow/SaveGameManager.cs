@@ -17,7 +17,6 @@ namespace RocketyRocket2
         public int FxSound;
         public int Music;
         public int GobalDeaths;
-        public int LevelsDeath;
 
         // Constructor privado para patrón Singleton
         public SaveGameManager() { }
@@ -44,7 +43,6 @@ namespace RocketyRocket2
             PlayerPrefs.SetInt("FxSound", FxSound);
             PlayerPrefs.SetInt("Music", Music);
             PlayerPrefs.SetInt("GobalDeaths", GobalDeaths);
-            PlayerPrefs.SetInt("LevelsDeath", LevelsDeath);
             PlayerPrefs.Save();
         }
 
@@ -61,7 +59,7 @@ namespace RocketyRocket2
             FxSound = PlayerPrefs.GetInt("FxSound", 1);
             Music = PlayerPrefs.GetInt("Music", 1);
             GobalDeaths = PlayerPrefs.GetInt("GobalDeaths", 0);
-            LevelsDeath = PlayerPrefs.GetInt("LevelsDeath", 0);
+
         }
     }
 }

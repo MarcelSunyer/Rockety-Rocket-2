@@ -8803,6 +8803,10 @@ PrefabInstance:
       value: PauseMenu
       objectReference: {fileID: 0}
     - target: {fileID: 4427022524175426421, guid: 07156247122480e4dacca4158551259b, type: 3}
+      propertyPath: pauseActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427022524175426421, guid: 07156247122480e4dacca4158551259b, type: 3}
       propertyPath: E_isTutorial
       value: 
       objectReference: {fileID: 5256622344116083105}

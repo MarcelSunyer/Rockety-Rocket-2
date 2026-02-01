@@ -14,7 +14,6 @@ namespace RocketyRocket2
             fullScrean.onClick.AddListener(ChangeFullSceran);
             fxAudio.onClick.AddListener(ChangeAudio);
             musicAudio.onClick.AddListener(ChangeMusic);
-
         }
 
         private void ChangeFullSceran()

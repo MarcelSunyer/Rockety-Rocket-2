@@ -263,19 +263,7 @@ namespace RocketyRocket2
         private void StopShip()
         {
             canvasForcer.GetComponent<SelctionForcer>().enabled = true;
-            if (BladeFunctions != null)
-            {
-                for (int i = 0; i < BladeFunctions.Length; ++i)
-                {
-
-                    Color color = BladeFunctions[i].lineColor;
-
-                    color.a = Mathf.MoveTowards(color.a, 0f, 1.5f * Time.deltaTime);
-
-                    BladeFunctions[i].lineColor = color;
-
-                }
-            }
+           
             rotationInput = 0;
 
             stopToPlay = true;
@@ -401,6 +389,7 @@ namespace RocketyRocket2
         {
             RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.GobalDeaths += 1;
             counterDeaths.AddDeath();
+
             sliderBoost.gameObject.SetActive(false);
             if (!friendDied)
             {
@@ -421,6 +410,7 @@ namespace RocketyRocket2
 
                 for (int i = 0; i < DeathButtons.Length; ++i)
                 {
+                    DeathButtons[0].Select();
                     DeathButtons[i].gameObject.SetActive(true);
                     yield return new WaitForSeconds(0.75f);
                 }
@@ -442,6 +432,7 @@ namespace RocketyRocket2
 
                 for (int i = 0; i < DeathButtons.Length; ++i)
                 {
+                    DeathButtons[0].Select();
                     DeathButtons[i].gameObject.SetActive(true);
                     yield return new WaitForSeconds(0.75f);
                 }
