@@ -463,7 +463,7 @@ namespace RocketyRocket2
             {
                 sliderBoost.gameObject.SetActive(true);
             }
-            currentState = StateShip.Playing;
+
             yield return new WaitForSeconds(1);
             PressAnyKey.gameObject.SetActive(false);
 
@@ -480,6 +480,8 @@ namespace RocketyRocket2
 
                 }
             }
+            yield return new WaitForSeconds(0.5f);
+            currentState = StateShip.Playing;
         }
 
         private IEnumerator AstronautDeath()
