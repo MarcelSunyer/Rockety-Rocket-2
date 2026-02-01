@@ -32,6 +32,7 @@ namespace RocketyRocket2
         private bool played = false;
         void Start()
         {
+            gameObject.tag = "End";
             musicNormal = GameObject.Find("GameMusic").GetComponent<AudioSource>();
             WinMusic = GameObject.Find("WinMusic")?.GetComponent<AudioSource>();
 
@@ -75,7 +76,7 @@ namespace RocketyRocket2
         {
             if (collision.CompareTag("Ship"))
             {
-
+                
                 //musicNormal.gameObject.SetActive(false);
                 StartCoroutine(SoundManager.SoundManager.FadeOut(musicNormal, 1.5f));
                 if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 1)

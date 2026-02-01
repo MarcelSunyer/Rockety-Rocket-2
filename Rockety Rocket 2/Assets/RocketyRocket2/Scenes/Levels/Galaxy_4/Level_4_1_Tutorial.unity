@@ -5618,6 +5618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36646fbde3e0364ab9872e3ac9ca224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDestroyed: 0
   NextLevelIsTutorial: 0
   Galaxy: 4
   IsNextLevelAnotherGalxy: 0
@@ -22960,6 +22961,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5084259291808609503, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
   m_PrefabInstance: {fileID: 1166163450}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1166163453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3797320339823524701, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
+  m_PrefabInstance: {fileID: 1166163450}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1166163455 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5441982366244862137, guid: 8e91a9cf8b5ad8241aa72ff007108ac5, type: 3}
@@ -23173,6 +23179,7 @@ MonoBehaviour:
   boost: {fileID: 109828617}
   startGame: 0
   firstGames: 0
+  pressanykey: 1
 --- !u!114 &1251456068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29452,7 +29459,7 @@ PrefabInstance:
     - target: {fileID: 4427022524175426421, guid: 07156247122480e4dacca4158551259b, type: 3}
       propertyPath: TutorialIsActive
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1166163453}
     - target: {fileID: 4427022524175426421, guid: 07156247122480e4dacca4158551259b, type: 3}
       propertyPath: bladeStop.Array.size
       value: 1

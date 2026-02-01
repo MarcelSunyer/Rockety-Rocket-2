@@ -383,6 +383,17 @@ namespace RocketyRocket2
             {
                 ShipDestroyed();
             }
+            if(collision.CompareTag("End"))
+            {
+
+                if (BladeFunctions != null)
+                {
+                    for (int i = 0; i < BladeFunctions.Length; ++i)
+                    {
+                        BladeFunctions[i].squareSize = 0;
+                    }
+                }
+            }
             
         }
         private IEnumerator DestroyShip()
@@ -390,6 +401,19 @@ namespace RocketyRocket2
             RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.GobalDeaths += 1;
             counterDeaths.AddDeath();
 
+            if (BladeFunctions != null)
+            {
+                for (int i = 0; i < BladeFunctions.Length; ++i)
+                {
+                    BladeFunctions[i].squareSize = Mathf.MoveTowards(BladeFunctions[i].squareSize, 0f, 5f * Time.deltaTime);
+
+
+                    if (BladeFunctions[i].squareSize < 0.01f)
+                    {
+                        BladeFunctions[i].squareSize = 0f;
+                    }
+                }
+            }
             sliderBoost.gameObject.SetActive(false);
             if (!friendDied)
             {
@@ -439,6 +463,7 @@ namespace RocketyRocket2
                 
                 Destroy(this.gameObject);
             }
+
         }
 
         public IEnumerator StartShip()
@@ -465,7 +490,7 @@ namespace RocketyRocket2
 
                     Color color = BladeFunctions[i].lineColor;
 
-                    color.a = Mathf.MoveTowards(color.a, 210f, 1.5f * Time.deltaTime);
+                    color.a = Mathf.MoveTowards(color.a, 160f, 1.5f * Time.deltaTime);
 
                     BladeFunctions[i].lineColor = color;
 

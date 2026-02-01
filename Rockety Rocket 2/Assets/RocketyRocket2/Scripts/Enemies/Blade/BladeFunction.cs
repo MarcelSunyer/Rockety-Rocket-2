@@ -18,7 +18,7 @@ namespace RocketyRocket2
 
         // Configuración de la línea discontinua
         [Header("Línea Discontinua")]
-        [SerializeField] private float squareSize = 0.1f;
+        [SerializeField] public float squareSize = 0.1f;
         [SerializeField] private float gapBetweenSquares = 0.15f;
         [SerializeField] public Color lineColor = Color.white;
         [SerializeField] private float lineThickness = 2f;

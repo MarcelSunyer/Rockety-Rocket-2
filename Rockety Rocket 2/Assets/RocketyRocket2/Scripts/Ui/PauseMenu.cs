@@ -29,7 +29,6 @@ namespace RocketyRocket2
 
         [SerializeField] private BladeFunction[] bladeStop;
 
-
         private GameObject deaths;
 
         // Start is called before the first frame update
@@ -67,6 +66,8 @@ namespace RocketyRocket2
 
         private void PauseActive()
         {
+            if (TutorialIsActive != null)
+                TutorialIsActive.SetActive(false);   
                                 resumePause.Select();
             for (int i = 0; i < bladeStop.Length; i++)
             {
@@ -93,6 +94,8 @@ namespace RocketyRocket2
 
         private void PauseDisable()
         {
+            if(TutorialIsActive != null)
+                TutorialIsActive.SetActive(true);
             for (int i = 0; i < bladeStop.Length; i++)
             {
                 if (bladeStop[i] != null)

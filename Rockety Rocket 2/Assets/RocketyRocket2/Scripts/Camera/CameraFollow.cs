@@ -128,7 +128,7 @@ namespace RocketyRocket2
                 );
 
                 yield return new WaitForSeconds(0.5f);
-                Tween tween = gameObject.GetComponent<Camera>().DOOrthoSize(3.25f, 2);
+                Tween tween = gameObject.GetComponent<Camera>().DOOrthoSize(3.75f, 2);
                 tween.Play();
             }
             startGame = true;

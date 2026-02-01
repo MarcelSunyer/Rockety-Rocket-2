@@ -939,6 +939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36646fbde3e0364ab9872e3ac9ca224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDestroyed: 0
   NextLevelIsTutorial: 1
   Galaxy: 1
   IsNextLevelAnotherGalxy: 0
@@ -8985,6 +8986,7 @@ MonoBehaviour:
   boost: {fileID: 2056284748}
   startGame: 0
   firstGames: 0
+  pressanykey: 1
 --- !u!114 &1251456068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10518,6 +10520,10 @@ PrefabInstance:
       propertyPath: shipController
       value: 
       objectReference: {fileID: 1448262378}
+    - target: {fileID: 4427022524175426421, guid: 07156247122480e4dacca4158551259b, type: 3}
+      propertyPath: TutorialIsActive
+      value: 
+      objectReference: {fileID: 1607584309}
     - target: {fileID: 8202211516721520224, guid: 07156247122480e4dacca4158551259b, type: 3}
       propertyPath: m_IsActive
       value: 0
