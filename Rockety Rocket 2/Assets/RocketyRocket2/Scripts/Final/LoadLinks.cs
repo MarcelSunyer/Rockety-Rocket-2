@@ -44,7 +44,7 @@ namespace RocketyRocket2
         {
             closeAnim.CloseAnim();
             yield return new WaitForSeconds(0.7f);
-            SceneManager.LoadScene("MainMenuBootstrap");
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }

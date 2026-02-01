@@ -23,13 +23,14 @@ namespace RocketyRocket2
 
         private void ChangeAudio()
         {
-            RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound =
-                RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound == 1 ? 0 : 1;
+            RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound = RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound == 1 ? 0 : 1;
+            RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Save();
         }
         private void ChangeMusic()
         {
-            RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music =
-               RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 1 ? 0 : 1;
+            RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music = RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 1 ? 0 : 1;
+
+            RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Save();
         }
     }
 }

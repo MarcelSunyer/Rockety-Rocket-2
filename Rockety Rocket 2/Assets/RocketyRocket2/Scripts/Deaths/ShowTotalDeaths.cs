@@ -10,7 +10,7 @@ namespace RocketyRocket2
         void Start()
         {
 
-            text.text = MainBootstrap.SaveManager.GobalDeaths.ToString();
+            text.text = RocketyRocket2Game.Instance.SaveGameManager.GobalDeaths.ToString();
         }
 
         

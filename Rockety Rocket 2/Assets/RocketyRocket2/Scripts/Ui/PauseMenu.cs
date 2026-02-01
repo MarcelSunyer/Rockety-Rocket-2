@@ -134,7 +134,7 @@ namespace RocketyRocket2
         private void ReturnMainMenu()
         {
             deaths.SetActive(false);
-            SceneManager.LoadScene("MainMenuBootstrap");
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }

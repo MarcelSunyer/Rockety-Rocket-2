@@ -39,7 +39,7 @@ namespace RocketyRocket2
             targetLookAheadPosition = transform.position;
         }
 
-        void LateUpdate()
+        void FixedUpdate()
         {
             if (ship == null || shipController == null || shipRigidbody == null)
                 return;
@@ -128,7 +128,7 @@ namespace RocketyRocket2
                 );
 
                 yield return new WaitForSeconds(0.5f);
-                Tween tween = gameObject.GetComponent<Camera>().DOOrthoSize(3.75f, 2);
+                Tween tween = gameObject.GetComponent<Camera>().DOOrthoSize(3.3f, 2);
                 tween.Play();
             }
             startGame = true;

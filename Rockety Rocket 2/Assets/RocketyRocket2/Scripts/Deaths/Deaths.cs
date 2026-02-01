@@ -7,21 +7,22 @@ namespace RocketyRocket2
     {
         public TextMeshProUGUI text;
 
+        public bool stopSumar;
 
         private void Update()
         {
-            text.text = MainBootstrap.SaveManager.GobalDeaths.ToString();
+            text.text = RocketyRocket2Game.Instance.SaveGameManager.GobalDeaths.ToString();
         }
         public void AddDeath()
         {
-            MainBootstrap.SaveManager.GobalDeaths += 1;
+            RocketyRocket2Game.Instance.SaveGameManager.GobalDeaths += 1;
             AddDeathText();
         }
 
         public void AddDeathText()
         {
-            text.text = MainBootstrap.SaveManager.GobalDeaths.ToString();
-            MainBootstrap.SaveManager.Save();
+            text.text = RocketyRocket2Game.Instance.SaveGameManager.GobalDeaths.ToString();
+            RocketyRocket2Game.Instance.SaveGameManager.Save();
         }
     }
 }

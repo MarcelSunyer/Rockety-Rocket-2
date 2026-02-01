@@ -47,17 +47,6 @@ namespace RocketyRocket2
 
         private void Start()
         {
-            SoundManager.SoundManager.PlaySound(
-            GetRandomAmbience(),
-            AmbienceSound, 0.02f
-            );
-
-            if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 1)
-                SoundManager.SoundManager.PlaySound(
-                GetRandomAmbience(),
-                AmbienceSound
-                );
-
             if (canvasFather != null)
             {
                 screenWidth = canvasFather.rect.width;
@@ -152,9 +141,7 @@ namespace RocketyRocket2
         }
         public void Quit()
         {
-            RocketyRocket2Game.Instance.SaveGameManager.Save();
             Application.Quit();
-
         }
 
         public void StartToMain()
@@ -259,15 +246,16 @@ namespace RocketyRocket2
             {
                 SceneManager.LoadScene("Congrations");
             }
-            if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 0 && !playingSound)
+
+            if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 0 && playingSound)
             {
                 AmbienceSound.Stop();
-                playingSound = true;
+                playingSound = false;
                 return;
             }
-            if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 1 && playingSound)
+            if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 1 && !playingSound)
             {
-                playingSound = false;
+                playingSound = true;
                 SoundManager.SoundManager.PlaySound(
                 GetRandomAmbience(),
                 AmbienceSound,0.02f

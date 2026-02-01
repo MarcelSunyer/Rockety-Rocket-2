@@ -83,7 +83,7 @@ namespace RocketyRocket2
         public GameObject AudioManager;
 
         private bool boostSoundPlaying = false;
-
+        private bool isShipDestroyed = false;
        
         void Start()
         {
@@ -398,7 +398,13 @@ namespace RocketyRocket2
         }
         private IEnumerator DestroyShip()
         {
-            RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.GobalDeaths += 1;
+            if(isShipDestroyed)
+            {
+                yield break;
+            }
+
+            isShipDestroyed = true;
+
             counterDeaths.AddDeath();
 
             if (BladeFunctions != null)

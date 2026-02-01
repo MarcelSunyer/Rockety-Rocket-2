@@ -285,7 +285,7 @@ namespace RocketyRocket2
 
         private IEnumerator GoMainMenuAnimationClose()
         {
-            deaths.SetActive(false);
+            //deaths.SetActive(false);
             if (buttonContinue != null)
             {
                 buttonContinue.enabled = false;
@@ -308,7 +308,7 @@ namespace RocketyRocket2
 
             startEndLevel.CloseAnim();
             yield return new WaitForSeconds(2);
-            SceneManager.LoadScene("MainMenuBootstrap");
+            SceneManager.LoadScene("MainMenu");
         }
 
         private IEnumerator CloseGame()

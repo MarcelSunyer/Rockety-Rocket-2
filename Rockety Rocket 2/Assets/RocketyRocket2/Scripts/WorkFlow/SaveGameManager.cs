@@ -4,8 +4,6 @@ namespace RocketyRocket2
 {
     public class SaveGameManager
     {
-        public static SaveGameManager Instance { get; private set; }
-
         public int Level_Green;
         public int Level_Blue;
         public int Level_Purple;
@@ -20,16 +18,6 @@ namespace RocketyRocket2
 
         // Constructor privado para patrón Singleton
         public SaveGameManager() { }
-
-        public static void Initialize()
-        {
-            if (Instance == null)
-            {
-                Instance = new SaveGameManager();
-                Instance.Load();
-            }
-        }
-
         public void Save()
         {
             PlayerPrefs.SetInt("Level_Green", Level_Green);
