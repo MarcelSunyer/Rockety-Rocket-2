@@ -8262,6 +8262,9 @@ MonoBehaviour:
   ship: {fileID: 1448262379}
   deadZoneSize: {x: 0.5, y: 0.5}
   smoothSpeed: 1
+  lookAheadFactor: 1.5
+  maxLookAheadDistance: 3
+  lookAheadSmoothTime: 0.3
   boost: {fileID: 1185047601010162982}
   startGame: 0
   firstGames: 0
@@ -20123,6 +20126,10 @@ PrefabInstance:
       propertyPath: sliderBoost
       value: 
       objectReference: {fileID: 1503214588}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: canvasForcer
+      value: 
+      objectReference: {fileID: 5268258}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: textDestroyed
       value: 

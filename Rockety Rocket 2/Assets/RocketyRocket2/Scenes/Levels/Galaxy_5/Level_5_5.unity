@@ -4800,6 +4800,9 @@ MonoBehaviour:
   ship: {fileID: 1448262379}
   deadZoneSize: {x: 0.5, y: 0.5}
   smoothSpeed: 1
+  lookAheadFactor: 1.5
+  maxLookAheadDistance: 3
+  lookAheadSmoothTime: 0.3
   boost: {fileID: 1185047601010162981}
   startGame: 0
   firstGames: 0
@@ -10599,7 +10602,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 709413267324158539, guid: 89b57af3035a901458c25800ef511339, type: 3}
   m_PrefabInstance: {fileID: 1749557043}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1749557046}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d6de845d5b9260468f97b812f0886bc, type: 3}
@@ -10608,6 +10611,11 @@ MonoBehaviour:
 --- !u!4 &1749557045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5231009830740867331, guid: 89b57af3035a901458c25800ef511339, type: 3}
+  m_PrefabInstance: {fileID: 1749557043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1749557046 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 752386226816588546, guid: 89b57af3035a901458c25800ef511339, type: 3}
   m_PrefabInstance: {fileID: 1749557043}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1768716210
@@ -12400,7 +12408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: valueBoost
-      value: 0.8
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: TimeToStart
@@ -12414,6 +12422,10 @@ PrefabInstance:
       propertyPath: sliderBoost
       value: 
       objectReference: {fileID: 1503214588}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: canvasForcer
+      value: 
+      objectReference: {fileID: 5268258}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: currentState
       value: 0
@@ -12540,7 +12552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7345021560943995986, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: Astronauts.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7345021560943995986, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: 'Astronauts.Array.data[0]'
@@ -12553,7 +12565,7 @@ PrefabInstance:
     - target: {fileID: 7345021560943995986, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: 'Astronauts.Array.data[2]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1749557046}
     - target: {fileID: 8653459336055550561, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -28.900024

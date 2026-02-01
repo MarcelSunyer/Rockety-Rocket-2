@@ -8,6 +8,8 @@ namespace RocketyRocket2
 {
     public class EndLevel : MonoBehaviour
     {
+        public bool isDestroyed = false;
+
         public bool NextLevelIsTutorial;
         
         public int Galaxy;
@@ -33,21 +35,27 @@ namespace RocketyRocket2
             if (buttonContinue != null)
             {
                 buttonContinue.onClick.AddListener(LoadNextLevel);
-                buttonContinue.Select();
+
             }
             
             if (buttonTryAgain != null)
             {
                 buttonTryAgain.onClick.AddListener(LoadLevelWithoutTutorial);
-                if(buttonContinue == null)
-                    buttonTryAgain.Select();
-
             }
             if (buttonMainMenu != null)
                 buttonMainMenu.onClick.AddListener(GoMainMenu);
 
             if (quitButton != null)
                 quitButton.onClick.AddListener(QuitGame);
+
+            if(isDestroyed)
+            {
+                buttonTryAgain.Select();
+            }
+            if (!isDestroyed)
+            {
+                buttonContinue.Select();
+            }
         }
 
         private void LoadNextLevel()

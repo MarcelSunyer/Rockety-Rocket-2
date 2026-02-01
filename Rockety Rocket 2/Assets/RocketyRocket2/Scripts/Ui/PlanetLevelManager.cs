@@ -25,6 +25,8 @@ namespace RocketyRocket2
         {
             if (RocketyRocket2Game.Instance != null)
             {
+                Debug.Log(RocketyRocket2Game.Instance.SaveGameManager.Level_Green.ToString());
+
                 if (GalaxyNum == 1)
                     LevelsOperative = RocketyRocket2Game.Instance.SaveGameManager.Level_Green;
                 if (GalaxyNum == 2)

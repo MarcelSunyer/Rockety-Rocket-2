@@ -25,6 +25,8 @@ namespace RocketyRocket2
         private Rigidbody2D shipRigidbody;
         private Vector3 targetLookAheadPosition;
 
+        public bool pressanykey = true;
+
         private void Start()
         {
             if (ship != null)
@@ -119,13 +121,18 @@ namespace RocketyRocket2
 
         private IEnumerator StartGamePlay()
         {
-            ship.GetComponent<ShipController>().StartCoroutine(
-                ship.GetComponent<ShipController>().StartShip()
-            );
-            yield return new WaitForSeconds(0.5f);
-            Tween tween = gameObject.GetComponent<Camera>().DOOrthoSize(3.25f, 2);
-            tween.Play();
+            if (pressanykey)
+            {
+                ship.GetComponent<ShipController>().StartCoroutine(
+                    ship.GetComponent<ShipController>().StartShip()
+                );
+
+                yield return new WaitForSeconds(0.5f);
+                Tween tween = gameObject.GetComponent<Camera>().DOOrthoSize(3.25f, 2);
+                tween.Play();
+            }
             startGame = true;
+            
         }
 
         private IEnumerator ActiveBoost()

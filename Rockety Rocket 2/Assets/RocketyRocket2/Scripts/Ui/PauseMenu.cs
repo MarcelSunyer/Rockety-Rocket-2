@@ -56,7 +56,7 @@ namespace RocketyRocket2
                     return;
                 }
 
-            } else if(!pauseActive && Input.GetKeyDown(KeyCode.Escape) || Gamepad.current.startButton.isPressed && !TutorialIsActive.active )
+            } else if(!pauseActive && Input.GetKeyDown(KeyCode.Escape) || Gamepad.current.startButton.isPressed && !TutorialIsActive )
             {
                 PauseActive();
                 return;
@@ -66,6 +66,7 @@ namespace RocketyRocket2
 
         private void PauseActive()
         {
+                                resumePause.Select();
             for (int i = 0; i < bladeStop.Length; i++)
             {
                 if (bladeStop[i] != null)
@@ -76,8 +77,9 @@ namespace RocketyRocket2
 
             pauseMenu.SetActive(true);
             pauseActive = true;
-            
-            if(resumePause != null)
+
+            resumePause.Select();
+            if (resumePause != null)
                 resumePause.gameObject.SetActive(true);
 
             if(returnToMainMenu != null)

@@ -17,6 +17,8 @@ namespace RocketyRocket2
             Pause
         }
 
+        public GameObject canvasForcer;
+
         public BladeFunction[] BladeFunctions;
         public StateShip currentState = StateShip.Playing;
         private Vector2 saveForce = Vector2.zero;
@@ -69,7 +71,7 @@ namespace RocketyRocket2
 
         public bool canPressAnyKey = true;
 
-        [SerializeField] private GameObject PressAnyKey;
+        public GameObject PressAnyKey;
         private bool justResumed = false;
 
         public AudioSource booOst;
@@ -81,6 +83,8 @@ namespace RocketyRocket2
         public GameObject AudioManager;
 
         private bool boostSoundPlaying = false;
+
+       
         void Start()
         {
             if (!GameObject.Find("AudioManager"))
@@ -101,8 +105,10 @@ namespace RocketyRocket2
            if(!canPressAnyKey)
             {
                 PressAnyKey.gameObject.SetActive(false);
+                StartCoroutine(WaitForStart());
             }
-            boostForce = boostForce / 30000;
+
+                boostForce = boostForce / 30000;
             counterDeaths.gameObject.SetActive(true);
         }
         void FixedUpdate()
@@ -200,29 +206,32 @@ namespace RocketyRocket2
                 StopShip();
                 StartCoroutine(DestroyShipOnHole());
             }
-            if (!started && (
-                    Input.anyKeyDown || Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(1) ||
-                    (Gamepad.current != null && (
-                        Gamepad.current.aButton.IsPressed() ||
-                        Gamepad.current.bButton.IsPressed() ||
-                        Gamepad.current.xButton.IsPressed() ||
-                        Gamepad.current.yButton.IsPressed() ||
-                        Gamepad.current.rightTrigger.IsPressed() ||
-                        Gamepad.current.leftTrigger.IsPressed() ||
-                        Gamepad.current.leftShoulder.IsPressed() ||
-                        Gamepad.current.leftStick.IsPressed() ||
-                        Gamepad.current.leftStickButton.IsPressed() ||
-                        Gamepad.current.rightShoulder.IsPressed() ||
-                        Gamepad.current.rightStick.IsPressed() ||
-                        Gamepad.current.rightStickButton.IsPressed() ||
-                        Gamepad.current.leftStick.IsPressed() ||
-                        Gamepad.current.rightStick.IsPressed()))
-            ))
+            if (canPressAnyKey)
             {
-                started = true;
+                if (!started && (
+                        Input.anyKeyDown || Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) ||
+                        (Gamepad.current != null && (
+                            Gamepad.current.aButton.IsPressed() ||
+                            Gamepad.current.bButton.IsPressed() ||
+                            Gamepad.current.xButton.IsPressed() ||
+                            Gamepad.current.yButton.IsPressed() ||
+                            Gamepad.current.rightTrigger.IsPressed() ||
+                            Gamepad.current.leftTrigger.IsPressed() ||
+                            Gamepad.current.leftShoulder.IsPressed() ||
+                            Gamepad.current.leftStick.IsPressed() ||
+                            Gamepad.current.leftStickButton.IsPressed() ||
+                            Gamepad.current.rightShoulder.IsPressed() ||
+                            Gamepad.current.rightStick.IsPressed() ||
+                            Gamepad.current.rightStickButton.IsPressed() ||
+                            Gamepad.current.leftStick.IsPressed() ||
+                            Gamepad.current.rightStick.IsPressed()))
+                ))
+                {
+                    started = true;
+                }
             }
 
-            if (started && !coroutineStarted)
+            if (started && !coroutineStarted && PressAnyKey)
             {
                 coroutineStarted = true;
                 StartCoroutine(StartShip());
@@ -235,6 +244,7 @@ namespace RocketyRocket2
         }
         private void MoveShip()
         {
+            canvasForcer.GetComponent<SelctionForcer>().enabled = false;
             float newRotation =
                 rigidbody2D.rotation - rotationInput * rotationSpeed * Time.fixedDeltaTime;
 
@@ -252,6 +262,7 @@ namespace RocketyRocket2
 
         private void StopShip()
         {
+            canvasForcer.GetComponent<SelctionForcer>().enabled = true;
             if (BladeFunctions != null)
             {
                 for (int i = 0; i < BladeFunctions.Length; ++i)
@@ -488,6 +499,7 @@ namespace RocketyRocket2
             if (currentState == StateShip.Pause)
                 return;
 
+            canvasForcer.GetComponent<SelctionForcer>().enabled = true;
             currentState = StateShip.Pause;
 
             // Guardamos estado físico
@@ -516,6 +528,8 @@ namespace RocketyRocket2
             {
                 SoundManager.SoundManager.PlaySound(GetRandomAmbience(), gamePlayMusic, 0.04f);
             }
+
+            canvasForcer.GetComponent<SelctionForcer>().enabled = false;
             rigidbody2D.simulated = true;
 
             rigidbody2D.linearVelocity = saveVelocity;
@@ -537,8 +551,18 @@ namespace RocketyRocket2
     };
 
             return ambiences[Random.Range(0, ambiences.Length)];
+    
+        }
+        private IEnumerator WaitForStart()
+
+        {
+            currentState = StateShip.Stop;
+            yield return new WaitForSeconds(3);
+            currentState = StateShip.Playing;
         }
     }
+
+   
 
 }
 

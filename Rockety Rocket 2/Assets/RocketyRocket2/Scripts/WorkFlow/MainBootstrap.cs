@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening.Core.Easing;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace RocketyRocket2
@@ -28,6 +29,7 @@ namespace RocketyRocket2
 
         protected void PrepareGame()
         {
+
             // Aquí puedes agregar otras inicializaciones si las necesitas
             Debug.Log("Game prepared with SaveManager ready");
         }

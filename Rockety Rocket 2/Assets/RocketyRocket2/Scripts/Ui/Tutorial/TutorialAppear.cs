@@ -105,7 +105,7 @@ namespace RocketyRocket2
             }
            
             cam.GetComponent<CameraFollow>().enabled = true;
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
 
             if (goal != null)
             {

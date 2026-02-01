@@ -30717,6 +30717,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1503214588}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: canvasForcer
+      value: 
+      objectReference: {fileID: 5268258}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: textDestroyed
       value: 
       objectReference: {fileID: 226423236}
