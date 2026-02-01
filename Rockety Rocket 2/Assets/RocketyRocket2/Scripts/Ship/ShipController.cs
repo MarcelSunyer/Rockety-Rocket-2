@@ -491,21 +491,42 @@ namespace RocketyRocket2
 
             if (BladeFunctions != null)
             {
-                for (int i = 0; i < BladeFunctions.Length; ++i)
+                float speed = 4f * Time.deltaTime;
+
+                // Loop desenrollado (unrolling) para procesar múltiples elementos a la vez
+                int i = 0;
+                int length = BladeFunctions.Length;
+
+                for (; i < length - 3; i += 4)
                 {
+                    // Procesa 4 elementos por iteración
+                    UpdateAlpha(BladeFunctions[i], speed);
+                    UpdateAlpha(BladeFunctions[i + 1], speed);
+                    UpdateAlpha(BladeFunctions[i + 2], speed);
+                    UpdateAlpha(BladeFunctions[i + 3], speed);
+                }
 
-                    Color color = BladeFunctions[i].lineColor;
-
-                    color.a = Mathf.MoveTowards(color.a, 160f, 1.5f * Time.deltaTime);
-
-                    BladeFunctions[i].lineColor = color;
-
+                // Procesa los elementos restantes
+                for (; i < length; i++)
+                {
+                    UpdateAlpha(BladeFunctions[i], speed);
                 }
             }
-            yield return new WaitForSeconds(0.5f);
+
+// Método auxiliar para evitar duplicación de código
+
+        yield return new WaitForSeconds(0.5f);
             currentState = StateShip.Playing;
         }
-
+        private void UpdateAlpha(BladeFunction function, float speed)
+        {
+            Color color = function.lineColor;
+            if (color.a < 240f)
+            {
+                color.a = Mathf.Min(color.a + speed, 240f);
+                function.lineColor = color;
+            }
+        }
         private IEnumerator AstronautDeath()
         {
             friendDied = true;
