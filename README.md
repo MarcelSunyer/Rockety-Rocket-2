@@ -6,7 +6,8 @@ Available on **Windows**, **macOS**, and **Linux**.
 **Rockety Rocket 2** is the sequel to *Rockety Rocket*, a small game about completing levels by maneuvering a cute ship through dangerous asteroid circuits.  
 This second entry greatly expands on the original, offering **higher artistic quality**, **more mechanics**, and **greater level variety**.
 
----
+<img width="400" height="225" alt="image" src="https://github.com/user-attachments/assets/77ac2db0-772b-44af-a5b3-8aa9a4aee3ab" />
+
 
 ## 🎮 Gameplay
 
@@ -19,7 +20,8 @@ Fuel is limited, and careless maneuvers may leave you drifting helplessly throug
 As you travel forward, you will cross galaxy after galaxy, each filled with new challenges.  
 Hidden within asteroid fields are astronauts lost during critical missions, **rescue all of them before advancing to the next galaxy**.
 
----
+<img width="400" height="225" alt="image" src="https://github.com/user-attachments/assets/15847e84-dcb9-45da-ba0c-28b18ea28ace" />
+
 
 ## ✨ Features
 
@@ -31,7 +33,8 @@ Hidden within asteroid fields are astronauts lost during critical missions, **re
 - ⏱️ **1–5 hours of playtime**, depending on skill and playstyle
 - 🎮 **Full controller support**
 
----
+
+<img width="400" height="225" alt="image" src="https://github.com/user-attachments/assets/cf666d44-674d-426b-9903-f2b15b331711" />
 
 ## 🖥️ Platforms
 
