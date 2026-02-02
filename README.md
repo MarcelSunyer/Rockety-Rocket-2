@@ -17,7 +17,7 @@ In the vast emptiness of the universe, there is **no gravity to slow you down**.
 Fuel is limited, and careless maneuvers may leave you drifting helplessly through space. **Mastering momentum and energy is the key to survival.**
 
 As you travel forward, you will cross galaxy after galaxy, each filled with new challenges.  
-Hidden within asteroid fields are astronauts lost during critical missions — **rescue all of them before advancing to the next galaxy**.
+Hidden within asteroid fields are astronauts lost during critical missions, **rescue all of them before advancing to the next galaxy**.
 
 ---
 
