@@ -48,15 +48,14 @@ namespace RocketyRocket2
         void Update()
         {
 
-
-            if (Input.GetKeyDown(KeyCode.Escape) || Gamepad.current.startButton.isPressed)
+            if (Input.GetKeyDown(KeyCode.Escape) || Gamepad.current.startButton.isPressed && Gamepad.current != null)
             {
                 resumePause.Select();
                 PauseActive();
                 return;
             }
 
-            if (!pauseActive && Input.GetKeyDown(KeyCode.Escape) || Gamepad.current.startButton.isPressed && !TutorialIsActive)
+            if (!pauseActive && Input.GetKeyDown(KeyCode.Escape) || (Gamepad.current.startButton.isPressed && Gamepad.current != null) && !TutorialIsActive)
             {
                 PauseActive();
                 return;

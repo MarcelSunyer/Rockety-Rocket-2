@@ -80,6 +80,8 @@ namespace RocketyRocket2
         public AudioSource gameOver;
         public AudioSource astronautdeath;
 
+        public GameObject AudiosExternos;
+
         public GameObject AudioManager;
 
         private bool boostSoundPlaying = false;
@@ -110,11 +112,13 @@ namespace RocketyRocket2
 
                 boostForce = boostForce / 30000;
             counterDeaths.gameObject.SetActive(true);
+            AudiosExternos.SetActive(false);
         }
         void FixedUpdate()
         {
             if (currentState == StateShip.Pause)
             {
+                AudiosExternos.SetActive(true);
                 boost_particle_1.gameObject.SetActive(false);
                 boost_particle_2.gameObject.SetActive(false);
                 boost_particle_3.gameObject.SetActive(false);
@@ -192,7 +196,7 @@ namespace RocketyRocket2
             }
             else
             {
-
+                TextLostaFriend.SetActive(false);
             }
             if (BlackHoleDeath)
             {
@@ -244,6 +248,7 @@ namespace RocketyRocket2
         }
         private void MoveShip()
         {
+            AudiosExternos.SetActive(false);
             canvasForcer.GetComponent<SelctionForcer>().enabled = false;
             float newRotation =
                 rigidbody2D.rotation - rotationInput * rotationSpeed * Time.fixedDeltaTime;
@@ -331,6 +336,7 @@ namespace RocketyRocket2
 
         public void ShipDestroyed()
         {
+            AudiosExternos.SetActive(true);
             StartCoroutine(SoundManager.SoundManager.FadeOut(gamePlayMusic, 0.3f));
             if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.FxSound == 1)
             {
@@ -539,6 +545,7 @@ namespace RocketyRocket2
         }
         public void Pause()
         {
+            AudiosExternos.SetActive(true);
             booOst.Stop();
             gamePlayMusic.Stop();
             if (currentState == StateShip.Pause)
@@ -569,6 +576,7 @@ namespace RocketyRocket2
 
         public void Resume()
         {
+            AudiosExternos.SetActive(false);
             if (RocketyRocket2.RocketyRocket2Game.Instance.SaveGameManager.Music == 1)
             {
                 SoundManager.SoundManager.PlaySound(GetRandomAmbience(), gamePlayMusic, 0.04f);

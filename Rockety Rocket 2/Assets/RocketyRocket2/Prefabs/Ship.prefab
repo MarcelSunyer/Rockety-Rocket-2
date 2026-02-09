@@ -21534,6 +21534,7 @@ MonoBehaviour:
   death: {fileID: 1889139672100095878}
   gameOver: {fileID: 5368836520333139637}
   astronautdeath: {fileID: 368572549815324929}
+  AudiosExternos: {fileID: 490506641715161189}
   AudioManager: {fileID: 7460385560511577368, guid: 92551e72385271c4b8dc517021bfca32, type: 3}
 --- !u!1 &2968015558697662207
 GameObject:

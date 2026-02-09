@@ -2159,6 +2159,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 752386226816588546, guid: 89b57af3035a901458c25800ef511339, type: 3}
   m_PrefabInstance: {fileID: 595719423}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &595719425 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 709413267324158539, guid: 89b57af3035a901458c25800ef511339, type: 3}
+  m_PrefabInstance: {fileID: 595719423}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595719424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6de845d5b9260468f97b812f0886bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &595719429 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5231009830740867331, guid: 89b57af3035a901458c25800ef511339, type: 3}
@@ -14728,6 +14739,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 752386226816588546, guid: 89b57af3035a901458c25800ef511339, type: 3}
   m_PrefabInstance: {fileID: 2103626777}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2103626779 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 709413267324158539, guid: 89b57af3035a901458c25800ef511339, type: 3}
+  m_PrefabInstance: {fileID: 2103626777}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103626778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6de845d5b9260468f97b812f0886bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2103626783 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5231009830740867331, guid: 89b57af3035a901458c25800ef511339, type: 3}
@@ -20137,9 +20159,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 226423236}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: Astronauts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: DeathButtons.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'Astronauts.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2103626779}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: 'Astronauts.Array.data[1]'
+      value: 
+      objectReference: {fileID: 595719425}
     - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: 'DeathButtons.Array.data[0]'
       value: 
